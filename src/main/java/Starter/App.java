@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
+import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -88,6 +89,7 @@ public class App extends Application {
         window.getIcons().add(new Image ("file:Images/eIcon.png"));
         Scene scene = new Scene(borderPane, 990, 600);
         //Todo Taste Entf zum löschen des Objekts
+        final Image zeichnen=new Image("file:Images/zeichnen.png",30,30,false,false);
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
 
@@ -443,11 +445,14 @@ public class App extends Application {
 
         //Neue Leitung zeichnen mit 2 Mausklicks auf Canvas
         canvas.setOnMouseClicked(new EventHandler<MouseEvent>(){
-
             public void handle(MouseEvent event)
             {drawLines(event, gc);}});
-
-
+        //Todo Mouse Cursor ändern
+        canvas.setOnMouseEntered(new EventHandler<MouseEvent>(){
+            public void handle(MouseEvent event)
+            {
+                //scene.setCursor(new ImageCursor(zeichnen));
+            }});
         vboxLeer.setPrefSize(15,100);
         //VBox Style
         vboxLeer.setStyle("-fx-background-color: black;"
