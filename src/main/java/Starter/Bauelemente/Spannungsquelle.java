@@ -27,6 +27,10 @@ public class Spannungsquelle extends Bauelemente {
     Image F90=new Image("file:Images/Bauelementefarbe/spannungsquelle90F.png",WidthHeight,WidthHeight,false,false);
     Image F135=new Image("file:Images/Bauelementefarbe/spannungsquelle135F.png",WidthHeight,WidthHeight,false,false);
 
+    Image FT00=new Image("file:Images/Bauelementefarbe/spannungsquelle00FT.png",WidthHeight,WidthHeight,false,false);
+    Image FT45=new Image("file:Images/Bauelementefarbe/spannungsquelle45FT.png",WidthHeight,WidthHeight,false,false);
+    Image FT90=new Image("file:Images/Bauelementefarbe/spannungsquelle90FT.png",WidthHeight,WidthHeight,false,false);
+    Image FT135=new Image("file:Images/Bauelementefarbe/spannungsquelle135FT.png",WidthHeight,WidthHeight,false,false);
 
     ImageView imageview = new ImageView();
     boolean deleted=false;
@@ -103,10 +107,10 @@ public class Spannungsquelle extends Bauelemente {
                 else if(imageview.getImage()==S135)
                 {imageview.setImage(T135);}
                 */
-                if(Orientation==0) {imageview.setImage(F00);}
-                else if(Orientation==1) {imageview.setImage(F45);}
-                else if(Orientation==2) {imageview.setImage(F90);}
-                else if(Orientation==3) {imageview.setImage(F135);}
+                if(Orientation==0) {imageview.setImage(FT00);}
+                else if(Orientation==1) {imageview.setImage(FT45);}
+                else if(Orientation==2) {imageview.setImage(FT90);}
+                else if(Orientation==3) {imageview.setImage(FT135);}
 
                 imageview.setX(event.getSceneX()-25);
                 imageview.setY(event.getSceneY()-25);
