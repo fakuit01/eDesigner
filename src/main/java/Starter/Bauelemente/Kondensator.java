@@ -49,13 +49,13 @@ public class Kondensator extends Bauelemente {
                     else if(Orientation==3) {imageview.setImage(S00);Orientation=0;}
                 }
                 //Todo funktioniert noch nicht richtig
-                else if(event.getButton()==MouseButton.PRIMARY)
+                /*else if(event.getButton()==MouseButton.PRIMARY)
                 {
-                    if(Orientation==0) {imageview.setImage(S135);Orientation=1;}
-                    else if(Orientation==1) {imageview.setImage(S90);Orientation=2;}
-                    else if(Orientation==2) {imageview.setImage(S45);Orientation=3;}
-                    else if(Orientation==3) {imageview.setImage(S00);Orientation=0;}
-                }
+                    if(Orientation==0) {imageview.setImage(S135);Orientation=3;}
+                    else if(Orientation==1) {imageview.setImage(S90);Orientation=0;}
+                    else if(Orientation==2) {imageview.setImage(S45);Orientation=1;}
+                    else if(Orientation==3) {imageview.setImage(S00);Orientation=2;}
+                }*/
             }});
         //zeichnet während des drag das Transparente Bild
         imageview.setOnMouseDragged(new EventHandler<MouseEvent>(){

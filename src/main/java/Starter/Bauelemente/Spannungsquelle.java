@@ -90,16 +90,17 @@ public class Spannungsquelle extends Bauelemente {
                     else if(Orientation==1) {imageview.setImage(F90);Orientation=2;}
                     else if(Orientation==2) {imageview.setImage(F135);Orientation=3;}
                     else if(Orientation==3) {imageview.setImage(F00);Orientation=0;}
-
+                    System.out.println("Ori rechtsklick "+Orientation);
                 }
-                //Todo funktioniert noch nicht richtig
-            else if(event.getButton()==MouseButton.PRIMARY)
+                //Todo funktioniert noch nicht richtig bei rechtsdrehung dann linksdrehung
+            /*else if(event.getButton()==MouseButton.PRIMARY)
                 {
-                    if(Orientation==0) {imageview.setImage(F135);Orientation=1;}
-                    else if(Orientation==1) {imageview.setImage(F90);Orientation=2;}
-                    else if(Orientation==2) {imageview.setImage(F45);Orientation=3;}
-                    else if(Orientation==3) {imageview.setImage(F00);Orientation=0;}
-                }
+                    if(Orientation==0) {imageview.setImage(F135);Orientation=3;}
+                    else if(Orientation==1) {imageview.setImage(F90);Orientation=0;}
+                    else if(Orientation==2) {imageview.setImage(F45);Orientation=1;}
+                    else if(Orientation==3) {imageview.setImage(F00);Orientation=2;}
+                    System.out.println("Ori links "+Orientation);
+                }*/
             }});
         //zeichnet während des drag das Transparente Bild
         imageview.setOnMouseDragged(new EventHandler<MouseEvent>(){
