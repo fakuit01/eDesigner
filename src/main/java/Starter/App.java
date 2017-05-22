@@ -447,7 +447,7 @@ public class App extends Application {
         canvas.setOnMouseClicked(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {drawLines(event, gc);}});
-        //Todo Mouse Cursor ändern
+        //Todo Mouse Cursor ändern falls gewünscht
         canvas.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
@@ -464,7 +464,7 @@ public class App extends Application {
 
         //HBox als untere Leiste mit Tooltipps
         String tooltipps="Tipps: ";
-        String drehen="Zum Drehen des Bauteils: Rechtsklick auf das Bauteil";
+        String drehen="Zum Drehen des Bauteils: Rechtsklick(gegen Uhrzeigersinn) bzw Linksklick(Uhrzeigersinn) auf das Bauteil";
         textToolTipps.setText(tooltipps+drehen);
         textToolTipps.setFill(Color.WHITE);
         hboxLeiste.getChildren().add(textToolTipps);

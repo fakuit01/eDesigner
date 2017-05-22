@@ -42,21 +42,22 @@ public class Spannungsquelle extends Bauelemente {
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
-                //TODO noch nicht ganz fertig
+                //färbt beim drüberfahren das objekt in farbe
                 if(Orientation==0) {imageview.setImage(F00);}
                 else if(Orientation==1){imageview.setImage(F45);}
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
             }});
+        ////aus transbild schwarzes bild
         imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
-
+            //Muelleimer
             public void handle(MouseEvent event) {
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
                     deleted=true;
                     imageview.setImage(null);
                     imageview.removeEventHandler(MouseEvent.ANY, this);
                 }
-                //Todo noch nicht ganz fertig
+                //Transparent in schwarz je nach orientierung
                 else {
                     if (Orientation == 0) {
                         imageview.setImage(S00);
@@ -90,7 +91,16 @@ public class Spannungsquelle extends Bauelemente {
                     else if(Orientation==2) {imageview.setImage(F135);Orientation=3;}
                     else if(Orientation==3) {imageview.setImage(F00);Orientation=0;}
 
-                }}});
+                }
+                //Todo funktioniert noch nicht richtig
+            else if(event.getButton()==MouseButton.PRIMARY)
+                {
+                    if(Orientation==0) {imageview.setImage(F135);Orientation=1;}
+                    else if(Orientation==1) {imageview.setImage(F90);Orientation=2;}
+                    else if(Orientation==2) {imageview.setImage(F45);Orientation=3;}
+                    else if(Orientation==3) {imageview.setImage(F00);Orientation=0;}
+                }
+            }});
         //zeichnet während des drag das Transparente Bild
         imageview.setOnMouseDragged(new EventHandler<MouseEvent>(){
 
