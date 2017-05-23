@@ -29,27 +29,57 @@ public class Leitung extends Bauelemente {
         line.setEndY(yend);
         line.setStroke(colorGrew);
         line.setStrokeWidth(5);
-        //Todo Linie ziehen
-        linelength=Math.sqrt((Math.pow(Math.abs(line.getStartX()-line.getEndX()),2))+(Math.pow(Math.abs(line.getStartY()-line.getEndY()),2)));
-        System.out.println("Linie Länge: "+linelength+"XStart: "+line.getStartX()+"XEND: "+line.getEndX()+"YStart: "+line.getStartY()+"YEnd:"+line.getEndY());
 
-        //zeichnet während des drag
+        //zeichnet während des drag bzw zieht die Linie, falls man am Start oder Ende der Linie zieht
         line.setOnMouseDragged(new EventHandler<MouseEvent>(){
+
 
             public void handle(MouseEvent event)
             {
-                //if()
-                line.setStroke(colorBlue);
-                posX=event.getSceneX()+xs;
-                posY=event.getSceneY()+ys;
-                xend=event.getSceneX()+xe;
-                yend=event.getSceneY()+ye;
+                int startMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getStartX()-event.getSceneX()),2))
+                        +(Math.pow(Math.abs(line.getStartY()-event.getSceneY()),2)));
 
-                line.setStartX(posX);
-                line.setStartY(posY);
-                line.setEndX(xe+event.getSceneX());
-                line.setEndY(ye+event.getSceneY());
+                int endMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getEndX()-event.getSceneX()),2))
+                        +(Math.pow(Math.abs(line.getEndY()-event.getSceneY()),2)));
+
+
+                //Prüft ob man am Startpunkt zieht
+                if(startMausAbstand <= 20){
+                    System.out.println("Maus befindet sich im Startbereich.");
+                    line.setStroke(colorBlue);
+                    posX=event.getSceneX()+xs;
+                    posY=event.getSceneY()+ys;
+
+                    line.setStartX(posX);
+                    line.setStartY(posY);
+                }
+                //Prüft ob man am Endpunkt zieht
+                else if(endMausAbstand <= 20){
+                    System.out.println("Maus befindet sich im Endbereich.");
+                    line.setStroke(colorBlue);
+                    xend=event.getSceneX()+xe;
+                    yend=event.getSceneY()+ye;
+
+                    line.setEndX(xe+event.getSceneX());
+                    line.setEndY(ye+event.getSceneY());
+                }
+                //sonst draggen
+                else{
+                    System.out.println("Nun wird gedragged.");
+                    line.setStroke(colorBlue);
+                    posX=event.getSceneX()+xs;
+                    posY=event.getSceneY()+ys;
+                    xend=event.getSceneX()+xe;
+                    yend=event.getSceneY()+ye;
+
+                    line.setStartX(posX);
+                    line.setStartY(posY);
+                    line.setEndX(xe+event.getSceneX());
+                    line.setEndY(ye+event.getSceneY());
+                }
+
             }});
+
         //um den Abstand von X und Y Koordinaten zu der Maus zu bekommen
         line.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
