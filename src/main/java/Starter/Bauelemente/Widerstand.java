@@ -48,7 +48,7 @@ public class Widerstand extends Bauelemente {
                     else if(Orientation==3) {imageview.setImage(S00);Orientation=0;}
 
                 }
-                //Todo funktioniert noch nicht richtig
+                //Todo funktioniert noch nicht richtig linksdrehung
                 /*
                 else if(event.getButton()==MouseButton.PRIMARY)
                 {

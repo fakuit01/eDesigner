@@ -464,6 +464,7 @@ public class App extends Application {
 
         //HBox als untere Leiste mit Tooltipps
         String tooltipps="Tipps: ";
+        //Todo String anpassen und vllt iwas damit machen bzw verschiedene Tipps anzeigen
         //String drehen="Zum Drehen des Bauteils: Rechtsklick(gegen Uhrzeigersinn) bzw Linksklick(Uhrzeigersinn) auf das Bauteil";
         String drehen="Zum drehen des Bauteils  Rechtklick auf das Bauteil";
         textToolTipps.setText(tooltipps+drehen);
