@@ -15,6 +15,7 @@ public class Leitung extends Bauelemente {
     Line line =new Line();
     BorderPane border=new BorderPane();
     boolean deleted=false;
+    double linelength;
 
     public Leitung(int ID,double xstart, double ystart, int Orientation, double xende, double yende)
     {
@@ -28,12 +29,16 @@ public class Leitung extends Bauelemente {
         line.setEndY(yend);
         line.setStroke(colorGrew);
         line.setStrokeWidth(5);
+        //Todo Linie ziehen
+        linelength=Math.sqrt((Math.pow(Math.abs(line.getStartX()-line.getEndX()),2))+(Math.pow(Math.abs(line.getStartY()-line.getEndY()),2)));
+        System.out.println("Linie Länge: "+linelength+"XStart: "+line.getStartX()+"XEND: "+line.getEndX()+"YStart: "+line.getStartY()+"YEnd:"+line.getEndY());
 
         //zeichnet während des drag
         line.setOnMouseDragged(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event)
             {
+                //if()
                 line.setStroke(colorBlue);
                 posX=event.getSceneX()+xs;
                 posY=event.getSceneY()+ys;
