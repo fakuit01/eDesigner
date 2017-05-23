@@ -135,12 +135,11 @@ public class Kondensator extends Bauelemente {
     public String toxml(String xml){
         if(deleted==false) {
 
-            xml += "		<Kondensator>"   //Kondensatorname in fett?
+            xml += "		<Kondensator>" + "Kondensator" + "</Kondensator>\n" //Kondensatorname in fett
                     + "         <ID>" + ID + "</ID>\n"
                     + "		    <PositionX>" + (int) posX + "</PositionX>\n"
                     + "		    <PositionY>" + (int) posY + "</PositionY>\n"
-                    + "		    <Richtung>" + Orientation + "</Richtung>\n"
-                    + "     </Kondensator>\n\n";
+                    + "		    <Richtung>" + Orientation + "</Richtung>\n\n";
             return xml;
         }
         else return xml;

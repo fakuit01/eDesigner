@@ -90,13 +90,12 @@ public class Leitung extends Bauelemente {
     //Wird zum String xml hinzugefügt
     public String toxml(String xml){
         if(deleted==false) {
-            xml += "		<Leitung>"
+            xml += "		<Leitung>" + "Leitung" + "</Leitung>\n"
                     + "         <ID>" + ID + "</ID>\n"
                     + "		    <PositionXstart>" + (int) posX + "</PositionXstart>\n"
                     + "		    <PositionYstart>" + (int) posY + "</PositionYstart>\n"
                     + "		    <PositionXend>" + (int) xend + "</PositionXend>\n"
-                    + "		    <PositionYend>" + (int) yend + "</PositionYend>\n"
-                    +"      </Leitung>\n\"\n";
+                    + "		    <PositionYend>" + (int) yend + "</PositionYend>\n\n";
             return xml;
         }
         else return xml;

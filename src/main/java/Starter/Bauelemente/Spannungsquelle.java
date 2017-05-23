@@ -209,12 +209,11 @@ public class Spannungsquelle extends Bauelemente {
         if(deleted==false) {
             //Todo andere xml files anpassen, startlogo?, live zeichnen!!!, linien kleiner größer nach zeichnen!!!!, beim drüberfahren des bildes wo anders bild anzeigen mit tooltipp
             //Todo limit beim kleiner machen, serialys?was ist das?, papierkorb verbessern, scrollen zeichenfläache größer als bildschirm
-            xml += "		<Spannungsquelle>\n"
+            xml += "		<Spannungsquelle>"+"Spannungsquelle"+"</Spannungsquelle>\n"
                     + "         <ID>" + ID + "</ID>\n"
                     + "		    <PositionX>" + (int) posX + "</PositionX>\n"
                     + "		    <PositionY>" + (int) posY + "</PositionY>\n"
-                    + "		    <Richtung>" + Orientation + "</Richtung>\n"
-                    + "     </Spannungsquelle>\n\n";
+                    + "		    <Richtung>" + Orientation + "</Richtung>\n\n";
             return xml;
         }
         else {
