@@ -63,7 +63,7 @@ public class Leitung extends Bauelemente {
                     line.setEndX(xe+event.getSceneX());
                     line.setEndY(ye+event.getSceneY());
                 }
-                //sonst draggen
+                //sonst draggen 
                 else{
                     System.out.println("Nun wird gedragged.");
                     line.setStroke(colorBlue);
