@@ -133,11 +133,12 @@ public class Spule extends Bauelemente {
     //Wird zum String xml hinzugefügt
     public String toxml(String xml){
         if(deleted==false) {
-            xml += "		<Spule>" + "Spule" + "</Spule>\n"
+            xml += "		<Spule>"
                     + "         <ID>" + ID + "</ID>\n"
                     + "		    <PositionX>" + (int) posX + "</PositionX>\n"
                     + "		    <PositionY>" + (int) posY + "</PositionY>\n"
-                    + "		    <Richtung>" + Orientation + "</Richtung>\n\n";
+                    + "		    <Richtung>" + Orientation + "</Richtung>\n"
+                    +"      </Spule>\n\n";
             return xml;
         }
         else return xml;
