@@ -11,7 +11,7 @@ public class Leitung extends Bauelemente {
     public double yend;
     double xs,ys,xe,ye;
     Color colorGrew=Color.rgb(238,238,238);
-    Color colorBlue=Color.rgb(42,95,160);
+    Color colorBlue=Color.rgb(50, 200, 0);
     Line line =new Line();
     BorderPane border=new BorderPane();
     boolean deleted=false;
@@ -90,12 +90,13 @@ public class Leitung extends Bauelemente {
     //Wird zum String xml hinzugefügt
     public String toxml(String xml){
         if(deleted==false) {
-            xml += "		<Leitung>" + "Leitung" + "</Leitung>\n"
-                    + "         <ID>" + ID + "</ID>\n"
-                    + "		    <PositionXstart>" + (int) posX + "</PositionXstart>\n"
-                    + "		    <PositionYstart>" + (int) posY + "</PositionYstart>\n"
-                    + "		    <PositionXend>" + (int) xend + "</PositionXend>\n"
-                    + "		    <PositionYend>" + (int) yend + "</PositionYend>\n\n";
+            xml += "\t\t<Leitung>\n"
+                    + "\t\t\t<ID>" + ID + "</ID>\n"
+                    + "\t\t\t<PositionXstart>" + (int) posX + "</PositionXstart>\n"
+                    + "\t\t\t<PositionYstart>" + (int) posY + "</PositionYstart>\n"
+                    + "\t\t\t<PositionXend>" + (int) xend + "</PositionXend>\n"
+                    + "\t\t\t<PositionYend>" + (int) yend + "</PositionYend>\n"
+                    +"\t\t</Leitung>\n\n";
             return xml;
         }
         else return xml;

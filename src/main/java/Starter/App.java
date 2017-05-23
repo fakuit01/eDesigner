@@ -518,12 +518,11 @@ public class App extends Application {
                 xmlstring=a.toxml(xmlstring);
             }
             String xmlheader="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-            String start= "			XML File\n"
-                    + "        <Header>\n"
-                    + "                <name>XML File</name>\n"
-                    + "		<Teile>\n\n";
-            String end="		</Teile>\n"
-                    + "        </Header>\n";
+            String start="<Header>\n"
+                    + "<name>"+file.getName()+"</name>\n"
+                    + "\t<Teile>\n\n";
+            String end="\t</Teile>\n"
+                    + "</Header>\n";
             all=start+xmlstring+end;
             FileWriter writer = new FileWriter(file);
             writer.write(all);
@@ -555,12 +554,11 @@ public class App extends Application {
                     xmlstring=a.toxml(xmlstring);
                 }
                 String xmlheader="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-                String start= "			XML File\n"
-                        + "        <Header>\n"
-                        + "                <name>XML File</name>\n"
-                        + "		<Teile>\n\n";
-                String end="		</Teile>\n"
-                        + "        </Header>\n";
+                String start="<Header>\n"
+                      //  + "<name>"+file.getName()+"</name>\n"
+                        + "\t<Teile>\n\n";
+                String end="\t</Teile>\n"
+                        + "</Header>\n";
                 all=start+xmlstring+end;
                 FileWriter writer = new FileWriter(file);
                 writer.write(all);
@@ -716,7 +714,7 @@ public class App extends Application {
                     while(scanner.hasNext())
                     {
                         String line=scanner.nextLine();
-                        if(line.indexOf("Kondensator")!=-1)
+                        if(line.indexOf("<Kondensator>")!=-1)
                         {
                             //Schreibt die Werte aus dem String in Variable
                             line=scanner.nextLine();
@@ -736,7 +734,7 @@ public class App extends Application {
                             //xmlstring=kondensator1.toxml(xmlstring);
                             arraylist.add(kondensator1);
                         }
-                        else if(line.indexOf("Spule")!=-1)
+                        else if(line.indexOf("<Spule>")!=-1)
                         {
                             //Schreibt die Werte aus dem String in Variable
 
@@ -755,7 +753,7 @@ public class App extends Application {
                             arraylist.add(spule1);
                             //spule1.draw(gc,0);
                         }
-                        else if(line.indexOf("Widerstand")!=-1)
+                        else if(line.indexOf("<Widerstand>")!=-1)
                         {
                             //Schreibt die Werte aus dem String in Variable
                             line=scanner.nextLine();
@@ -775,7 +773,7 @@ public class App extends Application {
                             arraylist.add(widerstand1);
 
                         }
-                        else if(line.indexOf("Spannungsquelle")!=-1)
+                        else if(line.indexOf("<Spannungsquelle>")!=-1)
                         {
                             //Schreibt die Werte aus dem String in Variable
                             line=scanner.nextLine();
@@ -795,7 +793,7 @@ public class App extends Application {
                             arraylist.add(spannungsquelle1);
 
                         }
-                        else if(line.indexOf("Leitung")!=-1)
+                        else if(line.indexOf("<Leitung>")!=-1)
                         {
                             //Schreibt die Werte aus dem String in Variable
                             line=scanner.nextLine();
