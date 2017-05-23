@@ -62,7 +62,9 @@ public class Spule extends Bauelemente {
         imageview.setOnMouseDragged(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-                //Welches Bild ist aktuell? Wegen drehen des Bildes
+                if(event.getButton()==MouseButton.PRIMARY) {
+
+                    //Welches Bild ist aktuell? Wegen drehen des Bildes
                 /*
                 if(imageview.getImage()==S00)
                 {imageview.setImage(T00);}
@@ -73,25 +75,31 @@ public class Spule extends Bauelemente {
                 else if(imageview.getImage()==S135)
                 {imageview.setImage(T135);}
                 */
-                if(Orientation==0) {imageview.setImage(T00);}
-                else if(Orientation==1) {imageview.setImage(T45);}
-                else if(Orientation==2) {imageview.setImage(T90);}
-                else if(Orientation==3) {imageview.setImage(T135);}
-                imageview.setX(event.getSceneX()-25);
-                imageview.setY(event.getSceneY()-25);
+                    if (Orientation == 0) {
+                        imageview.setImage(T00);
+                    } else if (Orientation == 1) {
+                        imageview.setImage(T45);
+                    } else if (Orientation == 2) {
+                        imageview.setImage(T90);
+                    } else if (Orientation == 3) {
+                        imageview.setImage(T135);
+                    }
+                    imageview.setX(event.getSceneX() - 25);
+                    imageview.setY(event.getSceneY() - 25);
+                }else return;
             }});
         //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste
         imageview.setOnMouseReleased(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-                //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
-                if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
-                    deleted=true;
-                    imageview.setImage(null);
-                    imageview.removeEventHandler(MouseEvent.ANY, this);
-                }
-                else {
-                    //Welches Bild ist aktuell? Wegen drehen des Bildes
+                if(event.getButton()==MouseButton.PRIMARY) {
+                    //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
+                    if (event.getSceneX() <= 125 && event.getSceneY() >= 450 && event.getSceneY() <= 500) {
+                        deleted = true;
+                        imageview.setImage(null);
+                        imageview.removeEventHandler(MouseEvent.ANY, this);
+                    } else {
+                        //Welches Bild ist aktuell? Wegen drehen des Bildes
                     /*
                     if (imageview.getImage() == T00) {
                         imageview.setImage(S00);
@@ -103,15 +111,21 @@ public class Spule extends Bauelemente {
                         imageview.setImage(S135);
                     }
                     */
-                    if(Orientation==0) {imageview.setImage(S00);}
-                    else if(Orientation==1) {imageview.setImage(S45);}
-                    else if(Orientation==2) {imageview.setImage(S90);}
-                    else if(Orientation==3) {imageview.setImage(S135);}
-                    imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                    imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
-                    posX = rundenLeitungen(event.getSceneX());
-                    posY = rundenLeitungen(event.getSceneY());
-                }
+                        if (Orientation == 0) {
+                            imageview.setImage(S00);
+                        } else if (Orientation == 1) {
+                            imageview.setImage(S45);
+                        } else if (Orientation == 2) {
+                            imageview.setImage(S90);
+                        } else if (Orientation == 3) {
+                            imageview.setImage(S135);
+                        }
+                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
+                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
+                        posX = rundenLeitungen(event.getSceneX());
+                        posY = rundenLeitungen(event.getSceneY());
+                    }
+                }else return;
             }});
 
     }

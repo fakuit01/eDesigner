@@ -90,7 +90,7 @@ public class Spannungsquelle extends Bauelemente {
                     else if(Orientation==1) {imageview.setImage(F90);Orientation=2;}
                     else if(Orientation==2) {imageview.setImage(F135);Orientation=3;}
                     else if(Orientation==3) {imageview.setImage(F00);Orientation=0;}
-                    System.out.println("Ori rechtsklick "+Orientation);
+                    //System.out.println("Ori rechtsklick "+Orientation);
                 }
                 //Todo funktioniert noch nicht richtig bei rechtsdrehung dann linksdrehung
             /*else if(event.getButton()==MouseButton.PRIMARY)
@@ -107,7 +107,9 @@ public class Spannungsquelle extends Bauelemente {
 
             public void handle(MouseEvent event)
             {
-                //Welches Bild ist aktuell? Wegen drehen des Bildes
+                if(event.getButton()==MouseButton.PRIMARY) {
+
+                    //Welches Bild ist aktuell? Wegen drehen des Bildes
                 /*
                 if(imageview.getImage()==S00)
                 {imageview.setImage(T00);}
@@ -118,30 +120,37 @@ public class Spannungsquelle extends Bauelemente {
                 else if(imageview.getImage()==S135)
                 {imageview.setImage(T135);}
                 */
-                if(Orientation==0) {imageview.setImage(FT00);}
-                else if(Orientation==1) {imageview.setImage(FT45);}
-                else if(Orientation==2) {imageview.setImage(FT90);}
-                else if(Orientation==3) {imageview.setImage(FT135);}
+                    if (Orientation == 0) {
+                        imageview.setImage(FT00);
+                    } else if (Orientation == 1) {
+                        imageview.setImage(FT45);
+                    } else if (Orientation == 2) {
+                        imageview.setImage(FT90);
+                    } else if (Orientation == 3) {
+                        imageview.setImage(FT135);
+                    }
 
-                imageview.setX(event.getSceneX()-25);
-                imageview.setY(event.getSceneY()-25);
-
+                    imageview.setX(event.getSceneX() - 25);
+                    imageview.setY(event.getSceneY() - 25);
+                }else return;
             }});
         //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste
         imageview.setOnMouseReleased(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event)
             {
-                //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
-                if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
-                    deleted=true;
-                    imageview.setImage(null);
-                    imageview.removeEventHandler(MouseEvent.ANY, this);
-                }
-                //Todo Bild sollte nicht in die Vbox gezogen werden können
-                //else if(x<150) {System.out.println("Nein hier nicht");return;}
-                else {
-                    //Welches Bild ist aktuell? Wegen drehen des Bildes
+                if(event.getButton()==MouseButton.PRIMARY) {
+
+                    //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
+                    if (event.getSceneX() <= 125 && event.getSceneY() >= 450 && event.getSceneY() <= 500) {
+                        deleted = true;
+                        imageview.setImage(null);
+                        imageview.removeEventHandler(MouseEvent.ANY, this);
+                    }
+                    //Todo Bild sollte nicht in die Vbox gezogen werden können
+                    //else if(x<150) {System.out.println("Nein hier nicht");return;}
+                    else {
+                        //Welches Bild ist aktuell? Wegen drehen des Bildes
                     /*)
                     if (imageview.getImage() == T00) {
                         imageview.setImage(S00);
@@ -153,16 +162,22 @@ public class Spannungsquelle extends Bauelemente {
                         imageview.setImage(S135);
                     }
                     */
-                    if(Orientation==0) {imageview.setImage(S00);}
-                    else if(Orientation==1) {imageview.setImage(S45);}
-                    else if(Orientation==2) {imageview.setImage(S90);}
-                    else if(Orientation==3) {imageview.setImage(S135);}
+                        if (Orientation == 0) {
+                            imageview.setImage(S00);
+                        } else if (Orientation == 1) {
+                            imageview.setImage(S45);
+                        } else if (Orientation == 2) {
+                            imageview.setImage(S90);
+                        } else if (Orientation == 3) {
+                            imageview.setImage(S135);
+                        }
 
-                    imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                    imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
-                    posX = rundenLeitungen(event.getSceneX());
-                    posY = rundenLeitungen(event.getSceneY());
-                }
+                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
+                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
+                        posX = rundenLeitungen(event.getSceneX());
+                        posY = rundenLeitungen(event.getSceneY());
+                    }
+                }else return;
             }});
         /*
         //Key drücken um Aktion durchzuführen geht nicht
