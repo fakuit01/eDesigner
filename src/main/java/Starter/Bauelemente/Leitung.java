@@ -15,7 +15,7 @@ public class Leitung extends Bauelemente {
     Line line =new Line();
     BorderPane border=new BorderPane();
     boolean deleted=false;
-    double linelength;
+    boolean drop=false;
 
     public Leitung(int ID,double xstart, double ystart, int Orientation, double xende, double yende)
     {
@@ -42,31 +42,34 @@ public class Leitung extends Bauelemente {
                 int endMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getEndX()-event.getSceneX()),2))
                         +(Math.pow(Math.abs(line.getEndY()-event.getSceneY()),2)));
 
+                line.setStroke(colorBlue);
 
                 //Prüft ob man am Startpunkt zieht
                 if(startMausAbstand <= 20){
                     System.out.println("Maus befindet sich im Startbereich.");
-                    line.setStroke(colorBlue);
+                    //Todo hier anpassen an raster  oder unten
+                    //posX=rundenLeitungen(event.getSceneX()+xs);
+                    //posY=rundenLeitungen(event.getSceneY()+ys);
                     posX=event.getSceneX()+xs;
                     posY=event.getSceneY()+ys;
-
                     line.setStartX(posX);
                     line.setStartY(posY);
+                    drop=true;
                 }
                 //Prüft ob man am Endpunkt zieht
                 else if(endMausAbstand <= 20){
                     System.out.println("Maus befindet sich im Endbereich.");
-                    line.setStroke(colorBlue);
+                    //xend=rundenLeitungen(event.getSceneX()+xe);
+                    //yend=rundenLeitungen(event.getSceneY()+ye);
                     xend=event.getSceneX()+xe;
                     yend=event.getSceneY()+ye;
-
-                    line.setEndX(xe+event.getSceneX());
-                    line.setEndY(ye+event.getSceneY());
+                    line.setEndX(xend);
+                    line.setEndY(yend);
+                    drop=true;
                 }
                 //sonst draggen 
                 else{
                     System.out.println("Nun wird gedragged.");
-                    line.setStroke(colorBlue);
                     posX=event.getSceneX()+xs;
                     posY=event.getSceneY()+ys;
                     xend=event.getSceneX()+xe;
@@ -76,6 +79,7 @@ public class Leitung extends Bauelemente {
                     line.setStartY(posY);
                     line.setEndX(xe+event.getSceneX());
                     line.setEndY(ye+event.getSceneY());
+                    drop=false;
                 }
 
             }});
@@ -101,24 +105,35 @@ public class Leitung extends Bauelemente {
 
             public void handle(MouseEvent event)
             {
-                line.setStroke(colorGrew);
-                //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
-                if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
-                    deleted=true;
-                    border.getChildren().remove(line);
-                    line.removeEventHandler(MouseEvent.ANY, this);
+                if(drop==false) {
+                    line.setStroke(colorGrew);
+                    //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
+                    if (event.getSceneX() <= 125 && event.getSceneY() >= 450 && event.getSceneY() <= 500) {
+                        deleted = true;
+                        border.getChildren().remove(line);
+                        line.removeEventHandler(MouseEvent.ANY, this);
+                    } else {
+                        posX = rundenLeitungen(event.getSceneX() + xs);
+                        posY = rundenLeitungen(event.getSceneY() + ys);
+                        xend = rundenLeitungen(event.getSceneX() + xe);
+                        yend = rundenLeitungen(event.getSceneY() + ye);
+                        line.setStartX(posX);
+                        line.setStartY(posY);
+                        line.setEndX(xend);
+                        line.setEndY(yend);
+                        //posX=rundenLeitungen(event.getSceneX());
+                        //posY=rundenLeitungen(event.getSceneY());
+                    }
                 }
-                else {
-                    posX = rundenLeitungen(event.getSceneX() + xs);
-                    posY = rundenLeitungen(event.getSceneY() + ys);
-                    xend = rundenLeitungen(event.getSceneX() + xe);
-                    yend = rundenLeitungen(event.getSceneY() + ye);
-                    line.setStartX(posX);
-                    line.setStartY(posY);
-                    line.setEndX(xend);
-                    line.setEndY(yend);
-                    //posX=rundenLeitungen(event.getSceneX());
-                    //posY=rundenLeitungen(event.getSceneY());
+                else if(drop==true)
+                {
+                    //todo nach loslassen an raster anpassen hier oder oben
+                    /*
+                    posX = rundenLeitungen(posX);
+                    posY = rundenLeitungen(posY);
+                    xend = rundenLeitungen(xend);
+                    yend = rundenLeitungen(yend);
+                    */
                 }
             }});
     }
