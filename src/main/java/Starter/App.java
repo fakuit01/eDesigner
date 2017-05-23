@@ -87,6 +87,8 @@ public class App extends Application {
         window = primaryStage;
         window.setTitle("eDesign");
         window.getIcons().add(new Image ("file:Images/eIcon.png"));
+        window.setMinHeight(600);
+        window.setMinWidth(400);
         Scene scene = new Scene(borderPane, 990, 600);
         //Todo Taste Entf zum löschen des Objekts
         final Image zeichnen=new Image("file:Images/zeichnen.png",30,30,false,false);
