@@ -43,13 +43,8 @@ public class Leitung extends Bauelemente {
                         +(Math.pow(Math.abs(line.getEndY()-event.getSceneY()),2)));
 
                 line.setStroke(colorBlue);
-
                 //Prüft ob man am Startpunkt zieht
                 if(startMausAbstand <= 20){
-                    System.out.println("Maus befindet sich im Startbereich.");
-                    //Todo hier anpassen an raster  oder unten
-                    //posX=rundenLeitungen(event.getSceneX()+xs);
-                    //posY=rundenLeitungen(event.getSceneY()+ys);
                     posX=event.getSceneX()+xs;
                     posY=event.getSceneY()+ys;
                     line.setStartX(posX);
@@ -58,9 +53,6 @@ public class Leitung extends Bauelemente {
                 }
                 //Prüft ob man am Endpunkt zieht
                 else if(endMausAbstand <= 20){
-                    System.out.println("Maus befindet sich im Endbereich.");
-                    //xend=rundenLeitungen(event.getSceneX()+xe);
-                    //yend=rundenLeitungen(event.getSceneY()+ye);
                     xend=event.getSceneX()+xe;
                     yend=event.getSceneY()+ye;
                     line.setEndX(xend);
@@ -69,18 +61,27 @@ public class Leitung extends Bauelemente {
                 }
                 //sonst draggen 
                 else{
-                    System.out.println("Nun wird gedragged.");
-                    posX=event.getSceneX()+xs;
-                    posY=event.getSceneY()+ys;
-                    xend=event.getSceneX()+xe;
-                    yend=event.getSceneY()+ye;
+                    if(event.getSceneY()<25) {line.setStroke(Color.RED);}
+                    else if(event.getSceneX()<=125) {line.setStroke(Color.RED);}
+                    //Todo funktioniert nur wenn screensize nicht geändert wird muss man noch ändern
+                    else if(event.getSceneY()>=600-40){line.setStroke(Color.RED);}
+                    //Funktioniert nicht Screen ist größer als die 900 wtf
+                    else if(event.getSceneX()>=950){line.setStroke(Color.RED);}
 
-                    line.setStartX(posX);
-                    line.setStartY(posY);
-                    line.setEndX(xe+event.getSceneX());
-                    line.setEndY(ye+event.getSceneY());
-                    drop=false;
+                        //line.setStroke(colorBlue);
+                        posX = event.getSceneX() + xs;
+                        posY = event.getSceneY() + ys;
+                        xend = event.getSceneX() + xe;
+                        yend = event.getSceneY() + ye;
+
+                        line.setStartX(posX);
+                        line.setStartY(posY);
+                        line.setEndX(xe + event.getSceneX());
+                        line.setEndY(ye + event.getSceneY());
+                        drop = false;
+
                 }
+
 
             }});
 
@@ -112,7 +113,8 @@ public class Leitung extends Bauelemente {
                         deleted = true;
                         border.getChildren().remove(line);
                         line.removeEventHandler(MouseEvent.ANY, this);
-                    } else {
+                    }
+                    else {
                         posX = rundenLeitungen(event.getSceneX() + xs);
                         posY = rundenLeitungen(event.getSceneY() + ys);
                         xend = rundenLeitungen(event.getSceneX() + xe);
@@ -121,19 +123,20 @@ public class Leitung extends Bauelemente {
                         line.setStartY(posY);
                         line.setEndX(xend);
                         line.setEndY(yend);
-                        //posX=rundenLeitungen(event.getSceneX());
-                        //posY=rundenLeitungen(event.getSceneY());
+
                     }
                 }
                 else if(drop==true)
                 {
-                    //todo nach loslassen an raster anpassen hier oder oben
-                    /*
                     posX = rundenLeitungen(posX);
                     posY = rundenLeitungen(posY);
                     xend = rundenLeitungen(xend);
                     yend = rundenLeitungen(yend);
-                    */
+                    line.setStartX(posX);
+                    line.setStartY(posY);
+                    line.setEndX(xend);
+                    line.setEndY(yend);
+
                 }
             }});
     }

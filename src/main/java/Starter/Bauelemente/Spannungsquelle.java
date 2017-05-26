@@ -1,6 +1,7 @@
 package Starter.Bauelemente;
 
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
@@ -129,9 +130,8 @@ public class Spannungsquelle extends Bauelemente {
                     } else if (Orientation == 3) {
                         imageview.setImage(FT135);
                     }
-
-                    imageview.setX(event.getSceneX() - 25);
-                    imageview.setY(event.getSceneY() - 25);
+                        imageview.setX(event.getSceneX() - 25);
+                        imageview.setY(event.getSceneY() - 25);
                 }else return;
             }});
         //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste
@@ -171,11 +171,10 @@ public class Spannungsquelle extends Bauelemente {
                         } else if (Orientation == 3) {
                             imageview.setImage(S135);
                         }
-
-                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
-                        posX = rundenLeitungen(event.getSceneX());
-                        posY = rundenLeitungen(event.getSceneY());
+                            imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
+                            imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
+                            posX = rundenLeitungen(event.getSceneX());
+                            posY = rundenLeitungen(event.getSceneY());
                     }
                 }else return;
             }});

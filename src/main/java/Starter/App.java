@@ -468,7 +468,7 @@ public class App extends Application {
         String tooltipps="Tipps: ";
         //Todo String anpassen und vllt iwas damit machen bzw verschiedene Tipps anzeigen
         //String drehen="Zum Drehen des Bauteils: Rechtsklick(gegen Uhrzeigersinn) bzw Linksklick(Uhrzeigersinn) auf das Bauteil";
-        String drehen="Zum drehen des Bauteils  Rechtklick auf das Bauteil";
+        String drehen="Zum drehen des Bauteils Rechtsklick auf das Bauteil";
         textToolTipps.setText(tooltipps+drehen);
         textToolTipps.setFill(Color.WHITE);
         hboxLeiste.getChildren().add(textToolTipps);
@@ -595,21 +595,15 @@ public class App extends Application {
         clickCount++;
         clickCount=clickCount%2;
         if(event.getButton()== MouseButton.PRIMARY) {
+            //borderPane.getChildren().add(lineZeichnen);
+            lineZeichnen.setStrokeWidth(5);
+            lineZeichnen.setStroke(Color.GRAY);
 
             if(clickCount==1)
             {
                 xStartLeitung=rundenLeitungen(event.getSceneX());
                 yStartLeitung=rundenLeitungen(event.getSceneY());
-                //Todo Leitung zeichnen während man die Maus bewegt
-            /*
-            lineZeichnen.setStrokeWidth(5);
-            lineZeichnen.setStroke(Color.GRAY);
-            lineZeichnen.setStartX(xStartLeitung);
-            lineZeichnen.setStartY(yStartLeitung);
-            lineZeichnen.setEndX(event.getSceneX());
-            lineZeichnen.setEndY(event.getSceneY());
-            borderPane.getChildren().add(lineZeichnen);
-            */
+                //Todo Leitung zeichnen während man die Maus bewegt geht glaub nur mit nem neuen Thread mit bool auf true und false mit while schleife
             }
             else if (clickCount==0)
             {
