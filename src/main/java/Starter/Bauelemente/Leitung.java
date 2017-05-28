@@ -11,7 +11,7 @@ public class Leitung extends Bauelemente {
     public double yend;
     double xs,ys,xe,ye;
     Color colorGrew=Color.rgb(238,238,238);
-    Color colorBlue=Color.rgb(50, 200, 0);
+    Color colorGreen=Color.rgb(50, 200, 0);
     Line line =new Line();
     BorderPane border=new BorderPane();
     boolean deleted=false;
@@ -33,7 +33,6 @@ public class Leitung extends Bauelemente {
         //zeichnet während des drag bzw zieht die Linie, falls man am Start oder Ende der Linie zieht
         line.setOnMouseDragged(new EventHandler<MouseEvent>(){
 
-
             public void handle(MouseEvent event)
             {
                 int startMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getStartX()-event.getSceneX()),2))
@@ -42,7 +41,7 @@ public class Leitung extends Bauelemente {
                 int endMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getEndX()-event.getSceneX()),2))
                         +(Math.pow(Math.abs(line.getEndY()-event.getSceneY()),2)));
 
-                line.setStroke(colorBlue);
+                line.setStroke(colorGreen);
                 //Prüft ob man am Startpunkt zieht
                 if(startMausAbstand <= 20){
                     posX=event.getSceneX()+xs;
@@ -61,14 +60,13 @@ public class Leitung extends Bauelemente {
                 }
                 //sonst draggen 
                 else{
+                    //Was passiert wenn man ausserhalb des Bildschirms ist
                     if(event.getSceneY()<25) {line.setStroke(Color.RED);}
-                    else if(event.getSceneX()<=125) {line.setStroke(Color.RED);}
+                    else if(event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500) {line.setStroke(Color.RED);}
                     //Todo funktioniert nur wenn screensize nicht geändert wird muss man noch ändern
                     else if(event.getSceneY()>=600-40){line.setStroke(Color.RED);}
-                    //Funktioniert nicht Screen ist größer als die 900 wtf
+                    //Funktioniert nicht Screen ist größer als die 900
                     else if(event.getSceneX()>=950){line.setStroke(Color.RED);}
-
-                        //line.setStroke(colorBlue);
                         posX = event.getSceneX() + xs;
                         posY = event.getSceneY() + ys;
                         xend = event.getSceneX() + xe;
@@ -79,10 +77,7 @@ public class Leitung extends Bauelemente {
                         line.setEndX(xe + event.getSceneX());
                         line.setEndY(ye + event.getSceneY());
                         drop = false;
-
                 }
-
-
             }});
 
         //um den Abstand von X und Y Koordinaten zu der Maus zu bekommen
@@ -93,7 +88,7 @@ public class Leitung extends Bauelemente {
                 ys=posY-event.getSceneY();
                 xe=xend-event.getSceneX();
                 ye=yend-event.getSceneY();
-                line.setStroke(colorBlue);
+                line.setStroke(colorGreen);
             }});
         line.setOnMouseExited(new EventHandler<MouseEvent>(){
 
@@ -106,8 +101,10 @@ public class Leitung extends Bauelemente {
 
             public void handle(MouseEvent event)
             {
+                line.setStroke(colorGrew);
+                //Prüft ob man die Linie verlängert
                 if(drop==false) {
-                    line.setStroke(colorGrew);
+
                     //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
                     if (event.getSceneX() <= 125 && event.getSceneY() >= 450 && event.getSceneY() <= 500) {
                         deleted = true;
