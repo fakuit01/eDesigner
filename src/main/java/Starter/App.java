@@ -89,16 +89,17 @@ public class App extends Application {
         window.getIcons().add(new Image ("file:Images/eIcon.png"));
         window.setMinHeight(600);
         window.setMinWidth(400);
-        Scene scene = new Scene(borderPane, 990, 600);
+        Scene scene = new Scene(borderPane, 1000, 600);
         //Todo Taste Entf zum löschen des Objekts
-        final Image zeichnen=new Image("file:Images/zeichnen.png",30,30,false,false);
+        final Image zeichnen=new Image("file:Images/zeichnen.png");
+
+        //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
-
             public void handle(KeyEvent event)
             {
                 if(event.getCode()==KeyCode.DELETE)
-                    System.out.println("Lösch aktion noch nicht erledigt");
+                    System.out.println("Borderpane höhe: "+borderPane.getHeight()+" Borderpane Länge "+borderPane.getWidth()+" Maus "+MouseInfo.getPointerInfo().getLocation());
             }
         });
         //Menüpunkt "Datei" erstellen
@@ -450,10 +451,10 @@ public class App extends Application {
             public void handle(MouseEvent event)
             {drawLines(event, gc);}});
         //Todo Mouse Cursor ändern falls gewünscht
-        canvas.setOnMouseEntered(new EventHandler<MouseEvent>(){
+        scene.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-                //scene.setCursor(new ImageCursor(zeichnen));
+                scene.setCursor(new ImageCursor(zeichnen));
             }});
         vboxLeer.setPrefSize(15,100);
         //VBox Style

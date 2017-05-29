@@ -63,10 +63,10 @@ public class Leitung extends Bauelemente {
                     //Was passiert wenn man ausserhalb des Bildschirms ist
                     if(event.getSceneY()<25) {line.setStroke(Color.RED);}
                     else if(event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500) {line.setStroke(Color.RED);}
-                    //Todo funktioniert nur wenn screensize nicht geändert wird muss man noch ändern
-                    else if(event.getSceneY()>=600-40){line.setStroke(Color.RED);}
+                    else if(event.getSceneY()>=border.getHeight()-40){line.setStroke(Color.RED);}
                     //Funktioniert nicht Screen ist größer als die 900
-                    else if(event.getSceneX()>=950){line.setStroke(Color.RED);}
+                    else if(event.getSceneX()>=border.getWidth()-25){line.setStroke(Color.RED);}
+
                         posX = event.getSceneX() + xs;
                         posY = event.getSceneY() + ys;
                         xend = event.getSceneX() + xe;
@@ -120,7 +120,6 @@ public class Leitung extends Bauelemente {
                         line.setStartY(posY);
                         line.setEndX(xend);
                         line.setEndY(yend);
-
                     }
                 }
                 else if(drop==true)
@@ -133,7 +132,6 @@ public class Leitung extends Bauelemente {
                     line.setStartY(posY);
                     line.setEndX(xend);
                     line.setEndY(yend);
-
                 }
             }});
     }
@@ -156,7 +154,6 @@ public class Leitung extends Bauelemente {
         //Todo ka ob das gut ist
         this.border=borderPane;
         border.getChildren().add(line);
-        //borderPane.getChildren().add(line);
     }
     public double rundenLeitungen(double runden)
     {

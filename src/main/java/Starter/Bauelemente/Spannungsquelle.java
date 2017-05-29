@@ -42,6 +42,8 @@ public class Spannungsquelle extends Bauelemente {
 
     ImageView imageview = new ImageView();
     boolean deleted=false;
+    BorderPane border=new BorderPane();
+
 
     public Spannungsquelle(int ID,double x, double y, int Orientation1)
     {
@@ -67,15 +69,10 @@ public class Spannungsquelle extends Bauelemente {
                 }
                 //Transparent in schwarz je nach orientierung
                 else {
-                    if (Orientation == 0) {
-                        imageview.setImage(S00);
-                    } else if (Orientation == 1) {
-                        imageview.setImage(S45);
-                    } else if (Orientation == 2) {
-                        imageview.setImage(S90);
-                    } else if (Orientation == 3) {
-                        imageview.setImage(S135);
-                    }
+                    if (Orientation == 0) {imageview.setImage(S00);}
+                    else if (Orientation == 1) {imageview.setImage(S45);}
+                    else if (Orientation == 2) {imageview.setImage(S90);}
+                    else if (Orientation == 3) {imageview.setImage(S135);}
                 }
             }});
         //Rechtsklick Drehung bzw ändern des Bildes
@@ -118,65 +115,19 @@ public class Spannungsquelle extends Bauelemente {
                 if(event.getButton()==MouseButton.PRIMARY) {
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
                 //oberhalb menüleiste
-                    if (event.getSceneY() < 50) {
-                        if (Orientation == 0) {
-                            imageview.setImage(R00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(R45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(R90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(R135);
-                        }
-                        //in rechter vbox allerdings nicht beim Mülleimer
-                        //Todo da muss ein oder rein bei all den Funktionen mit dieser if in jeder Klasse oder nicht?
-                    } else if (event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500 ){
-                        if (Orientation == 0) {
-                            imageview.setImage(R00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(R45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(R90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(R135);
-                        }
-                    }
-                    //Todo funktioniert nur wenn screensize nicht geändert wird muss man noch ändern
-                    //über rechter vbox
-                    else if (event.getSceneY() >= 575 - 40) {
-                        if (Orientation == 0) {
-                            imageview.setImage(R00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(R45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(R90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(R135);
-                        }
-                    }
-                    //Todo Funktioniert nicht Screen ist größer als die 900
-                    //untere hbox
-                    else if (event.getSceneX() >= 925) {
-                        if (Orientation == 0) {
-                            imageview.setImage(R00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(R45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(R90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(R135);
-                        }
-                    } else {
+                    if (event.getSceneY() < 25) {orientationR();}
+                        //in rechter vbox allerdings nicht beim Mülleimer//Todo da muss ein oder rein bei all den Funktionen mit dieser if in jeder Klasse oder nicht?
+                    else if (event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500 ){orientationR();}
+                    //Todo funktioniert nur wenn screensize nicht geändert wird muss man noch ändern//über rechter vbox
+                    else if (event.getSceneY() > (border.getHeight()-40)) {orientationR();}
+                    //Todo Funktioniert nicht Screen ist größer als die 900 //untere hbox
+                    else if (event.getSceneX() > (border.getWidth()-25)) {orientationR();}
+                    else {
                         //normaler Bereich
-                        if (Orientation == 0) {
-                            imageview.setImage(FT00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(FT45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(FT90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(FT135);
-                        }
+                        if (Orientation == 0) {imageview.setImage(FT00);}
+                        else if (Orientation == 1) {imageview.setImage(FT45);}
+                        else if (Orientation == 2) {imageview.setImage(FT90);}
+                        else if (Orientation == 3) {imageview.setImage(FT135);}
                         imageview.setX(event.getSceneX() - 25);
                         imageview.setY(event.getSceneY() - 25);
                     }
@@ -198,85 +149,44 @@ public class Spannungsquelle extends Bauelemente {
                     //Todo Bild sollte nicht in die Vbox gezogen werden können funktioniert noch nicht richtig
                     //oben
                     else if(event.getSceneY() < 50) {
-                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                        imageview.setY(50-25);
                         posX = rundenLeitungen(event.getSceneX());
                         posY = 50-25;
-                        if (Orientation == 0) {
-                            imageview.setImage(S00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(S45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(S90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(S135);
-                        }
+                        imageview.setX(posX - 25);
+                        imageview.setY(posY);
+                        orientationS();
                     }
                         //rechts
-                    else if (event.getSceneX() >= 925) {
-                        imageview.setX(925-25);
-                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
-                        posX = 925-25;
+                    else if (event.getSceneX() > border.getWidth()) {
+                        posX = border.getWidth()-25;
                         posY = rundenLeitungen(event.getSceneY());
-                        if (Orientation == 0) {
-                            imageview.setImage(S00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(S45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(S90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(S135);
-                        }
+                        imageview.setX(posX);
+                        imageview.setY(posY - 25);
+                        orientationS();
                     }
                         //links
-                    else if (event.getSceneX() <= 125&&event.getSceneY()<=450&& event.getSceneY() <= 500 ){
+                    else if (event.getSceneX() <= 125&&(event.getSceneY()<=450  || event.getSceneY() <= 500 )){
                         //Todo noch mer if? Funktioniert noch nicht richtig
-                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
                         posX = rundenLeitungen(event.getSceneX());
                         posY = rundenLeitungen(event.getSceneY());
-                        if (Orientation == 0) {
-                            imageview.setImage(S00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(S45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(S90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(S135);
-                        }
+                        imageview.setX(posX - 25);
+                        imageview.setY(posY- 25);
+                        orientationS();
                     }
                         //unten
                     else if (event.getSceneY() >= 575 - 40) {
-                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                        imageview.setY(rundenLeitungen(575- 40 - 25));
                         posX = rundenLeitungen(event.getSceneX());
                         posY = rundenLeitungen(575- 40 - 25);
-                        if (Orientation == 0) {
-                            imageview.setImage(S00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(S45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(S90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(S135);
-                        }
+                        imageview.setX(posX- 25);
+                        imageview.setY(posY);
+                        orientationS();
                     }
                         //normaler bereich
                     else {
-                        //Welches Bild ist aktuell? Wegen drehen des Bildes
-                        if (Orientation == 0) {
-                            imageview.setImage(S00);
-                        } else if (Orientation == 1) {
-                            imageview.setImage(S45);
-                        } else if (Orientation == 2) {
-                            imageview.setImage(S90);
-                        } else if (Orientation == 3) {
-                            imageview.setImage(S135);
-                        }
-                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
                         posX = rundenLeitungen(event.getSceneX());
                         posY = rundenLeitungen(event.getSceneY());
+                        imageview.setX(posX- 25);
+                        imageview.setY(posY- 25);
+                        orientationS();
                     }
                 }else return;
             }});
@@ -296,6 +206,7 @@ public class Spannungsquelle extends Bauelemente {
     //Zeichnen Methode
     public void draw1(BorderPane borderPane)
     {
+        this.border=borderPane;
         imageview.setX(posX-25);
         imageview.setY(posY-25);
         if(Orientation==0) {imageview.setImage(S00);}
@@ -303,7 +214,7 @@ public class Spannungsquelle extends Bauelemente {
         else if(Orientation==2){imageview.setImage(S90);}
         else if(Orientation==3){imageview.setImage(S135);}
         else imageview.setImage(S00);
-        borderPane.getChildren().add(imageview);
+        border.getChildren().add(imageview);
     }
     //Wird zum String xml hinzugefügt
     public String toxml(String xml){
@@ -343,5 +254,18 @@ public class Spannungsquelle extends Bauelemente {
     public  double getOrientation() {return Orientation;}
     public  double getPosX() {return posX;}
     public  double getPosY() {return posY;}
-
+    public void orientationS()
+    {
+        if (Orientation == 0) {imageview.setImage(S00);}
+        else if (Orientation == 1) {imageview.setImage(S45);}
+        else if (Orientation == 2) {imageview.setImage(S90);}
+        else if (Orientation == 3) {imageview.setImage(S135);}
+    }
+    public void orientationR()
+    {
+        if (Orientation == 0) {imageview.setImage(R00);}
+        else if (Orientation == 1) {imageview.setImage(R45);}
+        else if (Orientation == 2) {imageview.setImage(R90);}
+        else if (Orientation == 3) {imageview.setImage(R135);}
+    }
 }
