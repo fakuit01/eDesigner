@@ -10,9 +10,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.SplashScreen;
 
 
-public class Startscreen {
+
+public class Startscreen extends JFrame{
     BorderPane borderPane=new BorderPane();
     Stage window;
     JFrame jframe=new JFrame("test");
@@ -56,4 +58,30 @@ public void closescreen(){
 
 }
 
+    public void Splashscreen() {
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(500, 400);
+        this.setLocationRelativeTo(null);
+        this.setTitle("Splash-Demo");
+
+        Thread t = new Thread() {
+            public void run() {
+                SplashScreen splash = SplashScreen.getSplashScreen();
+                if (splash == null) {
+                    System.out
+                            .println("SplashScreen kann nicht erzeugt werden.");
+                    return;
+                }
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    System.err.println("Thread unterbrochen");
+                }
+                splash.close();
+                Startscreen.this.setVisible(true);
+            }
+        };
+        t.start();
+    }
 }

@@ -8,6 +8,7 @@ public class Start {
         startscreen.showscreen();
         startscreen.closescreen();
 */
+        new Splashscreen();
         App.execute(args);
 
     }
