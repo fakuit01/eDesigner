@@ -465,7 +465,7 @@ public class App extends Application {
             }});
 
         //Neue Leitung zeichnen mit 2 Mausklicks auf Canvas
-        canvas.setOnMouseClicked(new EventHandler<MouseEvent>(){
+        canvas.setOnMousePressed(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {drawLines(event, gc);}});
         //Todo Mouse Cursor ändern falls gewünscht
@@ -611,7 +611,61 @@ public class App extends Application {
     //Zeichne Linien mit 2 Mausklicks
     public void drawLines(MouseEvent event, GraphicsContext gc)
     {
-        clickCount++;
+        /*Wenn Maus gedrückt setzte startpunkt
+           lineZeichnen ist hintergrundlinie  */
+            lineZeichnen.setStrokeWidth(5);
+            lineZeichnen.setStroke(Color.GREY);
+            lineZeichnen.setStartX(rundenLeitungen(event.getSceneX()));
+            lineZeichnen.setStartY(rundenLeitungen(event.getSceneY()));
+            xStartLeitung=rundenLeitungen(event.getSceneX());
+            yStartLeitung=rundenLeitungen(event.getSceneY());
+
+        /*Wenn Maus gedrpckt ist wird linezeichnen gezeichnet und immer wieder gelöscht
+          wird nicht am ende gerundet*/
+            canvas.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    xEndLeitung=rundenLeitungen(event.getSceneX());
+                    yEndLeitung=rundenLeitungen(event.getSceneY());
+                    lineZeichnen.setEndX(event.getSceneX());
+                    lineZeichnen.setEndY(event.getSceneY());
+                    borderPane.getChildren().remove(lineZeichnen);
+                    borderPane.getChildren().add(lineZeichnen);
+
+                }
+            });
+
+            //Sobald Maus losgelassen wird richtige Linie gezeichnet
+            canvas.setOnMouseReleased(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    xEndLeitung = rundenLeitungen(event.getSceneX());
+                    yEndLeitung = rundenLeitungen(event.getSceneY());
+                    borderPane.getChildren().remove(lineZeichnen);
+
+                    //Abfrage ob Start und Endpunkt gleich
+                    if(xStartLeitung==xEndLeitung&&yStartLeitung==yEndLeitung)
+                    {
+                        //Leitungen dürfen nicht auf selben Punkt sein
+                        xEndLeitung=0;
+                        yEndLeitung=0;
+                    }
+                    else {
+                        IDLeitung++;
+                        Leitung leitung1 = new Leitung(IDLeitung, xStartLeitung, yStartLeitung, 0, xEndLeitung, yEndLeitung);
+                        leitung1.draw1(borderPane);
+                        xmlstring = leitung1.toxml(xmlstring);
+                        arraylist.add(leitung1);
+                        xStartLeitung = 0;
+                        yStartLeitung = 0;
+                        xEndLeitung = 0;
+                        yEndLeitung = 0;
+                    }
+                }
+            });
+
+
+        /*clickCount++;
         clickCount=clickCount%2;
         if(event.getButton()== MouseButton.PRIMARY) {
             //borderPane.getChildren().add(lineZeichnen);
@@ -655,7 +709,7 @@ public class App extends Application {
 
             }
             else return;
-        }
+        }*/
     }
     //Snap ans Raster der Bauteile
     public double rundenBauteile(double runden) {
