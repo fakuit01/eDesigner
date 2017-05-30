@@ -91,7 +91,7 @@ public class App extends Application {
         window.setMinWidth(400);
         Scene scene = new Scene(borderPane, 1000, 600);
         //Todo Taste Entf zum löschen des Objekts
-        final Image zeichnen=new Image("file:Images/zeichnen.png");
+        final Image zeichnen=new Image("file:Images/zeichnen.png",50,50,false,false);
 
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
@@ -112,11 +112,15 @@ public class App extends Application {
             //Alles löschen
             neu();
         });
+        newMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+N"));
+
         fileMenu.getItems().add(newMenuItem);
 
         //Unterpunkt: Öffnen
         MenuItem openMenuItem = new MenuItem("Öffnen");
         openMenuItem.setOnAction(e -> {open();});
+        openMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
+
         fileMenu.getItems().add(openMenuItem);
         fileMenu.getItems().add(new SeparatorMenuItem());
 
@@ -125,16 +129,23 @@ public class App extends Application {
             //Speichert in das zuvor gespeicherte File
             autosave();
         });
+        autosave.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
+
         fileMenu.getItems().add(autosave);
         MenuItem save=new MenuItem("Speichern unter");
         save.setOnAction(e->{
             //Speichern unter
             saveas();
         });
+        save.setAccelerator(KeyCombination.keyCombination("Ctrl+U"));
+
         fileMenu.getItems().add(save);
         fileMenu.getItems().add(new SeparatorMenuItem());
-        //fileMenu.getItems().add(new MenuItem("Schließen"));
 
+        MenuItem close= new MenuItem("Schließen");
+        close.setAccelerator(KeyCombination.keyCombination("Ctrl+X"));
+        close.setOnAction(e->{System.exit(0);});
+        fileMenu.getItems().add(close);
         //Menüpunkt "Bearbeiten" erstellen
         Menu editMenu = new Menu("_Bearbeiten");
         //Submenü/Unterpunkte zu editMenu
@@ -146,7 +157,6 @@ public class App extends Application {
         editMenu.getItems().add(new MenuItem("Löschen"));
         editMenu.getItems().add(new SeparatorMenuItem());
         editMenu.getItems().add(new MenuItem("Screenshot"));
-
         //Menüpunkt "Ansicht" erstellen
         Menu viewMenu = new Menu("_Ansicht");
         //Submenü/Unterpunkte zu editMenu
@@ -155,10 +165,13 @@ public class App extends Application {
 
         //Menüpunkt "Hilfe" erstellen
         Menu helpMenu = new Menu("_Hilfe");
-
+        helpMenu.setOnAction(e->{
+            showhelp();
+        });
+        ContextMenu help=new ContextMenu();
         //Menüleiste zusammenführen
         //Todo rest der Menüs besprechen wegen aussehen und ob mehr funktionen in den Menüs
-        menuBar.getMenus().addAll(fileMenu);//editMenu, viewMenu, helpMenu);
+        menuBar.getMenus().addAll(fileMenu,helpMenu);//editMenu, viewMenu, helpMenu);
         //Vbox Größe
         vbox.setPrefSize(100,100);
         //VBox Style
@@ -454,7 +467,7 @@ public class App extends Application {
         scene.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-                scene.setCursor(new ImageCursor(zeichnen));
+                //scene.setCursor(new ImageCursor(zeichnen));
             }});
         vboxLeer.setPrefSize(15,100);
         //VBox Style
@@ -469,7 +482,7 @@ public class App extends Application {
         String tooltipps="Tipps: ";
         //Todo String anpassen und vllt iwas damit machen bzw verschiedene Tipps anzeigen
         //String drehen="Zum Drehen des Bauteils: Rechtsklick(gegen Uhrzeigersinn) bzw Linksklick(Uhrzeigersinn) auf das Bauteil";
-        String drehen="Zum drehen des Bauteils Rechtsklick auf das Bauteil";
+        String drehen="Zum Drehen des Bauteils Rechtsklick auf das Bauteil";
         textToolTipps.setText(tooltipps+drehen);
         textToolTipps.setFill(Color.WHITE);
         hboxLeiste.getChildren().add(textToolTipps);
@@ -823,6 +836,12 @@ public class App extends Application {
                 alert.setContentText("Konnte Datei nicht laden, da die Datei leer ist");
                 alert.showAndWait();
             }
+
         }
+
+    }
+    public void showhelp()
+    {
+System.out.println("test");
     }
 }
