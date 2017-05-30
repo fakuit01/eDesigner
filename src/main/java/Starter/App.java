@@ -76,10 +76,10 @@ public class App extends Application {
     ArrayList<Bauelemente> arraylist= new ArrayList<Bauelemente>();
     Text textToolTipps=new Text();
     Line lineZeichnen=new Line();
-    final Image hilfe=new Image("file:Images/hilfe.png",800,500,false,false);
+    final Image hilfe=new Image("file:Images/hilfe.png",1000,600,false,false);
     ImageView hilfeView = new ImageView(hilfe);
 
-    public static void main(String[] args) {
+    public static void execute(String[] args) {
         launch(args);
     }
 
@@ -93,7 +93,7 @@ public class App extends Application {
         window.setMinWidth(400);
         Scene scene = new Scene(borderPane, 1000, 600);
         //Todo Taste Entf zum löschen des Objekts
-        final Image zeichnen=new Image("file:Images/zeichnen.png",50,50,false,false);
+        final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
 
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
@@ -472,7 +472,7 @@ public class App extends Application {
         scene.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-                //scene.setCursor(new ImageCursor(zeichnen));
+                scene.setCursor(new ImageCursor(cursor));
             }});
         vboxLeer.setPrefSize(15,100);
         //VBox Style
