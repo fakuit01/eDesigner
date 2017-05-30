@@ -76,6 +76,8 @@ public class App extends Application {
     ArrayList<Bauelemente> arraylist= new ArrayList<Bauelemente>();
     Text textToolTipps=new Text();
     Line lineZeichnen=new Line();
+    final Image hilfe=new Image("file:Images/hilfe.png",800,500,false,false);
+    ImageView hilfeView = new ImageView(hilfe);
 
     public static void main(String[] args) {
         launch(args);
@@ -165,10 +167,13 @@ public class App extends Application {
 
         //Menüpunkt "Hilfe" erstellen
         Menu helpMenu = new Menu("_Hilfe");
-        helpMenu.setOnAction(e->{
-            showhelp();
-        });
-        ContextMenu help=new ContextMenu();
+        MenuItem help=new MenuItem("Hilfe");
+        help.setOnAction(e->{showhelp();});
+        helpMenu.getItems().add(help);
+        help.setAccelerator(KeyCombination.keyCombination("Ctrl+H"));
+
+
+
         //Menüleiste zusammenführen
         //Todo rest der Menüs besprechen wegen aussehen und ob mehr funktionen in den Menüs
         menuBar.getMenus().addAll(fileMenu,helpMenu);//editMenu, viewMenu, helpMenu);
@@ -842,6 +847,11 @@ public class App extends Application {
     }
     public void showhelp()
     {
-System.out.println("test");
+        Alert alert=new Alert(Alert.AlertType.INFORMATION);
+        alert.setGraphic(hilfeView);
+        alert.setTitle("Hilfe");
+        alert.setHeaderText(" ");
+        alert.setContentText(" ");
+        alert.showAndWait();
     }
 }
