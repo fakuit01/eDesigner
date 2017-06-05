@@ -13,6 +13,7 @@ public abstract class Bauelemente {
     //Position des Bauelements auf dem Raster
 
     //Ausrichtung des Bauelements (Himmelsrichtung)
+   /*
     final int ausrN = 0;
     final int ausrNO = 1;
     final int ausrO = 2;
@@ -21,12 +22,13 @@ public abstract class Bauelemente {
     final int ausrSW = 5;
     final int ausrW = 6;
     final int ausrNW = 7;
-    int ID;
+
 
     //SnapPoint-Positionen
     double snap1X=0,snap1Y=0;
     double snap2X=0,snap2Y=0;
-
+*/
+    int ID;
     protected double posX = 0, posY = 0;
     int Orientation=0;
 
@@ -40,7 +42,7 @@ public abstract class Bauelemente {
 
     //public abstract void draw(GraphicsContext gc, double Orientation);
     //Zeichnen Methode
-    public abstract void draw1(BorderPane borderPane);
+    public abstract void draw(BorderPane borderPane);
     //Wird zum String xml hinzugefügt
     public abstract String toxml(String xml);
     public abstract double getOrientation();

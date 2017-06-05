@@ -19,12 +19,6 @@ public class Spannungsquelle extends Bauelemente {
     Image S90=new Image("file:Images/Bauelementeschwarz/spannungsquelle90S.png",WidthHeight,WidthHeight,false,false);
     Image S135=new Image("file:Images/Bauelementeschwarz/spannungsquelle135S.png",WidthHeight,WidthHeight,false,false);
 
-    /*
-    Image T00=new Image("file:Images/Bauelementetransparent/spannungsquelle00T.png",50,50,false,false);
-    Image T45=new Image("file:Images/Bauelementetransparent/spannungsquelle45T.png",50,50,false,false);
-    Image T90=new Image("file:Images/Bauelementetransparent/spannungsquelle90T.png",50,50,false,false);
-    Image T135=new Image("file:Images/Bauelementetransparent/spannungsquelle135T.png",50,50,false,false);
-*/
     Image F00=new Image("file:Images/Bauelementefarbe/spannungsquelle00F.png",WidthHeight,WidthHeight,false,false);
     Image F45=new Image("file:Images/Bauelementefarbe/spannungsquelle45F.png",WidthHeight,WidthHeight,false,false);
     Image F90=new Image("file:Images/Bauelementefarbe/spannungsquelle90F.png",WidthHeight,WidthHeight,false,false);
@@ -49,6 +43,7 @@ public class Spannungsquelle extends Bauelemente {
     {
         super(ID,x,y,Orientation1);
         imageview.setImage(S00);
+        //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
@@ -58,7 +53,7 @@ public class Spannungsquelle extends Bauelemente {
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
             }});
-        ////aus transbild schwarzes bild
+        //Wenn man das Objekt verlässt
         imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
             //Muelleimer
             public void handle(MouseEvent event) {
@@ -81,16 +76,6 @@ public class Spannungsquelle extends Bauelemente {
             public void handle(MouseEvent event) {
                 if (event.getButton() == MouseButton.SECONDARY) {
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
-                    /*
-                    if(imageview.getImage()==S00)
-                    {imageview.setImage(S45);Orientation=1;}
-                    else if(imageview.getImage()==S45)
-                    {imageview.setImage(S90);Orientation=2;}
-                    else if(imageview.getImage()==S90)
-                    {imageview.setImage(S135);Orientation=3;}
-                    else if(imageview.getImage()==S135)
-                    {imageview.setImage(S00);Orientation=0;}
-                    */
                     if(Orientation==0) {imageview.setImage(F45);Orientation=1;}
                     else if(Orientation==1) {imageview.setImage(F90);Orientation=2;}
                     else if(Orientation==2) {imageview.setImage(F135);Orientation=3;}
@@ -149,7 +134,7 @@ public class Spannungsquelle extends Bauelemente {
                     //Todo Bild sollte nicht in die Vbox gezogen werden können funktioniert noch nicht richtig
                     //oben
                     else if(event.getSceneY() < 50) {
-                        posX = rundenLeitungen(event.getSceneX());
+                        posX = round(event.getSceneX());
                         posY = 50-25;
                         imageview.setX(posX - 25);
                         imageview.setY(posY);
@@ -158,7 +143,7 @@ public class Spannungsquelle extends Bauelemente {
                         //rechts
                     else if (event.getSceneX() > border.getWidth()) {
                         posX = border.getWidth()-25;
-                        posY = rundenLeitungen(event.getSceneY());
+                        posY = round(event.getSceneY());
                         imageview.setX(posX);
                         imageview.setY(posY - 25);
                         orientationS();
@@ -166,24 +151,24 @@ public class Spannungsquelle extends Bauelemente {
                         //links
                     else if (event.getSceneX() <= 125&&(event.getSceneY()<=450  || event.getSceneY() <= 500 )){
                         //Todo noch mer if? Funktioniert noch nicht richtig
-                        posX = rundenLeitungen(event.getSceneX());
-                        posY = rundenLeitungen(event.getSceneY());
+                        posX = round(event.getSceneX());
+                        posY = round(event.getSceneY());
                         imageview.setX(posX - 25);
                         imageview.setY(posY- 25);
                         orientationS();
                     }
                         //unten
                     else if (event.getSceneY() >= 575 - 40) {
-                        posX = rundenLeitungen(event.getSceneX());
-                        posY = rundenLeitungen(575- 40 - 25);
+                        posX = round(event.getSceneX());
+                        posY = round(575- 40 - 25);
                         imageview.setX(posX- 25);
                         imageview.setY(posY);
                         orientationS();
                     }
                         //normaler bereich
                     else {
-                        posX = rundenLeitungen(event.getSceneX());
-                        posY = rundenLeitungen(event.getSceneY());
+                        posX = round(event.getSceneX());
+                        posY = round(event.getSceneY());
                         imageview.setX(posX- 25);
                         imageview.setY(posY- 25);
                         orientationS();
@@ -204,7 +189,7 @@ public class Spannungsquelle extends Bauelemente {
         */
     }
     //Zeichnen Methode
-    public void draw1(BorderPane borderPane)
+    public void draw(BorderPane borderPane)
     {
         this.border=borderPane;
         imageview.setX(posX-25);
@@ -239,7 +224,7 @@ public class Spannungsquelle extends Bauelemente {
             return runden + (50 - (runden % 50));
         } else return 0;
     }
-    public double rundenLeitungen(double runden)
+    public double round(double runden)
     {
         double a=0,b=0;
         if (runden % 25 < 12.5) {

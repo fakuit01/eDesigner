@@ -112,10 +112,10 @@ public class Leitung extends Bauelemente {
                         line.removeEventHandler(MouseEvent.ANY, this);
                     }
                     else {
-                        posX = rundenLeitungen(event.getSceneX() + xs);
-                        posY = rundenLeitungen(event.getSceneY() + ys);
-                        xend = rundenLeitungen(event.getSceneX() + xe);
-                        yend = rundenLeitungen(event.getSceneY() + ye);
+                        posX = round(event.getSceneX() + xs);
+                        posY = round(event.getSceneY() + ys);
+                        xend = round(event.getSceneX() + xe);
+                        yend = round(event.getSceneY() + ye);
                         line.setStartX(posX);
                         line.setStartY(posY);
                         line.setEndX(xend);
@@ -124,10 +124,10 @@ public class Leitung extends Bauelemente {
                 }
                 else if(drop==true)
                 {
-                    posX = rundenLeitungen(posX);
-                    posY = rundenLeitungen(posY);
-                    xend = rundenLeitungen(xend);
-                    yend = rundenLeitungen(yend);
+                    posX = round(posX);
+                    posY = round(posY);
+                    xend = round(xend);
+                    yend = round(yend);
                     line.setStartX(posX);
                     line.setStartY(posY);
                     line.setEndX(xend);
@@ -149,13 +149,13 @@ public class Leitung extends Bauelemente {
         }
         else return xml;
     }
-    public void draw1(BorderPane borderPane)
+    public void draw(BorderPane borderPane)
     {
         //Todo ka ob das gut ist
         this.border=borderPane;
         border.getChildren().add(line);
     }
-    public double rundenLeitungen(double runden)
+    public double round(double runden)
     {
         double a=0,b=0;
         if (runden % 25 < 12.5) {

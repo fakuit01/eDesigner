@@ -9,17 +9,22 @@ import javafx.scene.layout.BorderPane;
 
 
 public class Spule extends Bauelemente {
-
+    int WidthHeight=50;
     //Bilder von den Objekten beim drag and drop Schwarz und Transparent
     Image S00=new Image("file:Images/Bauelementeschwarz/spule00S.png",50,50,false,false);
     Image S45=new Image("file:Images/Bauelementeschwarz/spule45S.png",50,50,false,false);
     Image S90=new Image("file:Images/Bauelementeschwarz/spule90S.png",50,50,false,false);
     Image S135=new Image("file:Images/Bauelementeschwarz/spule135S.png",50,50,false,false);
 
-    Image T00=new Image("file:Images/Bauelementetransparent/spule00T.png",50,50,false,false);
-    Image T45=new Image("file:Images/Bauelementetransparent/spule45T.png",50,50,false,false);
-    Image T90=new Image("file:Images/Bauelementetransparent/spule90T.png",50,50,false,false);
-    Image T135=new Image("file:Images/Bauelementetransparent/spule135T.png",50,50,false,false);
+    Image F00=new Image("file:Images/Bauelementefarbe/spule00F.png",WidthHeight,WidthHeight,false,false);
+    Image F45=new Image("file:Images/Bauelementefarbe/spule45F.png",WidthHeight,WidthHeight,false,false);
+    Image F90=new Image("file:Images/Bauelementefarbe/spule90F.png",WidthHeight,WidthHeight,false,false);
+    Image F135=new Image("file:Images/Bauelementefarbe/spule135F.png",WidthHeight,WidthHeight,false,false);
+
+    Image FT00=new Image("file:Images/Bauelementefarbe/spule00FT.png",WidthHeight,WidthHeight,false,false);
+    Image FT45=new Image("file:Images/Bauelementefarbe/spule45FT.png",WidthHeight,WidthHeight,false,false);
+    Image FT90=new Image("file:Images/Bauelementefarbe/spule90FT.png",WidthHeight,WidthHeight,false,false);
+    Image FT135=new Image("file:Images/Bauelementefarbe/spule135FT.png",WidthHeight,WidthHeight,false,false);
 
     ImageView imageview = new ImageView();
     boolean deleted=false;
@@ -28,21 +33,37 @@ public class Spule extends Bauelemente {
     {
         super(ID,x,y,Orientation1);
         imageview.setImage(S00);
+        //Wenn man über das Objekt drüber fährt
+        imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
+            public void handle(MouseEvent event) {
+                //färbt beim drüberfahren das objekt in farbe
+                if(Orientation==0) {imageview.setImage(F00);}
+                else if(Orientation==1){imageview.setImage(F45);}
+                else if(Orientation==2){imageview.setImage(F90);}
+                else if(Orientation==3){imageview.setImage(F135);}
+            }});
+        //Wenn man das Objekt verlässt
+        imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
+            //Muelleimer
+            public void handle(MouseEvent event) {
+                if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
+                    deleted=true;
+                    imageview.setImage(null);
+                    imageview.removeEventHandler(MouseEvent.ANY, this);
+                }
+                //Transparent in schwarz je nach orientierung
+                else {
+                    if (Orientation == 0) {imageview.setImage(S00);}
+                    else if (Orientation == 1) {imageview.setImage(S45);}
+                    else if (Orientation == 2) {imageview.setImage(S90);}
+                    else if (Orientation == 3) {imageview.setImage(S135);}
+                }
+            }});
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event) {
                 if (event.getButton() == MouseButton.SECONDARY) {
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
-                    /*
-                    if(imageview.getImage()==S00)
-                    {imageview.setImage(S45);Orientation=1;}
-                    else if(imageview.getImage()==S45)
-                    {imageview.setImage(S90);Orientation=2;}
-                    else if(imageview.getImage()==S90)
-                    {imageview.setImage(S135);Orientation=3;}
-                    else if(imageview.getImage()==S135)
-                    {imageview.setImage(S00);Orientation=0;}
-                    */
                     if(Orientation==0) {imageview.setImage(S45);Orientation=1;}
                     else if(Orientation==1) {imageview.setImage(S90);Orientation=2;}
                     else if(Orientation==2) {imageview.setImage(S135);Orientation=3;}
@@ -65,24 +86,14 @@ public class Spule extends Bauelemente {
                 if(event.getButton()==MouseButton.PRIMARY) {
 
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
-                /*
-                if(imageview.getImage()==S00)
-                {imageview.setImage(T00);}
-                else if(imageview.getImage()==S45)
-                {imageview.setImage(T45);}
-                else if(imageview.getImage()==S90)
-                {imageview.setImage(T90);}
-                else if(imageview.getImage()==S135)
-                {imageview.setImage(T135);}
-                */
                     if (Orientation == 0) {
-                        imageview.setImage(T00);
+                        imageview.setImage(FT00);
                     } else if (Orientation == 1) {
-                        imageview.setImage(T45);
+                        imageview.setImage(FT45);
                     } else if (Orientation == 2) {
-                        imageview.setImage(T90);
+                        imageview.setImage(FT90);
                     } else if (Orientation == 3) {
-                        imageview.setImage(T135);
+                        imageview.setImage(FT135);
                     }
                     imageview.setX(event.getSceneX() - 25);
                     imageview.setY(event.getSceneY() - 25);
@@ -100,17 +111,6 @@ public class Spule extends Bauelemente {
                         imageview.removeEventHandler(MouseEvent.ANY, this);
                     } else {
                         //Welches Bild ist aktuell? Wegen drehen des Bildes
-                    /*
-                    if (imageview.getImage() == T00) {
-                        imageview.setImage(S00);
-                    } else if (imageview.getImage() == T45) {
-                        imageview.setImage(S45);
-                    } else if (imageview.getImage() == T90) {
-                        imageview.setImage(S90);
-                    } else if (imageview.getImage() == T135) {
-                        imageview.setImage(S135);
-                    }
-                    */
                         if (Orientation == 0) {
                             imageview.setImage(S00);
                         } else if (Orientation == 1) {
@@ -120,10 +120,10 @@ public class Spule extends Bauelemente {
                         } else if (Orientation == 3) {
                             imageview.setImage(S135);
                         }
-                        imageview.setX(rundenLeitungen(event.getSceneX()) - 25);
-                        imageview.setY(rundenLeitungen(event.getSceneY()) - 25);
-                        posX = rundenLeitungen(event.getSceneX());
-                        posY = rundenLeitungen(event.getSceneY());
+                        imageview.setX(round(event.getSceneX()) - 25);
+                        imageview.setY(round(event.getSceneY()) - 25);
+                        posX = round(event.getSceneX());
+                        posY = round(event.getSceneY());
                     }
                 }else return;
             }});
@@ -144,14 +144,7 @@ public class Spule extends Bauelemente {
         else return xml;
     }
     //Snap ans Raster der Bauteile
-    public double rundenBauteile(double runden) {
-        if (runden % 50 < 25) {
-            return runden - (runden % 50);
-        } else if (runden % 50 >= 25) {
-            return runden + (50 - (runden % 50));
-        } else return 0;
-    }
-    public double rundenLeitungen(double runden)
+    public double round(double runden)
     {
         double a=0,b=0;
         if (runden % 25 < 12.5) {
@@ -164,7 +157,7 @@ public class Spule extends Bauelemente {
         } else return 0;
     }
     //Zeichnen Methode
-    public void draw1(BorderPane borderPane)
+    public void draw(BorderPane borderPane)
     {
         imageview.setX(posX-25);
         imageview.setY(posY-25);

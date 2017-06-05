@@ -67,18 +67,19 @@ public class App extends Application {
     private EventHandler<DragEvent> mIconDragOverRoot = null;
     Canvas canvas = new Canvas(dim.getWidth(),dim.getHeight());
     VBox vbox = new VBox();
-    VBox vboxLeer = new VBox();
-    HBox hboxLeiste = new HBox();
+    VBox vboxEmpty = new VBox();
+    HBox hboxEmpty = new HBox();
     GraphicsContext gc = canvas.getGraphicsContext2D();
     MenuBar menuBar = new MenuBar();
     BorderPane borderPane=new BorderPane();
     int IDLeitung=0,IDKondensator=0,IDSpule=0,IDSpannungsquelle=0,IDWiderstand=0;
     ArrayList<Bauelemente> arraylist= new ArrayList<Bauelemente>();
     Text textToolTipps=new Text();
-    Line lineZeichnen=new Line();
+    Line drawline=new Line();
     final Image hilfe=new Image("file:Images/hilfe.png",1000,600,false,false);
-    ImageView hilfeView = new ImageView(hilfe);
+    ImageView helpView = new ImageView(hilfe);
 
+    //Startet das Programm
     public static void execute(String[] args) {
         launch(args);
     }
@@ -92,7 +93,6 @@ public class App extends Application {
         window.setMinHeight(600);
         window.setMinWidth(400);
         Scene scene = new Scene(borderPane, 1000, 600);
-        //Todo Taste Entf zum löschen des Objekts
         final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
 
         //Löschen funktion anfang mit tastendruck wurde missbraucht
@@ -111,8 +111,8 @@ public class App extends Application {
         //Unterpunkt: Neu
         MenuItem newMenuItem = new MenuItem("Neu");
         newMenuItem.setOnAction(e -> {
-            //Alles löschen
-            neu();
+            //Alles löschen und neu aufbauen Programm neustarten
+            newEmpty();
         });
         newMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+N"));
 
@@ -120,7 +120,9 @@ public class App extends Application {
 
         //Unterpunkt: Öffnen
         MenuItem openMenuItem = new MenuItem("Öffnen");
-        openMenuItem.setOnAction(e -> {open();});
+        openMenuItem.setOnAction(e -> {
+            //File öffnen
+            open();});
         openMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
 
         fileMenu.getItems().add(openMenuItem);
@@ -140,7 +142,7 @@ public class App extends Application {
             saveas();
         });
         save.setAccelerator(KeyCombination.keyCombination("Ctrl+U"));
-
+        //Hinzufügen zum Menü
         fileMenu.getItems().add(save);
         fileMenu.getItems().add(new SeparatorMenuItem());
 
@@ -148,6 +150,7 @@ public class App extends Application {
         close.setAccelerator(KeyCombination.keyCombination("Ctrl+X"));
         close.setOnAction(e->{System.exit(0);});
         fileMenu.getItems().add(close);
+        /*
         //Menüpunkt "Bearbeiten" erstellen
         Menu editMenu = new Menu("_Bearbeiten");
         //Submenü/Unterpunkte zu editMenu
@@ -164,8 +167,9 @@ public class App extends Application {
         //Submenü/Unterpunkte zu editMenu
         viewMenu.getItems().add(new MenuItem("Theme ändern"));
         viewMenu.getItems().add(new MenuItem("Schriftgröße ändern"));
+        */
 
-        //Menüpunkt "Hilfe" erstellen
+        //Menüpunkt "Hilfe" erstellen und hinzufügen
         Menu helpMenu = new Menu("_Hilfe");
         MenuItem help=new MenuItem("Hilfe");
         help.setOnAction(e->{showhelp();});
@@ -175,7 +179,6 @@ public class App extends Application {
 
 
         //Menüleiste zusammenführen
-        //Todo rest der Menüs besprechen wegen aussehen und ob mehr funktionen in den Menüs
         menuBar.getMenus().addAll(fileMenu,helpMenu);//editMenu, viewMenu, helpMenu);
         //Vbox Größe
         vbox.setPrefSize(100,100);
@@ -185,22 +188,27 @@ public class App extends Application {
                 + "-fx-border-color: darkgrey;"
                 + "-fx-border-width: 0 3 0 0;"
                 + "-fx-padding: 10.5px;");
-        //Zeichnet das Gitter
+
+        //Zeichnet das Gitter und fügt es zur borderpane
         drawGitter(gc);
         borderPane.getChildren().add(canvas);
 
+        //++++++++++VBOX Bauteile mit Handler++++++++++
+        //
         //Icon für den Widerstand auf der Vbox
         final ImageView imageviewWiderstand = new ImageView();
         final Image widerstand=new Image("file:Images/widerstand.png",100,100,false,false);
         imageviewWiderstand.setImage(widerstand);
         vbox.getChildren().addAll(imageviewWiderstand);
         final Image widerstandSchrift= new Image("file:Images/widerstandSchrift.png",100,100,false,false);
-        //Mouse Over für das Einbleinden der IconBezeichnung
+
+        //Mouse Over für das Einblenden der IconBezeichnung
         imageviewWiderstand.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
                 imageviewWiderstand.setImage(widerstandSchrift);
             }});
+        //Icons wieder ohne Schrift anzeigen wenn man Objekt verlässt
         imageviewWiderstand.setOnMouseExited(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
@@ -213,12 +221,15 @@ public class App extends Application {
         imageviewKondensator.setImage(kondensator);
         vbox.getChildren().addAll(imageviewKondensator);
         final Image kondensatorSchrift= new Image("file:Images/kondensatorSchrift.png",100,100,false,false);
+
         //Mouse Over für das Einbleinden der IconBezeichnung
         imageviewKondensator.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
                 imageviewKondensator.setImage(kondensatorSchrift);
             }});
+        //Icons wieder ohne Schrift anzeigen wenn man Objekt verlässt
+
         imageviewKondensator.setOnMouseExited(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
@@ -259,6 +270,13 @@ public class App extends Application {
             public void handle(MouseEvent event) {imageviewSpannungsquelle.setImage(spannungsquelle);
             }});
 
+
+        //++++Ende der VBOX Elemente++++++
+
+
+
+        //+++++++++DRAG AND DROP von Vbox auf  Gitter
+
         //Images beim drag von der Vbox auf das Borderlane
         final ImageView imageviewSpannungsquelle1 = new ImageView();
         final Image spannungsquelle00T =new Image("file:Images/Bauelementetransparent/spannungsquelle00T.png",50,50,false,false);
@@ -293,15 +311,15 @@ public class App extends Application {
             {
                 borderPane.getChildren().remove(imageviewSpannungsquelle1);
                 double x=0,y=0;
-                x=rundenLeitungen(event.getSceneX());
-                y=rundenLeitungen(event.getSceneY());
+                x=round(event.getSceneX());
+                y=round(event.getSceneY());
                 if(x<150) return;
                 else {
                     IDSpannungsquelle++;
                     Spannungsquelle spannungsquelle = new Spannungsquelle(IDSpannungsquelle, x, y, 0);
                     arraylist.add(spannungsquelle);
                     //spannungsquelle.draw(gc,0);
-                    spannungsquelle.draw1(borderPane);
+                    spannungsquelle.draw(borderPane);
                     //xmlstring=spannungsquelle.toxml(xmlstring);
                 }
             }
@@ -323,15 +341,15 @@ public class App extends Application {
                 borderPane.getChildren().remove(imageviewSpule1);
                 double x=0,y=0;
                 //System.out.println("losgelassen an: X: "+event.getSceneX()+" Y: "+event.getSceneY());
-                x = rundenLeitungen(event.getSceneX());
-                y = rundenLeitungen(event.getSceneY());
+                x = round(event.getSceneX());
+                y = round(event.getSceneY());
                 if(x<150) return;
                 else {
                     IDSpule++;
                     Spule spule = new Spule(IDSpule, x, y, 0);
                     arraylist.add(spule);
                     //spule.draw(gc,0);
-                    spule.draw1(borderPane);
+                    spule.draw(borderPane);
                     //xmlstring=spule.toxml(xmlstring);
                 }
             }
@@ -353,15 +371,15 @@ public class App extends Application {
                 borderPane.getChildren().remove(imageviewKondensator1);
                 double x=0,y=0;
                 //System.out.println("losgelassen an: X: "+event.getSceneX()+" Y: "+event.getSceneY());
-                x = rundenLeitungen(event.getSceneX());
-                y = rundenLeitungen(event.getSceneY());
+                x = round(event.getSceneX());
+                y = round(event.getSceneY());
                 if(x<150) return;
                 else {
                     IDKondensator++;
                     Kondensator kondensator = new Kondensator(IDKondensator, x, y, 0);
                     arraylist.add(kondensator);
                     //kondensator.draw(gc,0);
-                    kondensator.draw1(borderPane);
+                    kondensator.draw(borderPane);
                     //xmlstring=kondensator.toxml(xmlstring);
                 }
             }
@@ -384,40 +402,37 @@ public class App extends Application {
                 double x=0,y=0;
 
                 //System.out.println("losgelassen an: X: "+event.getSceneX()+" Y: "+event.getSceneY());
-                x = rundenLeitungen(event.getSceneX());
-                y = rundenLeitungen(event.getSceneY());
+                x = round(event.getSceneX());
+                y = round(event.getSceneY());
                 if(x<150) return;
                 else {
                     IDWiderstand++;
                     Widerstand widerstand = new Widerstand(IDWiderstand, x, y, 0);
                     arraylist.add(widerstand);
                     //widerstand.draw(gc,0);
-                    widerstand.draw1(borderPane);
+                    widerstand.draw(borderPane);
                     //xmlstring=widerstand.toxml(xmlstring);
                 }
             }
         });
 
-        //Mülleimer
+        //ENDE vom DRAG AND DROP
+
+
+        //++++++Mülleimer++++++
         ImageView imageMuelleimer=new ImageView();
         Image muelleimerZu= new Image("file:Images/muelleimerOffen.png",100,75,false,false);
-        Image muelleimerOffen=new Image("file:Images/muelleimerOffen.png",50,50,false,false);
+        //Image muelleimerOffen=new Image("file:Images/muelleimerOffen.png",50,50,false,false);
         imageMuelleimer.setImage(muelleimerZu);
         imageMuelleimer.setX(120);
         imageMuelleimer.setY(400);
         //borderPane.getChildren().add(imageMuelleimer);
         vbox.getChildren().addAll(imageMuelleimer);
-        /*
-        imageMuelleimer.setOnMouseEntered(new EventHandler<MouseEvent>(){
+        //++++ENDE Mülleimer++++
+        //
 
-            public void handle(MouseEvent event)
-            {imageMuelleimer.setImage(muelleimerOffen);}});
-        imageMuelleimer.setOnMouseExited(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event)
-            {imageMuelleimer.setImage(muelleimerZu);}});
-*/
-        scene.setOnDragOver(new EventHandler<DragEvent>() {
+        //+++++Files in das Fenster ziehen
+              scene.setOnDragOver(new EventHandler<DragEvent>() {
 
             public void handle(DragEvent event) {
                 Dragboard db = event.getDragboard();
@@ -463,45 +478,53 @@ public class App extends Application {
                 event.setDropCompleted(success);
                 event.consume();
             }});
+        //++++Ende Files in das Fenster ziehen
 
+        //+++++Leitung zeichnen++++++
         //Neue Leitung zeichnen mit 2 Mausklicks auf Canvas
         canvas.setOnMousePressed(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {drawLines(event, gc);}});
+        //+++++Ende Leitung zeichnen++++
+
+        //++++++Maus Cursor++++++
         //Todo Mouse Cursor ändern falls gewünscht
         scene.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
                 scene.setCursor(new ImageCursor(cursor));
             }});
-        vboxLeer.setPrefSize(15,100);
+        //+++++Ende Maus Cursor
+
+        //Untere Vbox Style
+        vboxEmpty.setPrefSize(15,100);
         //VBox Style
-        vboxLeer.setStyle("-fx-background-color: black;"
+        vboxEmpty.setStyle("-fx-background-color: black;"
                 + "-fx-border-style: solid;"
                 + "-fx-border-color: darkgrey;"
                 + "-fx-border-width: 0 0 0 3;"
                 + "-fx-padding: 10.5px;");
 
 
-        //HBox als untere Leiste mit Tooltipps
+        //++++++HBox als untere Leiste mit Tooltipps++++++++
         String tooltipps="Tipps: ";
         //Todo String anpassen und vllt iwas damit machen bzw verschiedene Tipps anzeigen
-        //String drehen="Zum Drehen des Bauteils: Rechtsklick(gegen Uhrzeigersinn) bzw Linksklick(Uhrzeigersinn) auf das Bauteil";
         String drehen="Zum Drehen des Bauteils Rechtsklick auf das Bauteil";
         textToolTipps.setText(tooltipps+drehen);
         textToolTipps.setFill(Color.WHITE);
-        hboxLeiste.getChildren().add(textToolTipps);
-        hboxLeiste.setPrefSize(100,15);
+        hboxEmpty.getChildren().add(textToolTipps);
+        hboxEmpty.setPrefSize(100,15);
         //VBox Style
-        hboxLeiste.setStyle("-fx-background-color: black;"
+        hboxEmpty.setStyle("-fx-background-color: black;"
                 + "-fx-border-style: solid;"
                 + "-fx-border-color: darkgrey;"
                 + "-fx-border-width: 3 0 0 0;"
                 + "-fx-padding: 10.5px;");
+        //++++++Ende Hbox
 
         //Darstellung der menubar und vbox auf Borderpane mit Stylesheet
-        borderPane.setRight(vboxLeer);
-        borderPane.setBottom(hboxLeiste);
+        borderPane.setRight(vboxEmpty);
+        borderPane.setBottom(hboxEmpty);
         borderPane.setTop(menuBar);
         borderPane.setLeft(vbox);
         scene.getStylesheets().add("file:src/main/java/Starter/Css.css");
@@ -533,6 +556,7 @@ public class App extends Application {
                 new FileChooser.ExtensionFilter("XML Dateien (*.xml)", "*.xml");
         fileChoose.getExtensionFilters().add(extFilter);
         file = fileChoose.showSaveDialog(window);
+        //Für jedes Element in der Liste wird die toxml aufgerufen und der String erweitert
         try {
             for(Bauelemente a: arraylist)
             {
@@ -555,10 +579,9 @@ public class App extends Application {
         xmlstring="";
 
     }
-    //Speichern
+    //Speichern und vorhandenes überschreiben
     public void autosave()
     {
-        //System.out.println(file.getAbsolutePath());
         if(file==null)
         {
             Alert alert=new Alert(Alert.AlertType.INFORMATION);
@@ -569,6 +592,7 @@ public class App extends Application {
         }
         else
         {
+            //Für jedes Element in der Liste wird die toxml aufgerufen und der String erweitert
             try {
                 for(Bauelemente a: arraylist)
                 {
@@ -590,7 +614,7 @@ public class App extends Application {
             xmlstring="";
         }
     }
-    //Öffnen
+    //Öffnen eines XML Files
     public void open()
     {
         file=null;
@@ -613,35 +637,33 @@ public class App extends Application {
     {
         /*Wenn Maus gedrückt setzte startpunkt
            lineZeichnen ist hintergrundlinie  */
-            lineZeichnen.setStrokeWidth(5);
-            lineZeichnen.setStroke(Color.GREY);
-            lineZeichnen.setStartX(rundenLeitungen(event.getSceneX()));
-            lineZeichnen.setStartY(rundenLeitungen(event.getSceneY()));
-            xStartLeitung=rundenLeitungen(event.getSceneX());
-            yStartLeitung=rundenLeitungen(event.getSceneY());
+        drawline.setStrokeWidth(5);
+        drawline.setStroke(Color.GREY);
+        drawline.setStartX(round(event.getSceneX()));
+        drawline.setStartY(round(event.getSceneY()));
+            xStartLeitung=round(event.getSceneX());
+            yStartLeitung=round(event.getSceneY());
 
         /*Wenn Maus gedrpckt ist wird linezeichnen gezeichnet und immer wieder gelöscht
           wird nicht am ende gerundet*/
             canvas.setOnMouseDragged(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    xEndLeitung=rundenLeitungen(event.getSceneX());
-                    yEndLeitung=rundenLeitungen(event.getSceneY());
-                    lineZeichnen.setEndX(event.getSceneX());
-                    lineZeichnen.setEndY(event.getSceneY());
-                    borderPane.getChildren().remove(lineZeichnen);
-                    borderPane.getChildren().add(lineZeichnen);
-
+                    xEndLeitung=round(event.getSceneX());
+                    yEndLeitung=round(event.getSceneY());
+                    drawline.setEndX(event.getSceneX());
+                    drawline.setEndY(event.getSceneY());
+                    borderPane.getChildren().remove(drawline);
+                    borderPane.getChildren().add(drawline);
                 }
             });
-
             //Sobald Maus losgelassen wird richtige Linie gezeichnet
             canvas.setOnMouseReleased(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    xEndLeitung = rundenLeitungen(event.getSceneX());
-                    yEndLeitung = rundenLeitungen(event.getSceneY());
-                    borderPane.getChildren().remove(lineZeichnen);
+                    xEndLeitung = round(event.getSceneX());
+                    yEndLeitung = round(event.getSceneY());
+                    borderPane.getChildren().remove(drawline);
 
                     //Abfrage ob Start und Endpunkt gleich
                     if(xStartLeitung==xEndLeitung&&yStartLeitung==yEndLeitung)
@@ -653,7 +675,7 @@ public class App extends Application {
                     else {
                         IDLeitung++;
                         Leitung leitung1 = new Leitung(IDLeitung, xStartLeitung, yStartLeitung, 0, xEndLeitung, yEndLeitung);
-                        leitung1.draw1(borderPane);
+                        leitung1.draw(borderPane);
                         xmlstring = leitung1.toxml(xmlstring);
                         arraylist.add(leitung1);
                         xStartLeitung = 0;
@@ -676,7 +698,6 @@ public class App extends Application {
             {
                 xStartLeitung=rundenLeitungen(event.getSceneX());
                 yStartLeitung=rundenLeitungen(event.getSceneY());
-                //Todo Leitung zeichnen während man die Maus bewegt geht glaub nur mit nem neuen Thread mit bool auf true und false mit while schleife
             }
             else if (clickCount==0)
             {
@@ -691,7 +712,6 @@ public class App extends Application {
                 if(xStartLeitung==xEndLeitung&&yStartLeitung==yEndLeitung)
                 {
                     //Leitungen dürfen nicht auf selben Punkt sein
-                    //Todo überprüfen ob das so stimmt
                     xEndLeitung=0;
                     yEndLeitung=0;
                 }
@@ -711,6 +731,7 @@ public class App extends Application {
             else return;
         }*/
     }
+    /*
     //Snap ans Raster der Bauteile
     public double rundenBauteile(double runden) {
         if (runden % 50 < 25) {
@@ -718,9 +739,10 @@ public class App extends Application {
         } else if (runden % 50 >= 25) {
             return runden + (50 - (runden % 50));
         } else return 0;
-    }
+    }*/
+
     //Snap der Linien ans Raster
-    public double rundenLeitungen(double runden)
+    public double round(double runden)
     {
         double a=0,b=0;
         if (runden % 25 < 12.5) {
@@ -733,7 +755,7 @@ public class App extends Application {
         } else return 0;
     }
     //Neu
-    public void neu()
+    public void newEmpty()
     {
         Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Neues Projekt anlegen");
@@ -747,7 +769,7 @@ public class App extends Application {
         else return;
 
     }
-    //Löscht alles auf dem Borderpane und Graphic Content
+    //Löscht alles auf dem Borderpane und Graphic Content und erschafft ein neues
     public void deleteall()
     {
         IDKondensator=0;
@@ -761,8 +783,8 @@ public class App extends Application {
         //drawGitter(gc);
         borderPane.getChildren().clear();
         borderPane.getChildren().add(canvas);
-        borderPane.setRight(vboxLeer);
-        borderPane.setBottom(hboxLeiste);
+        borderPane.setRight(vboxEmpty);
+        borderPane.setBottom(hboxEmpty);
         borderPane.setTop(menuBar);
         borderPane.setLeft(vbox);
     }
@@ -785,29 +807,32 @@ public class App extends Application {
                         String line=scanner.nextLine();
                         if(line.indexOf("<Kondensator>")!=-1)
                         {
-                            //Schreibt die Werte aus dem String in Variable
-                            line=scanner.nextLine();
-                            IDKondensator=Integer.parseInt(line.substring(line.indexOf("<ID>")+4,line.indexOf("</ID>")));
-                            line=scanner.nextLine();
-                            xkon=(double)Integer.parseInt(line.substring(line.indexOf("<PositionX>")+11, line.indexOf("</PositionX>")));
-                            line=scanner.nextLine();
-                            ykon=(double)Integer.parseInt(line.substring(line.indexOf("<PositionY>")+11, line.indexOf("</PositionY>")));
-                            line=scanner.nextLine();
-                            konOr=Integer.parseInt(line.substring(line.indexOf("<Richtung>")+10, line.indexOf("</Richtung>")));
-                            //IDKondensator++;
-                            Kondensator kondensator1=new Kondensator(IDKondensator,xkon,ykon,konOr);
-                            //kondensator1.draw(gc,0);
-                            //Kondensator wird auf BorderPane gezeichnet
-                            kondensator1.draw1(borderPane);
-                            //Kondensator wird in String gespeichert um es später wieder abspeichern zu können
-                            //xmlstring=kondensator1.toxml(xmlstring);
-                            arraylist.add(kondensator1);
+                            try {
+                                //Schreibt die Werte aus dem String in Variable
+                                line = scanner.nextLine();
+                                IDKondensator = Integer.parseInt(line.substring(line.indexOf("<ID>") + 4, line.indexOf("</ID>")));
+                                line = scanner.nextLine();
+                                xkon = (double) Integer.parseInt(line.substring(line.indexOf("<PositionX>") + 11, line.indexOf("</PositionX>")));
+                                line = scanner.nextLine();
+                                ykon = (double) Integer.parseInt(line.substring(line.indexOf("<PositionY>") + 11, line.indexOf("</PositionY>")));
+                                line = scanner.nextLine();
+                                konOr = Integer.parseInt(line.substring(line.indexOf("<Richtung>") + 10, line.indexOf("</Richtung>")));
+                                Kondensator kondensator1 = new Kondensator(IDKondensator, xkon, ykon, konOr);
+                                //Kondensator wird auf BorderPane gezeichnet
+                                kondensator1.draw(borderPane);
+                                //Kondensator wird in String gespeichert um es später wieder abspeichern zu können
+
+                                arraylist.add(kondensator1);
+                            }
+                            catch (Exception f){//Catch exception if any
+                                System.err.println("Error: " + f.getMessage());
+                            }
                         }
                         else if(line.indexOf("<Spule>")!=-1)
                         {
+                            try{
                             //Schreibt die Werte aus dem String in Variable
-
-                            line=scanner.nextLine();
+                             line=scanner.nextLine();
                             IDSpule=Integer.parseInt(line.substring(line.indexOf("<ID>")+4,line.indexOf("</ID>")));
                             line=scanner.nextLine();
                             xspu=(double)Integer.parseInt(line.substring(line.indexOf("<PositionX>")+11, line.indexOf("</PositionX>")));
@@ -817,70 +842,77 @@ public class App extends Application {
                             spuOr=Integer.parseInt(line.substring(line.indexOf("<Richtung>")+10, line.indexOf("</Richtung>")));
                             Spule spule1= new Spule(IDSpule,xspu,yspu,spuOr);
                             //Spule wird auf BorderPane gezeichnet
-                            spule1.draw1(borderPane);
-                            //xmlstring=spule1.toxml(xmlstring);
+                            spule1.draw(borderPane);
                             arraylist.add(spule1);
-                            //spule1.draw(gc,0);
+                             }
+                            catch (Exception f){//Catch exception if any
+                        System.err.println("Error: " + f.getMessage());
+                    }
                         }
                         else if(line.indexOf("<Widerstand>")!=-1)
                         {
-                            //Schreibt die Werte aus dem String in Variable
-                            line=scanner.nextLine();
-                            IDWiderstand=Integer.parseInt(line.substring(line.indexOf("<ID>")+4,line.indexOf("</ID>")));
-                            line=scanner.nextLine();
-                            xwid=(double)Integer.parseInt(line.substring(line.indexOf("<PositionX>")+11, line.indexOf("</PositionX>")));
-                            line=scanner.nextLine();
-                            ywid=(double)Integer.parseInt(line.substring(line.indexOf("<PositionY>")+11, line.indexOf("</PositionY>")));
-                            line=scanner.nextLine();
-                            widOr= Integer.parseInt(line.substring(line.indexOf("<Richtung>")+10, line.indexOf("</Richtung>")));
-                            Widerstand widerstand1=new Widerstand(IDWiderstand,xwid,ywid,widOr);
-                            //widerstand1.draw(gc,0);
-                            //Widersatnd wird auf BorderPane gezeichnet
-                            widerstand1.draw1(borderPane);
-                            //Widerstand wird in String gespeichert um es später wieder abspeichern zu können
-                            //xmlstring=widerstand1.toxml(xmlstring);
-                            arraylist.add(widerstand1);
-
+                            try {
+                                //Schreibt die Werte aus dem String in Variable
+                                line = scanner.nextLine();
+                                IDWiderstand = Integer.parseInt(line.substring(line.indexOf("<ID>") + 4, line.indexOf("</ID>")));
+                                line = scanner.nextLine();
+                                xwid = (double) Integer.parseInt(line.substring(line.indexOf("<PositionX>") + 11, line.indexOf("</PositionX>")));
+                                line = scanner.nextLine();
+                                ywid = (double) Integer.parseInt(line.substring(line.indexOf("<PositionY>") + 11, line.indexOf("</PositionY>")));
+                                line = scanner.nextLine();
+                                widOr = Integer.parseInt(line.substring(line.indexOf("<Richtung>") + 10, line.indexOf("</Richtung>")));
+                                Widerstand widerstand1 = new Widerstand(IDWiderstand, xwid, ywid, widOr);
+                                //Widersatnd wird auf BorderPane gezeichnet
+                                widerstand1.draw(borderPane);
+                                arraylist.add(widerstand1);
+                            }
+                                catch (Exception f){//Catch exception if any
+                                    System.err.println("Error: " + f.getMessage());
+                                }
                         }
                         else if(line.indexOf("<Spannungsquelle>")!=-1)
                         {
-                            //Schreibt die Werte aus dem String in Variable
-                            line=scanner.nextLine();
-                            IDSpannungsquelle=Integer.parseInt(line.substring(line.indexOf("<ID>")+4,line.indexOf("</ID>")));
-                            line=scanner.nextLine();
-                            xspa=(double)Integer.parseInt(line.substring(line.indexOf("<PositionX>")+11, line.indexOf("</PositionX>")));
-                            line=scanner.nextLine();
-                            yspa=(double)Integer.parseInt(line.substring(line.indexOf("<PositionY>")+11, line.indexOf("</PositionY>")));
-                            line=scanner.nextLine();
-                            spaOr =Integer.parseInt(line.substring(line.indexOf("<Richtung>")+10, line.indexOf("</Richtung>")));
-                            Spannungsquelle spannungsquelle1=new Spannungsquelle(IDSpannungsquelle,xspa,yspa,spaOr);
-                            //spannungsquelle1.draw(gc, 0);
-                            //Sannungsquelle wird auf BorderPane gezeichnet
-                            spannungsquelle1.draw1(borderPane);
-                            //Spannungsquelle wird in String gespeichert um es später wieder abspeichern zu können
-                            //xmlstring=spannungsquelle1.toxml(xmlstring);
-                            arraylist.add(spannungsquelle1);
-
+                            try {
+                                //Schreibt die Werte aus dem String in Variable
+                                line = scanner.nextLine();
+                                IDSpannungsquelle = Integer.parseInt(line.substring(line.indexOf("<ID>") + 4, line.indexOf("</ID>")));
+                                line = scanner.nextLine();
+                                xspa = (double) Integer.parseInt(line.substring(line.indexOf("<PositionX>") + 11, line.indexOf("</PositionX>")));
+                                line = scanner.nextLine();
+                                yspa = (double) Integer.parseInt(line.substring(line.indexOf("<PositionY>") + 11, line.indexOf("</PositionY>")));
+                                line = scanner.nextLine();
+                                spaOr = Integer.parseInt(line.substring(line.indexOf("<Richtung>") + 10, line.indexOf("</Richtung>")));
+                                Spannungsquelle spannungsquelle1 = new Spannungsquelle(IDSpannungsquelle, xspa, yspa, spaOr);
+                                //Sannungsquelle wird auf BorderPane gezeichnet
+                                spannungsquelle1.draw(borderPane);
+                                arraylist.add(spannungsquelle1);
+                            }
+                            catch (Exception f){//Catch exception if any
+                                System.err.println("Error: " + f.getMessage());
+                            }
                         }
                         else if(line.indexOf("<Leitung>")!=-1)
                         {
-                            //Schreibt die Werte aus dem String in Variable
-                            line=scanner.nextLine();
-                            IDLeitung=Integer.parseInt(line.substring(line.indexOf("<ID>")+4,line.indexOf("</ID>")));
-                            line=scanner.nextLine();
-                            xles=(double)Integer.parseInt(line.substring(line.indexOf("<PositionXstart>")+16, line.indexOf("</PositionXstart>")));
-                            line=scanner.nextLine();
-                            yles=(double)Integer.parseInt(line.substring(line.indexOf("<PositionYstart>")+16, line.indexOf("</PositionYstart>")));
-                            line=scanner.nextLine();
-                            xlee=(double)Integer.parseInt(line.substring(line.indexOf("<PositionXend>")+14, line.indexOf("</PositionXend>")));
-                            line=scanner.nextLine();
-                            ylee=(double)Integer.parseInt(line.substring(line.indexOf("<PositionYend>")+14, line.indexOf("</PositionYend>")));
-                            Leitung leitung1=new Leitung(IDLeitung,xles,yles,0,xlee,ylee);
-                            //leitung1.draw(gc);
-                            leitung1.draw1(borderPane);
-                            //Leitung wird in String gespeichert um es später wieder abspeichern zu können
-                            //xmlstring=leitung1.toxml(xmlstring);
-                            arraylist.add(leitung1);
+                            try {
+                                //Schreibt die Werte aus dem String in Variable
+                                line = scanner.nextLine();
+                                IDLeitung = Integer.parseInt(line.substring(line.indexOf("<ID>") + 4, line.indexOf("</ID>")));
+                                line = scanner.nextLine();
+                                xles = (double) Integer.parseInt(line.substring(line.indexOf("<PositionXstart>") + 16, line.indexOf("</PositionXstart>")));
+                                line = scanner.nextLine();
+                                yles = (double) Integer.parseInt(line.substring(line.indexOf("<PositionYstart>") + 16, line.indexOf("</PositionYstart>")));
+                                line = scanner.nextLine();
+                                xlee = (double) Integer.parseInt(line.substring(line.indexOf("<PositionXend>") + 14, line.indexOf("</PositionXend>")));
+                                line = scanner.nextLine();
+                                ylee = (double) Integer.parseInt(line.substring(line.indexOf("<PositionYend>") + 14, line.indexOf("</PositionYend>")));
+                                Leitung leitung1 = new Leitung(IDLeitung, xles, yles, 0, xlee, ylee);
+                                leitung1.draw(borderPane);
+                                arraylist.add(leitung1);
+                            }
+                            catch (Exception f){//Catch exception if any
+                                System.err.println("Error: " + f.getMessage());
+                            }
+
                         }
                     }
                 } catch (Exception f){//Catch exception if any
@@ -902,7 +934,7 @@ public class App extends Application {
     public void showhelp()
     {
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
-        alert.setGraphic(hilfeView);
+        alert.setGraphic(helpView);
         alert.setTitle("Hilfe");
         alert.setHeaderText(" ");
         alert.setContentText(" ");
