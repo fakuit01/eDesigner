@@ -826,7 +826,8 @@ public class App extends Application {
                             }
                             catch (Exception f){//Catch exception if any
                                // System.err.println("Error: " + f.getMessage());
-                                brokenfilealert("Kondensator "+IDKondensator);
+                                if(IDKondensator!=0)brokenfilealert("Kondensator bei ID: "+IDKondensator+" Zeile: "+line);
+                                else brokenfilealert("Kondensator in Zeile: "+line);
                             }
                         }
                         else if(line.indexOf("<Spule>")!=-1)
@@ -848,7 +849,8 @@ public class App extends Application {
                              }
                             catch (Exception f){//Catch exception if any
                        // System.err.println("Error: " + f.getMessage());
-                                brokenfilealert("Spule "+IDSpule);
+                                if(IDSpule!=0)brokenfilealert("Spule bei ID: "+IDSpule +"\nZeile: "+line);
+                                else brokenfilealert("Spule in Zeile: "+line);
                     }
                         }
                         else if(line.indexOf("<Widerstand>")!=-1)
@@ -864,13 +866,14 @@ public class App extends Application {
                                 line = scanner.nextLine();
                                 widOr = Integer.parseInt(line.substring(line.indexOf("<Richtung>") + 10, line.indexOf("</Richtung>")));
                                 Widerstand widerstand1 = new Widerstand(IDWiderstand, xwid, ywid, widOr);
-                                //Widersatnd wird auf BorderPane gezeichnet
+                                //Widerstand wird auf BorderPane gezeichnet
                                 widerstand1.draw(borderPane);
                                 arraylist.add(widerstand1);
                             }
                                 catch (Exception f){//Catch exception if any
                                     //System.err.println("Error: " + f.getMessage());
-                                    brokenfilealert("Widerstand "+ IDWiderstand);
+                                    if(IDWiderstand!=0) brokenfilealert("Widerstand bei ID: "+ IDWiderstand+"\nZeile: "+line);
+                                    else brokenfilealert("Widerstand in Zeile: "+line);
                                 }
                         }
                         else if(line.indexOf("<Spannungsquelle>")!=-1)
@@ -892,7 +895,8 @@ public class App extends Application {
                             }
                             catch (Exception f){//Catch exception if any
                                 //System.err.println("Error: " + f.getMessage());
-                                brokenfilealert("Spannungsquelle "+IDSpannungsquelle);
+                                if(IDSpannungsquelle!=0)brokenfilealert("Spannungsquelle bei ID: "+IDSpannungsquelle+"\nZeile: "+line);
+                                else brokenfilealert("Spannungsquelle in Zeile: "+line);
                             }
                         }
                         else if(line.indexOf("<Leitung>")!=-1)
@@ -915,7 +919,9 @@ public class App extends Application {
                             }
                             catch (Exception f){//Catch exception if any
                                 //System.err.println("Error: " + f.getMessage());
-                                brokenfilealert("Leitung "+IDLeitung);
+
+                                if(IDLeitung!=0)brokenfilealert("Leitung bei ID: "+IDLeitung+"\nZeile: "+line);
+                                else brokenfilealert("Leitung in Zeile: "+line);
 
                             }
 
