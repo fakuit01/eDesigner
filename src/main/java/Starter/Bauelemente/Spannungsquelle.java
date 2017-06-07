@@ -63,12 +63,7 @@ public class Spannungsquelle extends Bauelemente {
                     imageview.removeEventHandler(MouseEvent.ANY, this);
                 }
                 //Transparent in schwarz je nach orientierung
-                else {
-                    if (Orientation == 0) {imageview.setImage(S00);}
-                    else if (Orientation == 1) {imageview.setImage(S45);}
-                    else if (Orientation == 2) {imageview.setImage(S90);}
-                    else if (Orientation == 3) {imageview.setImage(S135);}
-                }
+                else {orientationS();}
             }});
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
@@ -98,18 +93,35 @@ public class Spannungsquelle extends Bauelemente {
             public void handle(MouseEvent event)
             {
                 if(event.getButton()==MouseButton.PRIMARY) {
-
+                    //beta anfang
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
                 //oberhalb menüleiste
-                    if (event.getSceneY() < 25) {orientationR();}
-                        //in rechter vbox allerdings nicht beim Mülleimer//Todo da muss ein oder rein bei all den Funktionen mit dieser if in jeder Klasse oder nicht?
-                    else if (event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500 ){orientationR();}
-                    //Todo funktioniert nur wenn screensize nicht geändert wird muss man noch ändern//über rechter vbox
-                    else if (event.getSceneY() > (border.getHeight()-40)) {orientationR();}
-                    //Todo Funktioniert nicht Screen ist größer als die 900 //untere hbox
-                    else if (event.getSceneX() > (border.getWidth()-25)) {orientationR();}
-                    else {
-
+                    if (event.getSceneY() < 25)
+                    {
+                        imageview.setX(event.getSceneX() - 25);
+                        orientationR();
+                    }
+                        //in linker vbox allerdings nicht beim Mülleimer
+                    // Todo man kann vom mülleimer hochziehen bug
+                    else if (event.getSceneX() < 125&&event.getSceneY()<450 )
+                    {
+                        imageview.setY(event.getSceneY() - 25);
+                        orientationR();
+                    }
+                    //untere Hbox
+                    else if (event.getSceneY() > (border.getHeight()-40)) {
+                        imageview.setX(event.getSceneX() - 25);
+                        orientationR();
+                    }
+                    //rechte vbox
+                    else if (event.getSceneX() > (border.getWidth()-25))
+                    {
+                        imageview.setY(event.getSceneY() - 25);
+                        orientationR();
+                    }
+                    else
+                    {
+                    //beta ende
                         //normaler Bereich
                         if (Orientation == 0) {imageview.setImage(FT00);}
                         else if (Orientation == 1) {imageview.setImage(FT45);}
@@ -133,44 +145,42 @@ public class Spannungsquelle extends Bauelemente {
                         imageview.setImage(null);
                         imageview.removeEventHandler(MouseEvent.ANY, this);
                     }
-
-                    //Todo Bild sollte nicht in die Vbox gezogen werden können funktioniert noch nicht richtig
                     //oben
                     else if(event.getSceneY() < 50) {
                         posX = round(event.getSceneX());
-                        posY = 50-25;
+                        posY = 50;
                         imageview.setX(posX - 25);
-                        imageview.setY(posY);
+                        imageview.setY(posY-25);
                         orientationS();
                     }
-                        //rechts
-                    else if (event.getSceneX() > border.getWidth()) {
-                        posX = border.getWidth()-25;
+                    //rechts passt nicht immer
+                    else if (event.getSceneX() > border.getWidth()-40) {
+                        posX = round(border.getWidth()-40);
                         posY = round(event.getSceneY());
-                        imageview.setX(posX);
-                        imageview.setY(posY - 25);
+                        imageview.setX(posX-25);
+                        imageview.setY(posY-25);
                         orientationS();
                     }
-                        //links
-                    else if (event.getSceneX() <= 125&&(event.getSceneY()<=450  || event.getSceneY() <= 500 )){
-                        //Todo noch mer if? Funktioniert noch nicht richtig
-                        posX = round(event.getSceneX());
+                    //links muss noch
+                    else if (event.getSceneX() <= 125&&event.getSceneY()<=450){
+                        posX = round(0+125+25);
                         posY = round(event.getSceneY());
                         imageview.setX(posX - 25);
                         imageview.setY(posY- 25);
                         orientationS();
                     }
-                        //unten
-                    else if (event.getSceneY() >= 575 - 40) {
+                    //unten
+                    else if (event.getSceneY() >= (border.getHeight()-25 - 40))
+                    {
                         posX = round(event.getSceneX());
-                        posY = round(575- 40 - 25);
-                        imageview.setX(posX- 25);
-                        imageview.setY(posY);
+                        posY = round(border.getHeight()-25- 40);
+                        imageview.setX(posX-25);
+                        imageview.setY(posY-25);
                         orientationS();
                     }
-
-                        //normaler bereich
-                    else {
+                    //normaler bereich
+                    else
+                    {
                         posX = round(event.getSceneX());
                         posY = round(event.getSceneY());
                         imageview.setX(posX- 25);
@@ -221,13 +231,6 @@ public class Spannungsquelle extends Bauelemente {
         }
     }
     //Snap ans Raster der Bauteile
-    public double rundenBauteile(double runden) {
-        if (runden % 50 < 25) {
-            return runden - (runden % 50);
-        } else if (runden % 50 >= 25) {
-            return runden + (50 - (runden % 50));
-        } else return 0;
-    }
     public double round(double runden)
     {
         double a=0,b=0;
