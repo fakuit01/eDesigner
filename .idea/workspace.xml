@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$21.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Start.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Start.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Start.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +24,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="828" column="80" lean-forward="false" selection-start-line="828" selection-start-column="80" selection-end-line="828" selection-end-column="80" />
+            <state relative-caret-position="239">
+              <caret line="494" column="14" lean-forward="false" selection-start-line="494" selection-start-column="14" selection-end-line="494" selection-end-column="14" />
               <folding>
                 <element signature="e#2538#2551#0" expanded="true" />
                 <element signature="class#7815:7974" expanded="false" />
@@ -40,8 +49,31 @@
                 <element signature="class#16455:17266" expanded="false" />
                 <element signature="class#17930:18314" expanded="false" />
                 <element signature="class#18352:19989" expanded="false" />
-                <element signature="class#20454:20617" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spannungsquelle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+              <folding>
+                <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+                <element signature="method#rundenBauteile#0;class#Spannungsquelle#0" expanded="false" />
+                <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,6 +112,7 @@
       <find>f00</find>
       <find>new</find>
       <find>try</find>
+      <find>curs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,15 +128,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Startscreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Splashscreen.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
       </list>
     </option>
   </component>
@@ -112,6 +145,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -134,7 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,23 +257,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eDesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eDesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -749,14 +775,16 @@
       <workItem from="1496151806526" duration="2902000" />
       <workItem from="1496690840649" duration="5262000" />
       <workItem from="1496696208854" duration="828000" />
+      <workItem from="1496843966582" duration="145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42671000" />
+    <option name="totallyTimeSpent" value="42816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -768,12 +796,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28093645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28093645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25692964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2595949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -931,7 +959,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -968,7 +995,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1005,7 +1031,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1041,7 +1066,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1070,7 +1094,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1113,7 +1136,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1156,7 +1178,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1213,7 +1234,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1249,7 +1269,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1278,7 +1297,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1307,7 +1325,6 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1366,14 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Splashscreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1413,18 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding>
-            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
-            <element signature="method#rundenBauteile#0;class#Spannungsquelle#0" expanded="false" />
-            <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1853">
@@ -1441,10 +1438,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="828" column="80" lean-forward="false" selection-start-line="828" selection-start-column="80" selection-end-line="828" selection-end-column="80" />
+        <state relative-caret-position="239">
+          <caret line="494" column="14" lean-forward="false" selection-start-line="494" selection-start-column="14" selection-end-line="494" selection-end-column="14" />
           <folding>
             <element signature="e#2538#2551#0" expanded="true" />
             <element signature="class#7815:7974" expanded="false" />
@@ -1465,7 +1470,18 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-            <element signature="class#20454:20617" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+          <folding>
+            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#rundenBauteile#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
           </folding>
         </state>
       </provider>
