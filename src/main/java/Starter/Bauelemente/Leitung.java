@@ -60,7 +60,7 @@ public class Leitung extends Bauelemente {
                 }
                 //sonst draggen 
                 else{
-                    //Was passiert wenn man ausserhalb des Bildschirms ist
+                    //Was passiert wenn man ausserhalb der Boxen ist
                     if(event.getSceneY()<25) {line.setStroke(Color.RED);}
                     else if(event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500) {line.setStroke(Color.RED);}
                     else if(event.getSceneY()>=border.getHeight()-40){line.setStroke(Color.RED);}
@@ -103,14 +103,38 @@ public class Leitung extends Bauelemente {
             {
                 line.setStroke(colorGrew);
                 //Prüft ob man die Linie verlängert
+
+                //Linie gedragged
                 if(drop==false) {
 
                     //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
-                    if (event.getSceneX() <= 125 && event.getSceneY() >= 450 && event.getSceneY() <= 500) {
+                    if (event.getSceneX() <= 125 && event.getSceneY() >= 450) {
                         deleted = true;
                         border.getChildren().remove(line);
                         line.removeEventHandler(MouseEvent.ANY, this);
                     }
+                    //Todo roter bereich
+                    //oben
+                    else if(event.getSceneY() < 50)
+                    {
+
+                    }
+                    //rechts passt nicht immer
+                    else if (event.getSceneX() > border.getWidth()-40)
+                    {
+
+                    }
+                    //links
+                    else if (event.getSceneX() <= 125&&event.getSceneY()<=450)
+                    {
+
+                    }
+                    //unten
+                    else if (event.getSceneY() >= (border.getHeight()-25 - 40))
+                    {
+
+                    }
+                    //normaler Bereich
                     else {
                         posX = round(event.getSceneX() + xs);
                         posY = round(event.getSceneY() + ys);
@@ -122,8 +146,10 @@ public class Leitung extends Bauelemente {
                         line.setEndY(yend);
                     }
                 }
+                //Linie verlängern
                 else if(drop==true)
                 {
+
                     posX = round(posX);
                     posY = round(posY);
                     xend = round(xend);
