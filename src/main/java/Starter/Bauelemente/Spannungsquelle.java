@@ -98,7 +98,7 @@ public class Spannungsquelle extends Bauelemente {
             public void handle(MouseEvent event)
             {
                 if(event.getButton()==MouseButton.PRIMARY) {
-                    /*
+
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
                 //oberhalb menüleiste
                     if (event.getSceneY() < 25) {orientationR();}
@@ -109,7 +109,7 @@ public class Spannungsquelle extends Bauelemente {
                     //Todo Funktioniert nicht Screen ist größer als die 900 //untere hbox
                     else if (event.getSceneX() > (border.getWidth()-25)) {orientationR();}
                     else {
-                    */
+
                         //normaler Bereich
                         if (Orientation == 0) {imageview.setImage(FT00);}
                         else if (Orientation == 1) {imageview.setImage(FT45);}
@@ -117,7 +117,7 @@ public class Spannungsquelle extends Bauelemente {
                         else if (Orientation == 3) {imageview.setImage(FT135);}
                         imageview.setX(event.getSceneX() - 25);
                         imageview.setY(event.getSceneY() - 25);
-                    //}
+                    }
                 }
             }});
         //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste
@@ -133,7 +133,7 @@ public class Spannungsquelle extends Bauelemente {
                         imageview.setImage(null);
                         imageview.removeEventHandler(MouseEvent.ANY, this);
                     }
-                    /*
+
                     //Todo Bild sollte nicht in die Vbox gezogen werden können funktioniert noch nicht richtig
                     //oben
                     else if(event.getSceneY() < 50) {
@@ -168,7 +168,7 @@ public class Spannungsquelle extends Bauelemente {
                         imageview.setY(posY);
                         orientationS();
                     }
-                    */
+
                         //normaler bereich
                     else {
                         posX = round(event.getSceneX());

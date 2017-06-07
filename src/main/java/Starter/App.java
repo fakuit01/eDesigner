@@ -492,7 +492,7 @@ public class App extends Application {
         scene.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-               //scene.setCursor(new ImageCursor(cursor));
+               scene.setCursor(new ImageCursor(cursor));
             }});
         //+++++Ende Maus Cursor
 

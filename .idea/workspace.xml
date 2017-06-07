@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$21.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Start.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Start.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Start.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
-              <caret line="494" column="14" lean-forward="false" selection-start-line="494" selection-start-column="14" selection-end-line="494" selection-end-column="14" />
+              <caret line="494" column="15" lean-forward="false" selection-start-line="494" selection-start-column="15" selection-end-line="494" selection-end-column="15" />
               <folding>
                 <element signature="e#2538#2551#0" expanded="true" />
                 <element signature="class#7815:7974" expanded="false" />
@@ -49,16 +44,18 @@
                 <element signature="class#16455:17266" expanded="false" />
                 <element signature="class#17930:18314" expanded="false" />
                 <element signature="class#18352:19989" expanded="false" />
+                <element signature="e#20543#20544#0" expanded="true" />
+                <element signature="e#20614#20615#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spannungsquelle.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Spannungsquelle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+            <state relative-caret-position="442">
+              <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
                 <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
                 <element signature="method#rundenBauteile#0;class#Spannungsquelle#0" expanded="false" />
@@ -71,8 +68,8 @@
       <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -134,9 +131,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
       </list>
     </option>
   </component>
@@ -775,12 +772,12 @@
       <workItem from="1496151806526" duration="2902000" />
       <workItem from="1496690840649" duration="5262000" />
       <workItem from="1496696208854" duration="828000" />
-      <workItem from="1496843966582" duration="145000" />
+      <workItem from="1496843966582" duration="280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42816000" />
+    <option name="totallyTimeSpent" value="42951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -959,6 +956,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -995,6 +994,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1031,6 +1032,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1066,6 +1069,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1094,6 +1099,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1136,6 +1143,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1178,6 +1187,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1234,6 +1245,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1269,6 +1282,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1297,6 +1312,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1325,6 +1342,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1438,10 +1457,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#rundenBauteile#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1449,7 +1480,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
-          <caret line="494" column="14" lean-forward="false" selection-start-line="494" selection-start-column="14" selection-end-line="494" selection-end-column="14" />
+          <caret line="494" column="15" lean-forward="false" selection-start-line="494" selection-start-column="15" selection-end-line="494" selection-end-column="15" />
           <folding>
             <element signature="e#2538#2551#0" expanded="true" />
             <element signature="class#7815:7974" expanded="false" />
@@ -1470,18 +1501,8 @@
             <element signature="class#16455:17266" expanded="false" />
             <element signature="class#17930:18314" expanded="false" />
             <element signature="class#18352:19989" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
-          <folding>
-            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
-            <element signature="method#rundenBauteile#0;class#Spannungsquelle#0" expanded="false" />
-            <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20614#20615#0" expanded="true" />
           </folding>
         </state>
       </provider>
