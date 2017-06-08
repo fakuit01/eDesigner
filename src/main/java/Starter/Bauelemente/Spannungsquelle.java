@@ -55,7 +55,7 @@ public class Spannungsquelle extends Bauelemente {
                 else if(Orientation==1){imageview.setImage(F45);}
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
-                //Todo Hilfebild richtig oder weg
+                //Todo Hilfebild int Textbild ändern oder weg?
                 helpimage.setY(border.getHeight()-50);
                 helpimage.setX(5);
                 border.getChildren().add(helpimage);
@@ -66,10 +66,14 @@ public class Spannungsquelle extends Bauelemente {
             //Muelleimer
             public void handle(MouseEvent event)
             {
+
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
                     deleted=true;
                     imageview.setImage(null);
                     imageview.removeEventHandler(MouseEvent.ANY, this);
+                    //Hilfebild entfernen
+                    border.getChildren().remove(helpimage);
+
                 }
                 //Transparent in schwarz je nach orientierung
                 else
@@ -91,7 +95,7 @@ public class Spannungsquelle extends Bauelemente {
                     else if(Orientation==3) {imageview.setImage(F00);Orientation=0;}
                     //System.out.println("Ori rechtsklick "+Orientation);
                 }
-                //Todo funktioniert noch nicht richtig bei rechtsdrehung dann linksdrehung
+                //funktioniert noch nicht richtig bei rechtsdrehung dann linksdrehung
             /*else if(event.getButton()==MouseButton.PRIMARY)
                 {
                     if(Orientation==0) {imageview.setImage(F135);Orientation=3;}
@@ -154,6 +158,7 @@ public class Spannungsquelle extends Bauelemente {
                 if(event.getButton()==MouseButton.PRIMARY) {
 
                     //Mülleimer Funktion löscht alle Händler und das Bild Klasse bleibt allerdings erhalten
+                    //wird auch nicht vom Borderpane entfernt bei border.getChildren().remove(imageview) kommen fehler
                     if (event.getSceneX() <= 125 && event.getSceneY() >= 450 && event.getSceneY() <= 500) {
                         deleted = true;
                         imageview.setImage(null);

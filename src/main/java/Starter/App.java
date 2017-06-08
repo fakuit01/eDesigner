@@ -426,16 +426,20 @@ public class App extends Application {
 
         //ENDE vom DRAG AND DROP
 
-
+        /*
+        //Seperator falls gewünscht
+        Separator separator=new Separator();
+        vbox.getChildren().add(separator);
+        */
         //++++++Mülleimer++++++
-        ImageView imageMuelleimer=new ImageView();
-        Image muelleimerZu= new Image("file:Images/muelleimerOffen.png",100,75,false,false);
-        //Image muelleimerOffen=new Image("file:Images/muelleimerOffen.png",50,50,false,false);
-        imageMuelleimer.setImage(muelleimerZu);
-        imageMuelleimer.setX(120);
-        imageMuelleimer.setY(400);
-        //borderPane.getChildren().add(imageMuelleimer);
-        vbox.getChildren().addAll(imageMuelleimer);
+        ImageView imageviewtrash=new ImageView();
+        //Image trash= new Image("file:Images/muelleimerOffen.png",100,75,false,false);
+        Image trash= new Image("file:Images/muelleimerOffen1.png",100,100,false,false);
+
+        imageviewtrash.setImage(trash);
+        imageviewtrash.setX(120);
+        imageviewtrash.setY(400);
+        vbox.getChildren().addAll(imageviewtrash);
         //++++ENDE Mülleimer++++
         //
 
