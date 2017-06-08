@@ -2,30 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$10.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$11.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$12.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$13.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$14.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$15.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$16.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$17.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$18.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$19.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$20.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$21.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$22.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$23.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$6.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$7.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$8.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$9.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$3.class" />
@@ -33,7 +9,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,14 +22,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="978" column="4" lean-forward="false" selection-start-line="978" selection-start-column="4" selection-end-line="978" selection-end-column="4" />
+            <state relative-caret-position="6030">
+              <caret line="984" column="99" lean-forward="false" selection-start-line="984" selection-start-column="47" selection-end-line="984" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2672#2685#0" expanded="true" />
                 <element signature="class#8019:8178" expanded="false" />
                 <element signature="class#8300:8452" expanded="false" />
                 <element signature="class#8993:9154" expanded="false" />
@@ -84,7 +58,24 @@
                 <element signature="method#FileReader#0;class#App#0" expanded="false" />
                 <element signature="method#showhelp#0;class#App#0" expanded="false" />
                 <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-                <element signature="method#changetip#0;class#App#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spannungsquelle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+              <folding>
+                <element signature="class#5628:7593" expanded="false" />
+                <element signature="class#7726:10220" expanded="false" />
+                <element signature="method#draw#0;class#Spannungsquelle#0" expanded="false" />
+                <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+                <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
+                <element signature="method#orientationS#0;class#Spannungsquelle#0" expanded="false" />
+                <element signature="method#orientationR#0;class#Spannungsquelle#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -189,9 +180,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,22 +264,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eDesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eDesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -791,28 +768,28 @@
       <workItem from="1496843966582" duration="280000" />
       <workItem from="1496848104672" duration="5692000" />
       <workItem from="1496940646880" duration="391000" />
-      <workItem from="1496953152809" duration="5711000" />
+      <workItem from="1496953152809" duration="6692000" />
+      <workItem from="1496960314288" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54745000" />
+    <option name="totallyTimeSpent" value="55761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="798" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="798" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2798354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2798354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -823,12 +800,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -937,7 +915,6 @@
           <caret line="699" column="26" lean-forward="false" selection-start-line="699" selection-start-column="26" selection-end-line="699" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -967,7 +944,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -986,7 +962,6 @@
           <caret line="699" column="26" lean-forward="false" selection-start-line="699" selection-start-column="16" selection-end-line="699" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1016,7 +991,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1035,7 +1009,6 @@
           <caret line="477" column="46" lean-forward="false" selection-start-line="477" selection-start-column="46" selection-end-line="477" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1065,7 +1038,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1083,7 +1055,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1113,7 +1084,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1124,7 +1094,6 @@
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1154,7 +1123,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1179,7 +1147,6 @@
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1209,7 +1176,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1234,7 +1200,6 @@
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1264,7 +1229,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1303,7 +1267,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1333,7 +1296,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1351,7 +1313,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1381,7 +1342,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1392,7 +1352,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1422,7 +1381,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1433,7 +1391,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1463,7 +1420,6 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1528,7 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1601,25 +1556,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-          <folding>
-            <element signature="class#3226:3708" expanded="false" />
-            <element signature="class#5157:7122" expanded="false" />
-            <element signature="class#7255:9749" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="978" column="4" lean-forward="false" selection-start-line="978" selection-start-column="4" selection-end-line="978" selection-end-column="4" />
+        <state relative-caret-position="6030">
+          <caret line="984" column="99" lean-forward="false" selection-start-line="984" selection-start-column="47" selection-end-line="984" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2685#0" expanded="true" />
             <element signature="class#8019:8178" expanded="false" />
             <element signature="class#8300:8452" expanded="false" />
             <element signature="class#8993:9154" expanded="false" />
@@ -1649,7 +1591,22 @@
             <element signature="method#FileReader#0;class#App#0" expanded="false" />
             <element signature="method#showhelp#0;class#App#0" expanded="false" />
             <element signature="method#brokenfilealert#0;class#App#0" expanded="false" />
-            <element signature="method#changetip#0;class#App#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+          <folding>
+            <element signature="class#5628:7593" expanded="false" />
+            <element signature="class#7726:10220" expanded="false" />
+            <element signature="method#draw#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#round#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#orientationS#0;class#Spannungsquelle#0" expanded="false" />
+            <element signature="method#orientationR#0;class#Spannungsquelle#0" expanded="false" />
           </folding>
         </state>
       </provider>

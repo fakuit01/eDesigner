@@ -38,11 +38,14 @@ public class Spannungsquelle extends Bauelemente {
     ImageView imageview = new ImageView();
     boolean deleted=false;
     BorderPane border=new BorderPane();
+    ImageView helpimage = new ImageView();
+
 
     public Spannungsquelle(int ID,double x, double y, int Orientation1)
     {
         super(ID,x,y,Orientation1);
         imageview.setImage(S00);
+        helpimage.setImage(R00);
         //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
@@ -52,18 +55,29 @@ public class Spannungsquelle extends Bauelemente {
                 else if(Orientation==1){imageview.setImage(F45);}
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
+                //Todo Hilfebild richtig oder weg
+                helpimage.setY(border.getHeight()-50);
+                helpimage.setX(5);
+                border.getChildren().add(helpimage);
+                //Hilfebild ende
             }});
         //Wenn man das Objekt verlässt
         imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
             //Muelleimer
-            public void handle(MouseEvent event) {
+            public void handle(MouseEvent event)
+            {
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
                     deleted=true;
                     imageview.setImage(null);
                     imageview.removeEventHandler(MouseEvent.ANY, this);
                 }
                 //Transparent in schwarz je nach orientierung
-                else {orientationS();}
+                else
+                {
+                    orientationS();
+                    //Hilfebild entfernen
+                    border.getChildren().remove(helpimage);
+                }
             }});
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
