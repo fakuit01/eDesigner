@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 
 
@@ -37,7 +38,6 @@ public class Spannungsquelle extends Bauelemente {
     ImageView imageview = new ImageView();
     boolean deleted=false;
     BorderPane border=new BorderPane();
-
 
     public Spannungsquelle(int ID,double x, double y, int Orientation1)
     {

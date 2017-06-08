@@ -2,6 +2,9 @@ package Starter;
 
 //import Bauelemente.*;
 import Starter.Bauelemente.*;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
@@ -53,6 +56,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 //import java.nio.charset.StandardCharsets;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
+
+
 
 public class App extends Application {
     //Variablen die auch in den Funktionen verwendet werden
@@ -78,7 +84,9 @@ public class App extends Application {
     Line drawline=new Line();
     final Image hilfe=new Image("file:Images/hilfe.png",1000,600,false,false);
     ImageView helpView = new ImageView(hilfe);
-
+    //test
+    int timernumber=0;
+    //test ende
     //Startet das Programm
     public static void execute(String[] args) {
         launch(args);
@@ -98,10 +106,10 @@ public class App extends Application {
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
-            public void handle(KeyEvent event)
-            {
-                if(event.getCode()==KeyCode.DELETE)
-                    System.out.println("Borderpane höhe: "+borderPane.getHeight()+" Borderpane Länge "+borderPane.getWidth()+" Maus "+MouseInfo.getPointerInfo().getLocation());
+            public void handle(KeyEvent event) {
+                if (event.getCode() == KeyCode.DELETE) {
+                    System.out.println("Borderpane höhe: " + borderPane.getHeight() + " Borderpane Länge " + borderPane.getWidth() + " Maus " + MouseInfo.getPointerInfo().getLocation());
+                }
             }
         });
         //Menüpunkt "Datei" erstellen
@@ -507,20 +515,25 @@ public class App extends Application {
 
 
         //++++++HBox als untere Leiste mit Tooltipps++++++++
-        String tooltipps="Tipps: ";
-        //Todo String anpassen und vllt iwas damit machen bzw verschiedene Tipps anzeigen
-        String drehen="Zum Drehen des Bauteils Rechtsklick auf das Bauteil";
-        textToolTipps.setText(tooltipps+drehen);
         textToolTipps.setFill(Color.WHITE);
         hboxEmpty.getChildren().add(textToolTipps);
+
         hboxEmpty.setPrefSize(100,15);
-        //VBox Style
+
+        Timeline timeline = new Timeline(new KeyFrame(
+                Duration.millis(10000),
+                ae ->changetip()));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
+        //HBox Style
         hboxEmpty.setStyle("-fx-background-color: black;"
                 + "-fx-border-style: solid;"
                 + "-fx-border-color: darkgrey;"
                 + "-fx-border-width: 3 0 0 0;"
                 + "-fx-padding: 10.5px;");
         //++++++Ende Hbox
+
 
         //Darstellung der menubar und vbox auf Borderpane mit Stylesheet
         borderPane.setRight(vboxEmpty);
@@ -961,5 +974,21 @@ public class App extends Application {
         alert.setHeaderText("");
         alert.setContentText("Fehler in Datei bei: " + Bauteil);
         alert.showAndWait();
+    }
+    public void changetip()
+    {
+        timernumber++;
+        hboxEmpty.getChildren().remove(textToolTipps);
+        if(timernumber==6)timernumber=1;
+        switch (timernumber){
+            case 1:textToolTipps.setText("Tip: Bauteile werden gelöscht, indem man Sie auf den Mülleimer zieht und dann loslässt");break;
+            case 2:textToolTipps.setText("Tip: Bauelemente können durch Rechtsklick gedreht werden");break;
+            case 3:textToolTipps.setText("Tip: Start- bzw. Endpuntke der Leitungen können verändert werden indem man sie anklickt und an einen anderen Punkt zieht");break;
+            case 4:textToolTipps.setText("Tip: Bauteile können per Drag and Drop auf die Zeichenebene gezogen werden");break;
+            case 5:textToolTipps.setText("Tip: Leitungen werden durch Klick und ziehen der Maus gezeichnet");break;
+        }
+        hboxEmpty.getChildren().add(textToolTipps);
+
+
     }
 }
