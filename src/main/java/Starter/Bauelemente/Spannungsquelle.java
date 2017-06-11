@@ -58,7 +58,7 @@ public class Spannungsquelle extends Bauelemente {
                 else if(Orientation==1){imageview.setImage(F45);}
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
-                //Todo Hilfebild int Textbild ändern oder weg?
+                //Hilfebild
                 helpimage.setY(border.getHeight()-36);
                 helpimage.setX(5);
                 border.getChildren().add(helpimage);

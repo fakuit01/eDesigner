@@ -40,4 +40,39 @@
     -fx-background-color:#0096C9;
 }
 
+.dialog-pane{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .header-panel {
+    -fx-fill: black;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.dialog-pane .content.label {
+    -fx-fill: black;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button{
+    -fx-background-color:black;
+    -fx-text-fill:white;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow( three-pass-box, #009fe3, 10.0, 0.0, 0.0, 0.0);
+    -fx-cursor:hand;
+}
+.dialog-pane .button:hover{
+    -fx-background-color:white;
+    -fx-text-fill:#009fe3;
+    -fx-font-weight:bold;
+}
+
+
+
+
+
+
+
 

@@ -31,11 +31,10 @@ import javafx.event.EventHandler;
 import java.awt.*;
 import java.awt.Label;
 import java.awt.TextField;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Scanner;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -50,7 +49,6 @@ import javax.swing.*;
 //import javax.xml.soap.Text;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
-import java.io.File;
 import java.util.Iterator;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
@@ -74,7 +72,7 @@ public class App extends Application {
     Canvas canvas = new Canvas(dim.getWidth(),dim.getHeight());
     VBox vbox = new VBox();
     VBox vboxEmpty = new VBox();
-    HBox hboxEmpty = new HBox();
+    HBox hboxTipps = new HBox();
     GraphicsContext gc = canvas.getGraphicsContext2D();
     MenuBar menuBar = new MenuBar();
     BorderPane borderPane=new BorderPane();
@@ -103,6 +101,7 @@ public class App extends Application {
         Scene scene = new Scene(borderPane, 1000, 600);
         final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
 
+
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
@@ -114,8 +113,19 @@ public class App extends Application {
         });
         //Menüpunkt "Datei" erstellen
         //TODO: Menüstruktur und Funktionen ergänzen
-        Menu fileMenu = new Menu("_Datei");
+        Menu fileMenu = new Menu("_Menü");
         //Submenü/Unterpunkte zu fileMenu
+
+        //Menüpunkt "Hilfe" erstellen und hinzufügen
+        //Menu helpMenu = new Menu("_Hilfe");
+        MenuItem help=new MenuItem("Hilfe");
+        help.setOnAction(e->{showhelp();});
+        //helpMenu.getItems().add(help);
+        help.setAccelerator(KeyCombination.keyCombination("Ctrl+H"));
+        fileMenu.getItems().add(help);
+        fileMenu.getItems().add(new SeparatorMenuItem());
+
+
         //Unterpunkt: Neu
         MenuItem newMenuItem = new MenuItem("Neu");
         newMenuItem.setOnAction(e -> {
@@ -123,7 +133,6 @@ public class App extends Application {
             newEmpty();
         });
         newMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+N"));
-
         fileMenu.getItems().add(newMenuItem);
 
         //Unterpunkt: Öffnen
@@ -132,7 +141,6 @@ public class App extends Application {
             //File öffnen
             open();});
         openMenuItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
-
         fileMenu.getItems().add(openMenuItem);
         fileMenu.getItems().add(new SeparatorMenuItem());
 
@@ -142,14 +150,15 @@ public class App extends Application {
             autosave();
         });
         autosave.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
-
         fileMenu.getItems().add(autosave);
+
         MenuItem save=new MenuItem("Speichern unter");
         save.setOnAction(e->{
             //Speichern unter
             saveas();
         });
         save.setAccelerator(KeyCombination.keyCombination("Ctrl+U"));
+
         //Hinzufügen zum Menü
         fileMenu.getItems().add(save);
         fileMenu.getItems().add(new SeparatorMenuItem());
@@ -177,17 +186,12 @@ public class App extends Application {
         viewMenu.getItems().add(new MenuItem("Schriftgröße ändern"));
         */
 
-        //Menüpunkt "Hilfe" erstellen und hinzufügen
-        Menu helpMenu = new Menu("_Hilfe");
-        MenuItem help=new MenuItem("Hilfe");
-        help.setOnAction(e->{showhelp();});
-        helpMenu.getItems().add(help);
-        help.setAccelerator(KeyCombination.keyCombination("Ctrl+H"));
+
 
 
 
         //Menüleiste zusammenführen
-        menuBar.getMenus().addAll(fileMenu,helpMenu);//editMenu, viewMenu, helpMenu);
+        menuBar.getMenus().addAll(fileMenu);//editMenu, viewMenu, helpMenu);
         //Vbox Größe
         vbox.setPrefSize(100,100);
         //VBox Style
@@ -469,17 +473,27 @@ public class App extends Application {
                         //entscheidet ob es ein xml file ist
                         if(file.getName().toLowerCase().endsWith(".xml"))
                         {
-                            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-                            alert.setTitle("Achtung");
-                            alert.setHeaderText("");
-                            alert.setContentText("Wollen sie das neue Projekt: \""+file.getName()+"\" laden? Alle nicht gespeicherten Änderungen gehen verloren");
-                            Optional<ButtonType> result=alert.showAndWait();
-                            if(result.get()==ButtonType.OK) {FileReader(file);}
-                            else return;
+                            if(arraylist.isEmpty()) {FileReader1(file);}
+                            else{
+                                ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
+                                ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
+                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+                                DialogPane dialogPane = alert.getDialogPane();
+                                dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
+                                alert.setTitle("Achtung");
+                                alert.setHeaderText("");
+                                alert.setContentText("Wollen sie das Projekt: \"" + file.getName() + "\" laden? \nNicht gespeichertes geht verloren");
+                                Optional<ButtonType> result = alert.showAndWait();
+                                if (result.get() == yes) {
+                                    FileReader1(file);
+                                } else return;
+                            }
                         }
                         else
                         {
                             Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                            DialogPane dialogPane = alert.getDialogPane();
+                            dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
                             alert.setTitle("Falsches Dateiformat");
                             alert.setHeaderText("");
                             alert.setContentText("Das Programm unterstützt nur das XML Format");
@@ -520,9 +534,9 @@ public class App extends Application {
 
         //++++++HBox als untere Leiste mit Tooltipps++++++++
         textToolTipps.setFill(Color.WHITE);
-        hboxEmpty.getChildren().add(textToolTipps);
+        hboxTipps.getChildren().add(textToolTipps);
 
-        hboxEmpty.setPrefSize(100,15);
+        hboxTipps.setPrefSize(100,15);
 
         Timeline timeline = new Timeline(new KeyFrame(
                 Duration.millis(10000),
@@ -531,7 +545,7 @@ public class App extends Application {
         timeline.play();
 
         //HBox Style
-        hboxEmpty.setStyle("-fx-background-color: black;"
+        hboxTipps.setStyle("-fx-background-color: black;"
                 + "-fx-border-style: solid;"
                 + "-fx-border-color: darkgrey;"
                 + "-fx-border-width: 3 0 0 0;"
@@ -541,7 +555,7 @@ public class App extends Application {
 
         //Darstellung der menubar und vbox auf Borderpane mit Stylesheet
         borderPane.setRight(vboxEmpty);
-        borderPane.setBottom(hboxEmpty);
+        borderPane.setBottom(hboxTipps);
         borderPane.setTop(menuBar);
         borderPane.setLeft(vbox);
         scene.getStylesheets().add("file:src/main/java/Starter/Css.css");
@@ -602,6 +616,8 @@ public class App extends Application {
         if(file==null)
         {
             Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
             alert.setTitle("Fehler");
             alert.setHeaderText("");
             alert.setContentText("Es wurde kein Speicherort ausgewählt");
@@ -634,19 +650,47 @@ public class App extends Application {
     //Öffnen eines XML Files
     public void open()
     {
-        file=null;
-        //XKondensator, YKondensator, XlineStart, XLineEnd
-        double xkon, yspu,xwid,yspa,xspa,ywid,ykon,xspu,xles,yles,xlee,ylee;
-        //KondensatorOrientation
-        double konOr,spaOr,widOr,spuOr;
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Öffnen");
-        FileChooser.ExtensionFilter extFilter =
-                new FileChooser.ExtensionFilter("XML Dateien (*.xml)", "*.xml");
-        fileChooser.getExtensionFilters().add(extFilter);
-        file = fileChooser.showOpenDialog(window);
-        deleteall();
-        FileReader(file);
+        if(arraylist.isEmpty()){
+            file=null;
+            //XKondensator, YKondensator, XlineStart, XLineEnd
+            double xkon, yspu,xwid,yspa,xspa,ywid,ykon,xspu,xles,yles,xlee,ylee;
+            //KondensatorOrientation
+            double konOr,spaOr,widOr,spuOr;
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Öffnen");
+            FileChooser.ExtensionFilter extFilter =
+                    new FileChooser.ExtensionFilter("XML Dateien (*.xml)", "*.xml");
+            fileChooser.getExtensionFilters().add(extFilter);
+            file = fileChooser.showOpenDialog(window);
+            deleteall();
+            FileReader1(file);        }
+        else {
+            ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
+            ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
+            alert.setTitle("Neues Projekt anlegen");
+            alert.setHeaderText("");
+            alert.setContentText("Wollen Sie das aktuelle Projekt löschen und ein neues anlegen? Alle nicht gespeicherten Änderungen werden gelöscht.");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == yes) {
+                file=null;
+                //XKondensator, YKondensator, XlineStart, XLineEnd
+                double xkon, yspu,xwid,yspa,xspa,ywid,ykon,xspu,xles,yles,xlee,ylee;
+                //KondensatorOrientation
+                double konOr,spaOr,widOr,spuOr;
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Öffnen");
+                FileChooser.ExtensionFilter extFilter =
+                        new FileChooser.ExtensionFilter("XML Dateien (*.xml)", "*.xml");
+                fileChooser.getExtensionFilters().add(extFilter);
+                file = fileChooser.showOpenDialog(window);
+                deleteall();
+                FileReader1(file);
+            } else return;
+        }
+
     }
 
     //Zeichne Linien mit 2 Mausklicks
@@ -774,16 +818,24 @@ public class App extends Application {
     //Neu
     public void newEmpty()
     {
-        Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Neues Projekt anlegen");
-        alert.setHeaderText("");
-        alert.setContentText("Wollen Sie das aktuelle Projekt löschen und ein neues anlegen? Alle nicht gespeicherten Änderungen werden gelöscht.");
-        Optional<ButtonType> result=alert.showAndWait();
-        if(result.get()==ButtonType.OK) {
-            deleteall();
-            //xmlstring="";
+        if(arraylist.isEmpty()){
+          return;
         }
-        else return;
+        else {
+            ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
+            ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
+            alert.setTitle("Neues Projekt anlegen");
+            alert.setHeaderText("");
+            alert.setContentText("Wollen Sie das aktuelle Projekt löschen und ein neues anlegen? Alle nicht gespeicherten Änderungen werden gelöscht.");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == yes) {
+                deleteall();
+                //xmlstring="";
+            } else return;
+        }
 
     }
     //Löscht alles auf dem Borderpane und Graphic Content und erschafft ein neues
@@ -801,18 +853,32 @@ public class App extends Application {
         borderPane.getChildren().clear();
         borderPane.getChildren().add(canvas);
         borderPane.setRight(vboxEmpty);
-        borderPane.setBottom(hboxEmpty);
+        borderPane.setBottom(hboxTipps);
         borderPane.setTop(menuBar);
         borderPane.setLeft(vbox);
     }
-    public void FileReader(File file)
+    public void FileReader1(File file)
     {
+        try {
+            //prüft ob das file etwas beinhaltet
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            if(reader.readLine()==null) {
+                    Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                    DialogPane dialogPane = alert.getDialogPane();
+                    dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
+                    alert.setTitle("Leeres Dokument");
+                    alert.setHeaderText("");
+                    alert.setContentText("Konnte Datei \"" + file.getName() + "\" nicht laden, da die Datei leer ist");
+                    alert.showAndWait();
+            }
+            else
+            {
         //XKondensator, YKondensator, XlineStart, XLineEnd
         double xkon, yspu,xwid,yspa,xspa,ywid,ykon,xspu,xles,yles,xlee,ylee;
         //KondensatorOrientation
         int konOr,spaOr,widOr,spuOr;
-        {
-            //prüft ob das file etwas beinhaltet
+
+            //prüft ob es ein file gibt
             if (file != null) {
                 //Löscht die borderpane
                 deleteall();
@@ -838,13 +904,12 @@ public class App extends Application {
                                 //Kondensator wird auf BorderPane gezeichnet
                                 kondensator1.draw(borderPane);
                                 //Kondensator wird in String gespeichert um es später wieder abspeichern zu können
-
                                 arraylist.add(kondensator1);
+                                IDKondensator=0;
                             }
-                            catch (Exception f){//Catch exception if any
-                               // System.err.println("Error: " + f.getMessage());
-                                if(IDKondensator!=0)brokenfilealert("Kondensator bei ID: "+IDKondensator+" Zeile: "+line);
-                                else brokenfilealert("Kondensator in Zeile: "+line);
+                            catch (Exception f){
+                                if(IDKondensator!=0)brokenfilealert("Kondensator bei ID: "+IDKondensator+" Zeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
+                                else brokenfilealert("Kondensator in Zeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
                             }
                         }
                         else if(line.indexOf("<Spule>")!=-1)
@@ -863,11 +928,11 @@ public class App extends Application {
                             //Spule wird auf BorderPane gezeichnet
                             spule1.draw(borderPane);
                             arraylist.add(spule1);
+                            IDSpule=0;
                              }
-                            catch (Exception f){//Catch exception if any
-                       // System.err.println("Error: " + f.getMessage());
-                                if(IDSpule!=0)brokenfilealert("Spule bei ID: "+IDSpule +"\nZeile: "+line);
-                                else brokenfilealert("Spule in Zeile: "+line);
+                            catch (Exception f){
+                                if(IDSpule!=0)brokenfilealert("Spule bei ID: "+IDSpule +"\nZeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
+                                else brokenfilealert("Spule in Zeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
                     }
                         }
                         else if(line.indexOf("<Widerstand>")!=-1)
@@ -886,11 +951,12 @@ public class App extends Application {
                                 //Widerstand wird auf BorderPane gezeichnet
                                 widerstand1.draw(borderPane);
                                 arraylist.add(widerstand1);
+                                IDWiderstand=0;
+
                             }
-                                catch (Exception f){//Catch exception if any
-                                    //System.err.println("Error: " + f.getMessage());
-                                    if(IDWiderstand!=0) brokenfilealert("Widerstand bei ID: "+ IDWiderstand+"\nZeile: "+line);
-                                    else brokenfilealert("Widerstand in Zeile: "+line);
+                                catch (Exception f){
+                                    if(IDWiderstand!=0) brokenfilealert("Widerstand bei ID: "+ IDWiderstand+"\nZeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
+                                    else brokenfilealert("Widerstand in Zeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
                                 }
                         }
                         else if(line.indexOf("<Spannungsquelle>")!=-1)
@@ -909,11 +975,11 @@ public class App extends Application {
                                 //Sannungsquelle wird auf BorderPane gezeichnet
                                 spannungsquelle1.draw(borderPane);
                                 arraylist.add(spannungsquelle1);
+                                IDSpannungsquelle=0;
                             }
-                            catch (Exception f){//Catch exception if any
-                                //System.err.println("Error: " + f.getMessage());
-                                if(IDSpannungsquelle!=0)brokenfilealert("Spannungsquelle bei ID: "+IDSpannungsquelle+"\nZeile: "+line);
-                                else brokenfilealert("Spannungsquelle in Zeile: "+line);
+                            catch (Exception f){
+                                if(IDSpannungsquelle!=0)brokenfilealert("Spannungsquelle bei ID: "+IDSpannungsquelle+"\nZeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
+                                else brokenfilealert("Spannungsquelle in Zeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
                             }
                         }
                         else if(line.indexOf("<Leitung>")!=-1)
@@ -933,57 +999,56 @@ public class App extends Application {
                                 Leitung leitung1 = new Leitung(IDLeitung, xles, yles, 0, xlee, ylee);
                                 leitung1.draw(borderPane);
                                 arraylist.add(leitung1);
+                                IDLeitung=0;
                             }
-                            catch (Exception f){//Catch exception if any
-                                //System.err.println("Error: " + f.getMessage());
-
-                                if(IDLeitung!=0)brokenfilealert("Leitung bei ID: "+IDLeitung+"\nZeile: "+line);
-                                else brokenfilealert("Leitung in Zeile: "+line);
-
+                            catch (Exception f){
+                                if(IDLeitung!=0)brokenfilealert("Leitung bei ID: "+IDLeitung+"\nZeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
+                                else brokenfilealert("Leitung in Zeile: "+line+"\nBauelement wird möglicherweise nicht angezeigt!");
                             }
 
                         }
+
                     }
                 } catch (Exception f){//Catch exception if any
                     System.err.println("Error: " + f.getMessage());
+                    System.out.println("leer");
                 }
             }
-            else
-            {
-                Alert alert=new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Leeres Dokument");
-                alert.setHeaderText("");
-                alert.setContentText("Konnte Datei nicht laden, da die Datei leer ist");
-                alert.showAndWait();
-            }
+            //Todo ist eig falsch kommt beim abbrechen button?
 
+            }
         }
+        catch (Exception f){System.err.println("Error: " + f.getMessage());}
+
 
     }
     public void showhelp()
     {
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
+        //DialogPane braucht man zum stylen
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
         alert.setGraphic(helpView);
         alert.setTitle("Hilfe");
         alert.setHeaderText(" ");
-        alert.setContentText(" ");
+        //alert.setContentText(" ");
         alert.showAndWait();
-        DialogPane dialogPane=alert.getDialogPane();
-        dialogPane.setStyle("-fx-background-color: #f9d900;");
     }
     public void brokenfilealert(String Bauteil)
     {
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
         alert.setTitle("Fehler in Datei");
         alert.setHeaderText("");
-        alert.setContentText("Fehler in Datei bei: " + Bauteil);
+        alert.setContentText("Fehler in Datei: " + Bauteil);
         alert.showAndWait();
     }
     public void changetip()
     {
         timernumber++;
         textToolTipps.setStyle("-fx-font: 16 arial");
-        hboxEmpty.getChildren().remove(textToolTipps);
+        hboxTipps.getChildren().remove(textToolTipps);
         if(timernumber==6)timernumber=1;
         switch (timernumber){
             case 1:textToolTipps.setText("Tip: Bauteile werden gelöscht, indem man Sie auf den Mülleimer zieht und dann loslässt");break;
@@ -992,7 +1057,7 @@ public class App extends Application {
             case 4:textToolTipps.setText("Tip: Bauteile können per Drag and Drop auf die Zeichenebene gezogen werden");break;
             case 5:textToolTipps.setText("Tip: Leitungen werden durch Klick und ziehen der Maus gezeichnet");break;
         }
-        hboxEmpty.getChildren().add(textToolTipps);
+        hboxTipps.getChildren().add(textToolTipps);
 
 
     }
