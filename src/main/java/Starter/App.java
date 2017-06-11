@@ -35,7 +35,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Scanner;
-
+import javafx.geometry.Rectangle2D;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.Event;
@@ -82,9 +84,11 @@ public class App extends Application {
     Line drawline=new Line();
     final Image hilfe=new Image("file:Images/hilfe.png",1000,600,false,false);
     ImageView helpView = new ImageView(hilfe);
-    //test
     int timernumber=0;
-    //test ende
+    Scene scene;
+    Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+Screen screen;
+
     //Startet das Programm
     public static void execute(String[] args) {
         launch(args);
@@ -98,16 +102,16 @@ public class App extends Application {
         window.getIcons().add(new Image ("file:Images/eIcon.png"));
         window.setMinHeight(600);
         window.setMinWidth(400);
-        Scene scene = new Scene(borderPane, 1000, 600);
+        scene = new Scene(borderPane, 1000, 600);
         final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
-
 
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.DELETE) {
-                    System.out.println("Borderpane höhe: " + borderPane.getHeight() + " Borderpane Länge " + borderPane.getWidth() + " Maus " + MouseInfo.getPointerInfo().getLocation());
+
+                    System.out.println(" Screen: ");
                 }
             }
         });
@@ -165,7 +169,20 @@ public class App extends Application {
 
         MenuItem close= new MenuItem("Schließen");
         close.setAccelerator(KeyCombination.keyCombination("Ctrl+X"));
-        close.setOnAction(e->{System.exit(0);});
+        close.setOnAction(e->{
+            ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
+            ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
+            alert.setTitle("Programm schliessen?");
+            alert.setHeaderText("");
+            alert.setContentText("Alle nicht gespeicherten Änderungen werden gelöscht.");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == yes) {
+                System.exit(0);
+            } else return;
+            });
         fileMenu.getItems().add(close);
         /*
         //Menüpunkt "Bearbeiten" erstellen
@@ -825,11 +842,14 @@ public class App extends Application {
             ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
             ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+            alert.setX(primScreenBounds.getWidth() /2 -212);
+            alert.setY(primScreenBounds.getHeight() /2 -65);
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
             alert.setTitle("Neues Projekt anlegen");
             alert.setHeaderText("");
             alert.setContentText("Wollen Sie das aktuelle Projekt löschen und ein neues anlegen? Alle nicht gespeicherten Änderungen werden gelöscht.");
+
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == yes) {
                 deleteall();
