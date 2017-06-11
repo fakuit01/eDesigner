@@ -35,6 +35,9 @@ public class Spannungsquelle extends Bauelemente {
     Image R90=new Image("file:Images/Bauelementefarbe/spannungsquelle90RT.png",WidthHeight,WidthHeight,false,false);
     Image R135=new Image("file:Images/Bauelementefarbe/spannungsquelle135RT.png",WidthHeight,WidthHeight,false,false);
 
+    Image help=new Image("file:Images/bauteilehilfe.png",900,30,false,false);
+
+
     ImageView imageview = new ImageView();
     boolean deleted=false;
     BorderPane border=new BorderPane();
@@ -45,7 +48,7 @@ public class Spannungsquelle extends Bauelemente {
     {
         super(ID,x,y,Orientation1);
         imageview.setImage(S00);
-        helpimage.setImage(R00);
+        helpimage.setImage(help);
         //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
@@ -56,7 +59,7 @@ public class Spannungsquelle extends Bauelemente {
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
                 //Todo Hilfebild int Textbild ändern oder weg?
-                helpimage.setY(border.getHeight()-50);
+                helpimage.setY(border.getHeight()-36);
                 helpimage.setX(5);
                 border.getChildren().add(helpimage);
                 //Hilfebild ende

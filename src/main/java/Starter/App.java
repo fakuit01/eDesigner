@@ -982,6 +982,7 @@ public class App extends Application {
     public void changetip()
     {
         timernumber++;
+        textToolTipps.setStyle("-fx-font: 16 arial");
         hboxEmpty.getChildren().remove(textToolTipps);
         if(timernumber==6)timernumber=1;
         switch (timernumber){
