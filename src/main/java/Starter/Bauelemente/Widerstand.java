@@ -30,7 +30,11 @@ public class Widerstand extends Bauelemente {
     Image R90=new Image("file:Images/Bauelementefarbe/widerstand90RT.png",WidthHeight,WidthHeight,false,false);
     Image R135=new Image("file:Images/Bauelementefarbe/widerstand135RT.png",WidthHeight,WidthHeight,false,false);
 
+    Image help=new Image("file:Images/widerstandhilfe.png",900,30,false,false);
+
+
     ImageView imageview = new ImageView();
+    ImageView helpimage = new ImageView();
     boolean deleted=false;
     BorderPane border=new BorderPane();
 
@@ -38,6 +42,7 @@ public class Widerstand extends Bauelemente {
     {
         super(ID,x,y,Orientation1);
         imageview.setImage(S00);
+        helpimage.setImage(help);
         //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
@@ -47,11 +52,15 @@ public class Widerstand extends Bauelemente {
                 else if(Orientation==1){imageview.setImage(F45);}
                 else if(Orientation==2){imageview.setImage(F90);}
                 else if(Orientation==3){imageview.setImage(F135);}
+                helpimage.setY(border.getHeight()-36);
+                helpimage.setX(5);
+                border.getChildren().add(helpimage);
             }});
         //Wenn man das Objekt verlässt
         imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
             //Muelleimer
             public void handle(MouseEvent event) {
+                border.getChildren().remove(helpimage);
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
                     deleted=true;
                     imageview.setImage(null);

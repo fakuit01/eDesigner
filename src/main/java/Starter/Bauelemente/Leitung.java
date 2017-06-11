@@ -1,6 +1,8 @@
 package Starter.Bauelemente;
 
 import javafx.event.EventHandler;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
@@ -16,6 +18,8 @@ public class Leitung extends Bauelemente {
     BorderPane border=new BorderPane();
     boolean deleted=false;
     boolean drop=false;
+    Image help=new Image("file:Images/leitunghilfe.png",900,30,false,false);
+    ImageView helpimage = new ImageView();
 
     public Leitung(int ID,double xstart, double ystart, int Orientation, double xende, double yende)
     {
@@ -29,6 +33,7 @@ public class Leitung extends Bauelemente {
         line.setEndY(yend);
         line.setStroke(colorGrew);
         line.setStrokeWidth(5);
+        helpimage.setImage(help);
 
         //zeichnet während des drag bzw zieht die Linie, falls man am Start oder Ende der Linie zieht
         line.setOnMouseDragged(new EventHandler<MouseEvent>(){
@@ -89,12 +94,15 @@ public class Leitung extends Bauelemente {
                 xe=xend-event.getSceneX();
                 ye=yend-event.getSceneY();
                 line.setStroke(colorGreen);
+                helpimage.setY(border.getHeight()-36);
+                helpimage.setX(5);
+                border.getChildren().add(helpimage);
             }});
         line.setOnMouseExited(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
                 line.setStroke(colorGrew);
-
+                border.getChildren().remove(helpimage);
             }});
         //zeichnet wenn dropped
         line.setOnMouseReleased(new EventHandler<MouseEvent>(){

@@ -35,7 +35,7 @@ public class Spannungsquelle extends Bauelemente {
     Image R90=new Image("file:Images/Bauelementefarbe/spannungsquelle90RT.png",WidthHeight,WidthHeight,false,false);
     Image R135=new Image("file:Images/Bauelementefarbe/spannungsquelle135RT.png",WidthHeight,WidthHeight,false,false);
 
-    Image help=new Image("file:Images/bauteilehilfe.png",900,30,false,false);
+    Image help=new Image("file:Images/spannungsquellehilfe.png",900,30,false,false);
 
 
     ImageView imageview = new ImageView();
@@ -66,25 +66,18 @@ public class Spannungsquelle extends Bauelemente {
             }});
         //Wenn man das Objekt verlässt
         imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
+
             //Muelleimer
             public void handle(MouseEvent event)
             {
-
+                border.getChildren().remove(helpimage);
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
                     deleted=true;
                     imageview.setImage(null);
                     imageview.removeEventHandler(MouseEvent.ANY, this);
-                    //Hilfebild entfernen
-                    border.getChildren().remove(helpimage);
-
                 }
                 //Transparent in schwarz je nach orientierung
-                else
-                {
-                    orientationS();
-                    //Hilfebild entfernen
-                    border.getChildren().remove(helpimage);
-                }
+                else {orientationS();}
             }});
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
