@@ -87,8 +87,7 @@ public class App extends Application {
     int timernumber=0;
     Scene scene;
     Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
-Screen screen;
-
+    Rectangle2D zweiterscreen;
     //Startet das Programm
     public static void execute(String[] args) {
         launch(args);
@@ -105,13 +104,35 @@ Screen screen;
         scene = new Scene(borderPane, 1000, 600);
         final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
 
+        //Todo aktueller Screen versuch ich geb auf
+        ArrayList<Rectangle2D> arraylistrect= new ArrayList<Rectangle2D>();
+        ArrayList<Screen> arraylistscreen= new ArrayList<Screen>();
+        for (Screen screen : Screen.getScreens()) {
+            Rectangle2D bounds = screen.getVisualBounds();
+            arraylistrect.add(bounds);
+            arraylistscreen.add(screen);
+        }
+        zweiterscreen=arraylistscreen.get(1).getVisualBounds();
+        //System.out.println("2 "+zweiterscreen);
+        //2ter versuch
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[]    gs = ge.getScreenDevices();
+        StringBuilder sb = new StringBuilder();
+        DisplayMode dm;
+        for (int i = 0; i < gs.length; i++) {
+            dm = gs[i].getDisplayMode();
+            sb.append(i + ", width: " + dm.getWidth() + ", height: " + dm.getHeight() + "\n");
+        }
+        //System.out.println("2 "+sb);
+        //Ende versuch
+
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.DELETE) {
 
-                    System.out.println(" Screen: ");
+                    System.out.println(" Screen: test");
                 }
             }
         });
@@ -173,6 +194,8 @@ Screen screen;
             ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
             ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+            alert.setX(primScreenBounds.getWidth() /2 -212);
+            alert.setY(primScreenBounds.getHeight() /2 -65);
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
             alert.setTitle("Programm schliessen?");
@@ -495,6 +518,8 @@ Screen screen;
                                 ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
                                 ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
                                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+                                alert.setX(primScreenBounds.getWidth() /2 -212);
+                                alert.setY(primScreenBounds.getHeight() /2 -65);
                                 DialogPane dialogPane = alert.getDialogPane();
                                 dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
                                 alert.setTitle("Achtung");
@@ -509,6 +534,8 @@ Screen screen;
                         else
                         {
                             Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                            alert.setX(primScreenBounds.getWidth() /2 -212);
+                            alert.setY(primScreenBounds.getHeight() /2 -65);
                             DialogPane dialogPane = alert.getDialogPane();
                             dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
                             alert.setTitle("Falsches Dateiformat");
@@ -633,6 +660,8 @@ Screen screen;
         if(file==null)
         {
             Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setX(primScreenBounds.getWidth() /2 -212);
+            alert.setY(primScreenBounds.getHeight() /2 -65);
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
             alert.setTitle("Fehler");
@@ -685,6 +714,8 @@ Screen screen;
             ButtonType no = new ButtonType("Nein", ButtonBar.ButtonData.CANCEL_CLOSE);
             ButtonType yes = new ButtonType("Ja", ButtonBar.ButtonData.OK_DONE);
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION," ",yes,no);
+            alert.setX(primScreenBounds.getWidth() /2 -212);
+            alert.setY(primScreenBounds.getHeight() /2 -65);
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
             alert.setTitle("Neues Projekt anlegen");
@@ -884,6 +915,8 @@ Screen screen;
             BufferedReader reader = new BufferedReader(new FileReader(file));
             if(reader.readLine()==null) {
                     Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setX(primScreenBounds.getWidth() /2 -212);
+                alert.setY(primScreenBounds.getHeight() /2 -65);
                     DialogPane dialogPane = alert.getDialogPane();
                     dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
                     alert.setTitle("Leeres Dokument");
@@ -1045,7 +1078,9 @@ Screen screen;
     public void showhelp()
     {
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
-        //DialogPane braucht man zum stylen
+        alert.setX(primScreenBounds.getWidth() /2 -525);
+        alert.setY(primScreenBounds.getHeight() /2 -362);
+         //DialogPane braucht man zum stylen
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
         alert.setGraphic(helpView);
@@ -1057,6 +1092,8 @@ Screen screen;
     public void brokenfilealert(String Bauteil)
     {
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
+        alert.setX(primScreenBounds.getWidth() /2 -212);
+        alert.setY(primScreenBounds.getHeight() /2 -65);
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
         alert.setTitle("Fehler in Datei");
