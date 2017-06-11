@@ -1108,11 +1108,11 @@ public class App extends Application {
         hboxTipps.getChildren().remove(textToolTipps);
         if(timernumber==6)timernumber=1;
         switch (timernumber){
-            case 1:textToolTipps.setText("Tip: Bauteile werden gelöscht, indem man Sie auf den Mülleimer zieht und dann loslässt");break;
-            case 2:textToolTipps.setText("Tip: Bauelemente können durch Rechtsklick gedreht werden");break;
-            case 3:textToolTipps.setText("Tip: Start- bzw. Endpuntke der Leitungen können verändert werden indem man sie anklickt und an einen anderen Punkt zieht");break;
-            case 4:textToolTipps.setText("Tip: Bauteile können per Drag and Drop auf die Zeichenebene gezogen werden");break;
-            case 5:textToolTipps.setText("Tip: Leitungen werden durch Klick und ziehen der Maus gezeichnet");break;
+            case 1:textToolTipps.setText("Tipp: Bauteile werden gelöscht, indem man Sie auf den Mülleimer zieht und dann loslässt");break;
+            case 2:textToolTipps.setText("Tipp: Bauelemente können durch Rechtsklick gedreht werden");break;
+            case 3:textToolTipps.setText("Tipp: Start- bzw. Endpunkte der Leitungen können verändert werden indem man sie anklickt und an einen anderen Punkt zieht");break;
+            case 4:textToolTipps.setText("Tipp: Bauteile können per Drag and Drop auf die Zeichenebene gezogen werden");break;
+            case 5:textToolTipps.setText("Tipp: Leitungen werden durch Klick und ziehen der Maus gezeichnet");break;
         }
         hboxTipps.getChildren().add(textToolTipps);
 

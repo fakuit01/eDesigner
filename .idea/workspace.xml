@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/kondensatorhilfe.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/leitunghilfe.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/spulehilfe.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/widerstandhilfe.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Images/bauteilehilfe.png" afterPath="$PROJECT_DIR$/Images/spannungsquellehilfe.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Kondensator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spannungsquelle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Spule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Widerstand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/kondensatorhilfe.png" afterPath="$PROJECT_DIR$/Images/kondensatorhilfe.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/leitunghilfe.png" afterPath="$PROJECT_DIR$/Images/leitunghilfe.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/spannungsquellehilfe.png" afterPath="$PROJECT_DIR$/Images/spannungsquellehilfe.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/widerstandhilfe.png" afterPath="$PROJECT_DIR$/Images/widerstandhilfe.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spule.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,16 +21,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="78" column="36" lean-forward="true" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+            <state relative-caret-position="591">
+              <caret line="1112" column="48" lean-forward="true" selection-start-line="1112" selection-start-column="48" selection-end-line="1112" selection-end-column="163" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2701#2714#0" expanded="true" />
-                <element signature="e#3691#3704#0" expanded="true" />
-                <element signature="e#3764#3772#0" expanded="true" />
                 <element signature="class#14347:14751" expanded="false" />
                 <element signature="class#14810:15562" expanded="false" />
                 <element signature="class#15610:15974" expanded="false" />
@@ -75,14 +45,14 @@
       <file leaf-file-name="Kondensator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="969">
+              <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Leitung.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Leitung.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -152,12 +122,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Css.css" />
-        <option value="$PROJECT_DIR$/src/main/java/Starter/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spule.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Starter/App.java" />
       </list>
     </option>
   </component>
@@ -175,7 +145,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -197,9 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,6 +266,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -822,14 +793,17 @@
       <workItem from="1497199556420" duration="3662000" />
       <workItem from="1497203275987" duration="1061000" />
       <workItem from="1497205174283" duration="907000" />
+      <workItem from="1497206305735" duration="28000" />
+      <workItem from="1497206360653" duration="134000" />
+      <workItem from="1497206511082" duration="307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80305000" />
+    <option name="totallyTimeSpent" value="80774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -842,14 +816,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29208472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29208472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108208954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11140725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -861,6 +834,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -941,9 +915,6 @@
           <caret line="699" column="26" lean-forward="false" selection-start-line="699" selection-start-column="26" selection-end-line="699" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -971,9 +942,6 @@
           <caret line="699" column="26" lean-forward="false" selection-start-line="699" selection-start-column="16" selection-end-line="699" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1001,9 +969,6 @@
           <caret line="477" column="46" lean-forward="false" selection-start-line="477" selection-start-column="46" selection-end-line="477" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1030,9 +995,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1052,9 +1014,6 @@
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1088,9 +1047,6 @@
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1124,9 +1080,6 @@
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1174,9 +1127,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1203,9 +1153,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1225,9 +1172,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1247,9 +1191,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1403,21 +1344,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="969">
+          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="78" column="36" lean-forward="true" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+        <state relative-caret-position="591">
+          <caret line="1112" column="48" lean-forward="true" selection-start-line="1112" selection-start-column="48" selection-end-line="1112" selection-end-column="163" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="e#3691#3704#0" expanded="true" />
-            <element signature="e#3764#3772#0" expanded="true" />
             <element signature="class#14347:14751" expanded="false" />
             <element signature="class#14810:15562" expanded="false" />
             <element signature="class#15610:15974" expanded="false" />
@@ -1428,14 +1374,6 @@
             <element signature="class#18591:19402" expanded="false" />
             <element signature="class#20130:20514" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
