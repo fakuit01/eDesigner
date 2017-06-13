@@ -104,6 +104,7 @@ public class App extends Application {
         scene = new Scene(borderPane, 1000, 600);
         final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
 
+        /*
         //Todo aktueller Screen versuch ich geb auf
         ArrayList<Rectangle2D> arraylistrect= new ArrayList<Rectangle2D>();
         ArrayList<Screen> arraylistscreen= new ArrayList<Screen>();
@@ -125,7 +126,7 @@ public class App extends Application {
         }
         //System.out.println("2 "+sb);
         //Ende versuch
-
+*/
         //Löschen funktion anfang mit tastendruck wurde missbraucht
         scene.setOnKeyPressed(new EventHandler<KeyEvent>()
         {

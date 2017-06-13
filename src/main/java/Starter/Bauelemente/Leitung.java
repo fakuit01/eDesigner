@@ -67,9 +67,8 @@ public class Leitung extends Bauelemente {
                 else{
                     //Was passiert wenn man ausserhalb der Boxen ist
                     if(event.getSceneY()<25) {line.setStroke(Color.RED);}
-                    else if(event.getSceneX() < 125&&event.getSceneY()<450&& event.getSceneY() < 500) {line.setStroke(Color.RED);}
+                    else if(event.getSceneX() < 125&&event.getSceneY()<450) {line.setStroke(Color.RED);}
                     else if(event.getSceneY()>=border.getHeight()-40){line.setStroke(Color.RED);}
-                    //Funktioniert nicht Screen ist größer als die 900
                     else if(event.getSceneX()>=border.getWidth()-25){line.setStroke(Color.RED);}
 
                         posX = event.getSceneX() + xs;
@@ -96,13 +95,15 @@ public class Leitung extends Bauelemente {
                 line.setStroke(colorGreen);
                 helpimage.setY(border.getHeight()-36);
                 helpimage.setX(5);
-                border.getChildren().add(helpimage);
+                //dann geht löschen nicht mehr
+                //border.getChildren().add(helpimage);
             }});
         line.setOnMouseExited(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
                 line.setStroke(colorGrew);
-                border.getChildren().remove(helpimage);
+                //dann geht löschen nicht mehr
+                //border.getChildren().remove(helpimage);
             }});
         //zeichnet wenn dropped
         line.setOnMouseReleased(new EventHandler<MouseEvent>(){
@@ -111,7 +112,6 @@ public class Leitung extends Bauelemente {
             {
                 line.setStroke(colorGrew);
                 //Prüft ob man die Linie verlängert
-
                 //Linie gedragged
                 if(drop==false) {
 
@@ -122,26 +122,29 @@ public class Leitung extends Bauelemente {
                         line.removeEventHandler(MouseEvent.ANY, this);
                     }
                     //Todo roter bereich
+
                     //oben
                     else if(event.getSceneY() < 50)
                     {
-
+                    System.out.println("<50");
                     }
                     //rechts passt nicht immer
                     else if (event.getSceneX() > border.getWidth()-40)
                     {
+                        System.out.println("-40");
 
                     }
                     //links
                     else if (event.getSceneX() <= 125&&event.getSceneY()<=450)
                     {
-
+                        System.out.println("<=125<=450");
                     }
                     //unten
                     else if (event.getSceneY() >= (border.getHeight()-25 - 40))
                     {
-
+                        System.out.println("25-40");
                     }
+
                     //normaler Bereich
                     else {
                         posX = round(event.getSceneX() + xs);
@@ -157,7 +160,6 @@ public class Leitung extends Bauelemente {
                 //Linie verlängern
                 else if(drop==true)
                 {
-
                     posX = round(posX);
                     posY = round(posY);
                     xend = round(xend);
@@ -185,7 +187,6 @@ public class Leitung extends Bauelemente {
     }
     public void draw(BorderPane borderPane)
     {
-        //Todo ka ob das gut ist
         this.border=borderPane;
         border.getChildren().add(line);
     }
