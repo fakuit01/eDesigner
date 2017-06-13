@@ -374,6 +374,7 @@ public class App extends Application {
                     //spannungsquelle.draw(gc,0);
                     spannungsquelle.draw(borderPane);
                     //xmlstring=spannungsquelle.toxml(xmlstring);
+
                 }
             }
         });
@@ -1111,7 +1112,7 @@ public class App extends Application {
         switch (timernumber){
             case 1:textToolTipps.setText("Tipp: Bauteile werden gelöscht, indem man sie auf den Mülleimer zieht und dann loslässt");break;
             case 2:textToolTipps.setText("Tipp: Bauelemente können durch Rechtsklick gedreht werden");break;
-            case 3:textToolTipps.setText("Tipp: Start- bzw. Endpunkte der Leitungen können verändert werden, indem man sie anklickt und an einen anderen Punkt zieht");break;
+            case 3:textToolTipps.setText("Tipp: Start- und Endpunkte der Leitungen können verändert werden, indem man sie anklickt und an einen anderen Punkt zieht");break;
             case 4:textToolTipps.setText("Tipp: Bauteile können per Drag and Drop auf die Editorfläche gezogen werden");break;
             case 5:textToolTipps.setText("Tipp: Leitungen werden durch Klicken und Ziehen der Maus gezeichnet");break;
         }

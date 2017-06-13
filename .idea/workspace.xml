@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/leitunghilfe.png" afterPath="$PROJECT_DIR$/Images/leitunghilfe.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="1115" column="78" lean-forward="false" selection-start-line="1115" selection-start-column="78" selection-end-line="1115" selection-end-column="78" />
+            <state relative-caret-position="119">
+              <caret line="136" column="17" lean-forward="false" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
               <folding>
                 <element signature="e#2701#2714#0" expanded="true" />
               </folding>
@@ -30,12 +29,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Leitung.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
+      <file leaf-file-name="Spannungsquelle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-476">
-              <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="215">
+              <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+              <folding>
+                <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,8 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>drawli</find>
-      <find>ft00</find>
       <find>f00</find>
       <find>try</find>
       <find>curs</find>
@@ -81,6 +80,8 @@
       <find>primScreenBounds</find>
       <find>alert.set</find>
       <find>linie</find>
+      <find>dele</find>
+      <find>control</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,12 +101,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Css.css" />
-        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Widerstand.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spule.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
       </list>
     </option>
   </component>
@@ -123,8 +124,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1408" />
-    <option name="y" value="104" />
+    <option name="x" value="42" />
+    <option name="y" value="71" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -245,8 +246,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -578,15 +579,17 @@
       <workItem from="1497341219316" duration="893000" />
       <workItem from="1497343571943" duration="367000" />
       <workItem from="1497344109164" duration="92000" />
-      <workItem from="1497344230230" duration="984000" />
+      <workItem from="1497344230230" duration="1082000" />
+      <workItem from="1497345760420" duration="35000" />
+      <workItem from="1497347977569" duration="1651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83110000" />
+    <option name="totallyTimeSpent" value="84894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1408" y="104" width="1382" height="744" extended-state="0" />
+    <frame x="42" y="71" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -598,8 +601,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29037037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29037037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -610,8 +613,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -996,17 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="33" />
-          <folding>
-            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,21 +1026,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="1115" column="78" lean-forward="false" selection-start-line="1115" selection-start-column="78" selection-end-line="1115" selection-end-column="78" />
+        <state relative-caret-position="119">
+          <caret line="136" column="17" lean-forward="false" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
           <folding>
             <element signature="e#2701#2714#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="215">
+          <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+          <folding>
+            <element signature="method#toxml#0;class#Spannungsquelle#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

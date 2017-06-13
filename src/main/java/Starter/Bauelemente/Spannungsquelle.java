@@ -4,6 +4,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -49,20 +51,39 @@ public class Spannungsquelle extends Bauelemente {
         super(ID,x,y,Orientation1);
         imageview.setImage(S00);
         helpimage.setImage(help);
+
+        /*
+        //KeyEvent funktioniert nicht
+        imageview.setOnKeyPressed(new EventHandler<KeyEvent>()
+        {
+            public void handle(KeyEvent event) {
+                if (event.getCode()==KeyCode.CONTROL)
+                {
+                    System.out.println("Control Spannungsquelle");
+                }
+            }
+        });
+        */
         //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
                 //färbt beim drüberfahren das objekt in farbe
-                if(Orientation==0) {imageview.setImage(F00);}
-                else if(Orientation==1){imageview.setImage(F45);}
-                else if(Orientation==2){imageview.setImage(F90);}
-                else if(Orientation==3){imageview.setImage(F135);}
-                //Hilfebild
-                helpimage.setY(border.getHeight()-36);
-                helpimage.setX(5);
-                border.getChildren().add(helpimage);
-                //Hilfebild ende
+
+                    if (Orientation == 0) {
+                        imageview.setImage(F00);
+                    } else if (Orientation == 1) {
+                        imageview.setImage(F45);
+                    } else if (Orientation == 2) {
+                        imageview.setImage(F90);
+                    } else if (Orientation == 3) {
+                        imageview.setImage(F135);
+                    }
+                    //Hilfebild
+                    helpimage.setY(border.getHeight() - 36);
+                    helpimage.setX(5);
+                    border.getChildren().add(helpimage);
+                    //Hilfebild ende
             }});
         //Wenn man das Objekt verlässt
         imageview.setOnMouseExited(new EventHandler<MouseEvent>(){
@@ -77,7 +98,10 @@ public class Spannungsquelle extends Bauelemente {
                     imageview.removeEventHandler(MouseEvent.ANY, this);
                 }
                 //Transparent in schwarz je nach orientierung
-                else {orientationS();}
+                else
+                {
+                    orientationS();
+                }
             }});
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
@@ -204,18 +228,6 @@ public class Spannungsquelle extends Bauelemente {
                     }
                 }else return;
             }});
-        /*
-        //Key drücken um Aktion durchzuführen geht nicht
-        imageviewSpannungsquelle1.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-               // if(event.getCode()==KeyCode.E) {
-                    //if(event.getCode()== KeyCode.DELETE)
-                    System.out.println("Test"+event.getText());
-                }
-            //}
-        });
-        */
     }
     //Zeichnen Methode
     public void draw(BorderPane borderPane)
@@ -261,6 +273,7 @@ public class Spannungsquelle extends Bauelemente {
     public  double getOrientation() {return Orientation;}
     public  double getPosX() {return posX;}
     public  double getPosY() {return posY;}
+    public ImageView getImageview() {return imageview;}
     public void orientationS()
     {
         if (Orientation == 0) {imageview.setImage(S00);}
