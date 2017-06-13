@@ -197,18 +197,7 @@ public class Leitung extends Bauelemente {
         this.border=borderPane;
         border.getChildren().add(line);
     }
-    public double round(double runden)
-    {
-        double a=0,b=0;
-        if (runden % 25 < 12.5) {
-            a= runden - (runden % 25);
-            return a;
 
-        } else if (runden % 25 >= 12.5) {
-            b= runden +  (25-runden % 25);
-            return b;
-        } else return 0;
-    }
     public double getOrientation() {return Orientation;}
     public double getPosX() {return posX;}
     public double getPosY() {return posY;}

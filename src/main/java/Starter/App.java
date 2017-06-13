@@ -755,7 +755,7 @@ public class App extends Application {
             xStartLeitung=round(event.getSceneX());
             yStartLeitung=round(event.getSceneY());
 
-        /*Wenn Maus gedrpckt ist wird linezeichnen gezeichnet und immer wieder gelöscht
+        /*Wenn Maus gedrückt ist wird linezeichnen gezeichnet und immer wieder gelöscht
           wird nicht am ende gerundet*/
             canvas.setOnMouseDragged(new EventHandler<MouseEvent>() {
                 @Override
