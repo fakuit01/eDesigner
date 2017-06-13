@@ -148,7 +148,7 @@ public class App extends Application {
             }
         });
         /*
-        //Todo Anfang mehrere Objekte bewegen
+        //Anfang mehrere Objekte bewegen
         scene.setOnKeyReleased(new EventHandler<KeyEvent>()
         {
             public void handle(KeyEvent event)
@@ -166,14 +166,17 @@ public class App extends Application {
                     if (b.isMouseInsideImage(xStartPosition, yStartPosition) && !draglist.contains(b))
                     {
                         draglist.add(b);
-                        System.out.println("dragliste:");
+                        //System.out.println("dragliste:");
                         for (Bauelemente d: draglist) {
-                            System.out.println(d);
+                            //System.out.println(d);
+                            d.orientationF();
                         }
+
                     }
                 }
             }
         });
+        //Drag eines Bauteils
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event) {
                 if(event.getButton() != MouseButton.PRIMARY || isControlPressed) {return;}
@@ -182,12 +185,11 @@ public class App extends Application {
                 yStartPosition = event.getSceneY();
                 for(Bauelemente b : arraylist)
                 {
-                    if (b.isMouseInsideImage(xStartPosition, yStartPosition) &&
-                            !draglist.contains(b))
+                    if (b.isMouseInsideImage(xStartPosition, yStartPosition) && !draglist.contains(b))
                     {
                         draglist.add(b);
-                        System.out.println("dragliste:");
-                        for (Bauelemente d: draglist) {System.out.println(d);}
+                        //System.out.println("drag Bauteil:");
+                        //for (Bauelemente d: draglist) {System.out.println(d);}
                     }
                 }
             }
@@ -198,7 +200,9 @@ public class App extends Application {
                 if(event.getButton()!= MouseButton.PRIMARY) {return;}
                 double xDistance = event.getSceneX() - xStartPosition;
                 double yDistance = event.getSceneY() - yStartPosition;
-                for (Bauelemente d: draglist) {d.preview(xDistance, yDistance);}
+                for (Bauelemente d: draglist) {
+                    //if( d instanceof Leitung)
+                    d.preview(xDistance, yDistance);}
             }
         });
 
@@ -213,7 +217,7 @@ public class App extends Application {
                 draglist.clear();
             }
         });
-        //Todo Ende mehrere Objekte bewegen
+        //Ende mehrere Objekte bewegen
         */
 
         //Menüpunkt "Datei" erstellen

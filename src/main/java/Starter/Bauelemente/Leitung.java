@@ -9,17 +9,17 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
 public class Leitung extends Bauelemente {
-    public double xend;
-    public double yend;
-    double xs,ys,xe,ye;
+
+
     Color colorGrew=Color.rgb(238,238,238);
     Color colorGreen=Color.rgb(50, 200, 0);
-    Line line =new Line();
-    BorderPane border=new BorderPane();
-    boolean deleted=false;
-    boolean drop=false;
     Image help=new Image("file:Images/leitunghilfe.png",900,30,false,false);
-    ImageView helpimage = new ImageView();
+
+    public double xend;
+    public double yend;
+    Line line =new Line();
+    boolean drop=false;
+    double xs,ys,xe,ye;
 
     public Leitung(int ID,double xstart, double ystart, int Orientation, double xende, double yende)
     {
@@ -49,8 +49,6 @@ public class Leitung extends Bauelemente {
 
             public void handle(MouseEvent event)
             {
-
-
                 line.setStroke(colorGreen);
                 //Prüft ob man am Startpunkt zieht
                 if(startMausAbstand <= 20){
@@ -105,6 +103,7 @@ public class Leitung extends Bauelemente {
                 //dann geht löschen nicht mehr
                 //border.getChildren().add(helpimage);
             }});
+
         line.setOnMouseExited(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {

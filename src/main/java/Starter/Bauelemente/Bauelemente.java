@@ -44,6 +44,7 @@ public abstract class Bauelemente {
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
+
                 //färbt beim drüberfahren das objekt in farbe
                 orientationF();
                 //Hilfebild

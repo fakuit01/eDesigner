@@ -39,10 +39,6 @@ public class Spannungsquelle extends Bauelemente {
 
     Image help=new Image("file:Images/spannungsquellehilfe.png",900,30,false,false);
 
-
-
-
-
     public Spannungsquelle(int ID,double x, double y, int Orientation1)
     {
         super(ID,x,y,Orientation1);
