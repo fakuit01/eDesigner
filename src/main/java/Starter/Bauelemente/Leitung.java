@@ -36,15 +36,20 @@ public class Leitung extends Bauelemente {
         helpimage.setImage(help);
 
         //zeichnet während des drag bzw zieht die Linie, falls man am Start oder Ende der Linie zieht
-        line.setOnMouseDragged(new EventHandler<MouseEvent>(){
-
-            public void handle(MouseEvent event)
-            {
+        line.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
                 int startMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getStartX()-event.getSceneX()),2))
                         +(Math.pow(Math.abs(line.getStartY()-event.getSceneY()),2)));
 
                 int endMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getEndX()-event.getSceneX()),2))
                         +(Math.pow(Math.abs(line.getEndY()-event.getSceneY()),2)));
+
+        line.setOnMouseDragged(new EventHandler<MouseEvent>(){
+
+            public void handle(MouseEvent event)
+            {
+
 
                 line.setStroke(colorGreen);
                 //Prüft ob man am Startpunkt zieht
@@ -83,6 +88,8 @@ public class Leitung extends Bauelemente {
                         drop = false;
                 }
             }});
+            }
+        });
 
         //um den Abstand von X und Y Koordinaten zu der Maus zu bekommen
         line.setOnMouseEntered(new EventHandler<MouseEvent>(){

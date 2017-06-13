@@ -742,7 +742,7 @@ public class App extends Application {
 
     }
 
-    //Zeichne Linien mit 2 Mausklicks
+    //Zeichne Linie zeichnen per dragn drop
     public void drawLines(MouseEvent event, GraphicsContext gc)
     {
         /*Wenn Maus gedrückt setzte startpunkt

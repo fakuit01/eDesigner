@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
-    </list>
+    <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +16,55 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+            <state relative-caret-position="1499">
+              <caret line="841" column="11" lean-forward="true" selection-start-line="841" selection-start-column="11" selection-end-line="841" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#2701#2714#0" expanded="true" />
-                <element signature="class#14360:14764" expanded="false" />
-                <element signature="class#14823:15575" expanded="false" />
-                <element signature="class#15623:15987" expanded="false" />
-                <element signature="class#16036:16796" expanded="false" />
-                <element signature="class#16850:17238" expanded="false" />
-                <element signature="class#17293:18113" expanded="false" />
-                <element signature="class#18166:18550" expanded="false" />
-                <element signature="class#18604:19415" expanded="false" />
-                <element signature="class#20143:20527" expanded="false" />
+                <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+                <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+                <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+                <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+                <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+                <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+                <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+                <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kondensator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <marker date="1497341944068" expanded="true" signature="3450:3828" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="3450:3829" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="3450:10333" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="3950:5177" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="4002:5176" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="5304:7247" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="5368:7246" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="5451:5578" ph="//..." />
+                <marker date="1497341944068" expanded="true" signature="5795:5909" ph="//..." />
+                <marker date="1497341944068" expanded="true" signature="6698:6752" ph="//..." />
+                <marker date="1497341944068" expanded="true" signature="7406:9874" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="7470:9873" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="10405:10822" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="10896:11388" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="11467:11726" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="11763:11784" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="11814:11828" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="11858:11872" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="11908:12159" ph="{...}" />
+                <marker date="1497341944068" expanded="true" signature="12195:12446" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -41,8 +73,8 @@
       <file leaf-file-name="Leitung.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="144" column="49" lean-forward="false" selection-start-line="144" selection-start-column="49" selection-end-line="144" selection-end-column="49" />
+            <state relative-caret-position="289">
+              <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -59,7 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cur</find>
       <find>drawli</find>
       <find>ft00</find>
       <find>f00</find>
@@ -89,6 +120,7 @@
       <find>prim</find>
       <find>primScreenBounds</find>
       <find>alert.set</find>
+      <find>linie</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,9 +163,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="798" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -154,6 +187,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,8 +287,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,136 +442,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -553,15 +456,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -606,22 +500,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -655,12 +533,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -687,28 +559,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
     <list size="2">
@@ -773,7 +623,7 @@
     <option name="totallyTimeSpent" value="81667000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="798" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -785,26 +635,48 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29080933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2917981" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11111111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1830161" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29080933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11111111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -862,8 +734,14 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Starter/App.java</url>
+          <line>1107</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -884,17 +762,21 @@
         <state relative-caret-position="18386">
           <caret line="699" column="26" lean-forward="false" selection-start-line="699" selection-start-column="26" selection-end-line="699" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -912,17 +794,21 @@
         <state relative-caret-position="20271">
           <caret line="699" column="26" lean-forward="false" selection-start-line="699" selection-start-column="16" selection-end-line="699" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -940,17 +826,21 @@
         <state relative-caret-position="7155">
           <caret line="477" column="46" lean-forward="false" selection-start-line="477" selection-start-column="46" selection-end-line="477" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -967,17 +857,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -987,17 +881,21 @@
         <state relative-caret-position="6990">
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1021,17 +919,21 @@
         <state relative-caret-position="6990">
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1055,17 +957,21 @@
         <state relative-caret-position="6990">
           <caret line="466" column="109" lean-forward="false" selection-start-line="466" selection-start-column="109" selection-end-line="466" selection-end-column="109" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1103,17 +1009,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1130,17 +1040,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1150,17 +1064,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1170,17 +1088,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1325,36 +1247,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="969">
+          <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1497341944068" expanded="true" signature="3450:3828" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="3450:3829" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="3450:10333" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="3950:5177" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="4002:5176" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="5304:7247" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="5368:7246" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="5451:5578" ph="//..." />
+            <marker date="1497341944068" expanded="true" signature="5795:5909" ph="//..." />
+            <marker date="1497341944068" expanded="true" signature="6698:6752" ph="//..." />
+            <marker date="1497341944068" expanded="true" signature="7406:9874" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="7470:9873" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="10405:10822" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="10896:11388" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="11467:11726" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="11763:11784" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="11814:11828" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="11858:11872" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="11908:12159" ph="{...}" />
+            <marker date="1497341944068" expanded="true" signature="12195:12446" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+        <state relative-caret-position="1499">
+          <caret line="841" column="11" lean-forward="true" selection-start-line="841" selection-start-column="11" selection-end-line="841" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2701#2714#0" expanded="true" />
-            <element signature="class#14360:14764" expanded="false" />
-            <element signature="class#14823:15575" expanded="false" />
-            <element signature="class#15623:15987" expanded="false" />
-            <element signature="class#16036:16796" expanded="false" />
-            <element signature="class#16850:17238" expanded="false" />
-            <element signature="class#17293:18113" expanded="false" />
-            <element signature="class#18166:18550" expanded="false" />
-            <element signature="class#18604:19415" expanded="false" />
-            <element signature="class#20143:20527" expanded="false" />
+            <marker date="1497342840768" expanded="false" signature="10041:10060" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10108:10122" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="10322:10341" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="10382:10396" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11015:11034" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11084:11098" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11300:11319" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11362:11376" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="11933:11952" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="11990:12004" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="12129:12148" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="12179:12193" ph=" }" />
+            <marker date="1497342840768" expanded="false" signature="23819:23849" ph=" { " />
+            <marker date="1497342840768" expanded="false" signature="23890:23904" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="144" column="49" lean-forward="false" selection-start-line="144" selection-start-column="49" selection-end-line="144" selection-end-column="49" />
+        <state relative-caret-position="289">
+          <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
           <folding />
         </state>
       </provider>
