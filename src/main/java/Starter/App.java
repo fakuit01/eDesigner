@@ -155,7 +155,6 @@ public class App extends Application {
             {if (event.getCode() == KeyCode.CONTROL) {isControlPressed = false;}}
         });
 
-
         scene.setOnMouseClicked(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {

@@ -39,7 +39,7 @@ public abstract class Bauelemente {
                 }
             }
         });
-        //*/
+        */
         //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
@@ -228,7 +228,7 @@ public abstract class Bauelemente {
     }
 
 
-    //Neu draggen Todo neuer code
+    //Neu draggen neuer code
     public boolean isMouseInsideImage(double x, double y)
     {
         return (x < posX + 25 && x > posX - 25 &&
