@@ -87,7 +87,13 @@ public class App extends Application {
     int timernumber=0;
     Scene scene;
     Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
-    Rectangle2D zweiterscreen;
+    //Rectangle2D zweiterscreen;
+    boolean isControlPressed = false;
+    ArrayList<Bauelemente> draglist = new ArrayList<Bauelemente>();
+    double xStartPosition;
+    double yStartPosition;
+
+
     //Startet das Programm
     public static void execute(String[] args) {
         launch(args);
@@ -133,12 +139,85 @@ public class App extends Application {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.DELETE) {
 
-                    System.out.println(" Screen: test");
+                    System.out.println(" Screen: delete");
+                }
+                if (event.getCode() == KeyCode.CONTROL) {
+
+                    isControlPressed = true;
                 }
             }
         });
+        /*
+        //Todo Anfang mehrere Objekte bewegen
+        scene.setOnKeyReleased(new EventHandler<KeyEvent>()
+        {
+            public void handle(KeyEvent event)
+            {if (event.getCode() == KeyCode.CONTROL) {isControlPressed = false;}}
+        });
+
+
+        scene.setOnMouseClicked(new EventHandler<MouseEvent>(){
+
+            public void handle(MouseEvent event) {
+                if(event.getButton() != MouseButton.PRIMARY || !isControlPressed) {return;}
+                xStartPosition = event.getSceneX();
+                yStartPosition = event.getSceneY();
+                for(Bauelemente b : arraylist)
+                {
+                    if (b.isMouseInsideImage(xStartPosition, yStartPosition) && !draglist.contains(b))
+                    {
+                        draglist.add(b);
+                        System.out.println("dragliste:");
+                        for (Bauelemente d: draglist) {
+                            System.out.println(d);
+                        }
+                    }
+                }
+            }
+        });
+        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
+            public void handle(MouseEvent event) {
+                if(event.getButton() != MouseButton.PRIMARY || isControlPressed) {return;}
+
+                xStartPosition = event.getSceneX();
+                yStartPosition = event.getSceneY();
+                for(Bauelemente b : arraylist)
+                {
+                    if (b.isMouseInsideImage(xStartPosition, yStartPosition) &&
+                            !draglist.contains(b))
+                    {
+                        draglist.add(b);
+                        System.out.println("dragliste:");
+                        for (Bauelemente d: draglist) {System.out.println(d);}
+                    }
+                }
+            }
+        });
+
+        scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                if(event.getButton()!= MouseButton.PRIMARY) {return;}
+                double xDistance = event.getSceneX() - xStartPosition;
+                double yDistance = event.getSceneY() - yStartPosition;
+                for (Bauelemente d: draglist) {d.preview(xDistance, yDistance);}
+            }
+        });
+
+        scene.setOnMouseReleased(new EventHandler<MouseEvent>(){
+            public void handle(MouseEvent event) {
+                if(event.getButton()!= MouseButton.PRIMARY || isControlPressed) {return;}
+                double xDistance = event.getSceneX() - xStartPosition;
+                double yDistance = event.getSceneY() - yStartPosition;
+                for (Bauelemente d: draglist) {d.move(xDistance, yDistance);}
+                xStartPosition = 0;
+                yStartPosition = 0;
+                draglist.clear();
+            }
+        });
+        //Todo Ende mehrere Objekte bewegen
+        */
+
         //Menüpunkt "Datei" erstellen
-        //TODO: Menüstruktur und Funktionen ergänzen
         Menu fileMenu = new Menu("_Menü");
         //Submenü/Unterpunkte zu fileMenu
 

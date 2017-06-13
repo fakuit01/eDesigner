@@ -14,24 +14,6 @@ import javafx.scene.layout.BorderPane;
 
 public abstract class Bauelemente {
 
-    //Position des Bauelements auf dem Raster
-
-    //Ausrichtung des Bauelements (Himmelsrichtung)
-   /*
-    final int ausrN = 0;
-    final int ausrNO = 1;
-    final int ausrO = 2;
-    final int ausrSO = 3;
-    final int ausrS = 4;
-    final int ausrSW = 5;
-    final int ausrW = 6;
-    final int ausrNW = 7;
-
-
-    //SnapPoint-Positionen
-    double snap1X=0,snap1Y=0;
-    double snap2X=0,snap2Y=0;
-*/
     int ID;
     double posX = 0, posY = 0;
     int Orientation=0;
@@ -41,11 +23,11 @@ public abstract class Bauelemente {
     ImageView helpimage = new ImageView();
 
     //Icon
-    public Bauelemente(int ID, double posX1, double posY1, int Orientation) {
+    public Bauelemente(int ID, double posX1, double posY1, int Orientation1) {
         this.posX = posX1;
         this.posY = posY1;
         this.ID=ID;
-        this.Orientation = Orientation;
+        this.Orientation = Orientation1;
         /*
         //KeyEvent funktioniert nicht
         imageview.setOnKeyPressed(new EventHandler<KeyEvent>()
@@ -57,14 +39,13 @@ public abstract class Bauelemente {
                 }
             }
         });
-        */
+        //*/
         //Wenn man über das Objekt drüber fährt
         imageview.setOnMouseEntered(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
                 //färbt beim drüberfahren das objekt in farbe
                 orientationF();
-
                 //Hilfebild
                 helpimage.setY(border.getHeight() - 36);
                 helpimage.setX(5);
@@ -89,7 +70,8 @@ public abstract class Bauelemente {
                     orientationS();
                 }
             }});
-        //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste
+        ///*
+        //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste Todo unnötig mit neuem Code
         imageview.setOnMouseReleased(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event)
@@ -147,7 +129,7 @@ public abstract class Bauelemente {
                     }
                 }else return;
             }});
-        //zeichnet während des drag das Transparente Bild
+        //zeichnet während des drag das Transparente Bild Todo unnötig mit neuem Code
         imageview.setOnMouseDragged(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event)
@@ -188,6 +170,7 @@ public abstract class Bauelemente {
                     }
                 }
             }});
+        //*/
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
 
@@ -243,6 +226,99 @@ public abstract class Bauelemente {
         orientationS();
         border.getChildren().add(imageview);
     }
+
+
+    //Neu draggen Todo neuer code
+    public boolean isMouseInsideImage(double x, double y)
+    {
+        return (x < posX + 25 && x > posX - 25 &&
+                y < posY + 25 && y > posY - 25 );
+    }
+    public void preview(double xDistance, double yDistance)
+    {
+        if (posY + yDistance < 25)
+        {
+            imageview.setX(posX + xDistance - 25);
+            orientationR();
+        }
+        //in linker vbox allerdings nicht beim Mülleimer
+        // Todo man kann vom mülleimer hochziehen bug
+        else if (posX + xDistance < 125&&posY + yDistance<450 )
+        {
+            imageview.setY(posY + yDistance - 25);
+            orientationR();
+        }
+        //untere Hbox
+        else if (posY + yDistance > (border.getHeight()-40)) {
+            imageview.setX(posX + xDistance - 25);
+            orientationR();
+        }
+        //rechte vbox
+        else if (posX + xDistance > (border.getWidth()-25))
+        {
+            imageview.setY(posY + yDistance - 25);
+            orientationR();
+        }
+        else
+        {
+            //beta ende
+            //normaler Bereich
+            orientationFT();
+            imageview.setX(posX + xDistance - 25);
+            imageview.setY(posY + yDistance - 25);
+        }
+    }
+
+    public void move(double xDistance, double yDistance)
+    {
+        if (posX + xDistance <= 125 && posY + yDistance >= 450 && posY + yDistance <= 500) {
+            deleted = true;
+            imageview.setImage(null);
+        }
+        //oben
+        else if(posY + yDistance < 50) {
+            posX = round(posX + xDistance);
+            posY = 50;
+            imageview.setX(posX - 25);
+            imageview.setY(posY-25);
+            orientationS();
+        }
+        //rechts passt nicht immer
+        else if (posX + xDistance > border.getWidth()-40) {
+            posX = round(border.getWidth()-40);
+            posY = round(posY + yDistance);
+            imageview.setX(posX-25);
+            imageview.setY(posY-25);
+            orientationS();
+        }
+        //links muss noch
+        else if (posX + xDistance <= 125&&posY + yDistance<=450){
+            posX = round(0+125+25);
+            posY = round(posY + yDistance);
+            imageview.setX(posX - 25);
+            imageview.setY(posY- 25);
+            orientationS();
+        }
+        //unten
+        else if (posY + yDistance >= (border.getHeight()-25 - 40))
+        {
+            posX = round(posX + xDistance);
+            posY = round(border.getHeight()-25- 40);
+            imageview.setX(posX-25);
+            imageview.setY(posY-25);
+            orientationS();
+        }
+        //normaler bereich
+        else
+        {
+            posX = round(posX + xDistance);
+            posY = round(posY + yDistance);
+            imageview.setX(posX- 25);
+            imageview.setY(posY- 25);
+            orientationS();
+        }
+    }
+
 
 }
 
