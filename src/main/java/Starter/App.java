@@ -1190,13 +1190,14 @@ public class App extends Application {
         timernumber++;
         textToolTipps.setStyle("-fx-font: 16 arial");
         hboxTipps.getChildren().remove(textToolTipps);
-        if(timernumber==6)timernumber=1;
+        if(timernumber==7)timernumber=1;
         switch (timernumber){
             case 1:textToolTipps.setText("Tipp: Bauteile werden gelöscht, indem man sie auf den Mülleimer zieht und dann loslässt");break;
             case 2:textToolTipps.setText("Tipp: Bauelemente können durch Rechtsklick gedreht werden");break;
             case 3:textToolTipps.setText("Tipp: Start- und Endpunkte der Leitungen können verändert werden, indem man sie anklickt und an einen anderen Punkt zieht");break;
-            case 4:textToolTipps.setText("Tipp: Bauteile können per Drag and Drop auf die Editorfläche gezogen werden");break;
+            case 4:textToolTipps.setText("Tipp: Bauteile können durch Ziehen des Bauteils auf die Editorfläche plaziert werden");break;
             case 5:textToolTipps.setText("Tipp: Leitungen werden durch Klicken und Ziehen der Maus gezeichnet");break;
+            case 6:textToolTipps.setText("Tipp: Mehrere Bauteile können mithilfe der Steuerungstaste bewegt werden");break;
         }
         hboxTipps.getChildren().add(textToolTipps);
 
