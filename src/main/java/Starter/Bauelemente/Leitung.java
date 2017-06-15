@@ -3,6 +3,7 @@ package Starter.Bauelemente;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
@@ -37,55 +38,65 @@ public class Leitung extends Bauelemente {
 
         //zeichnet während des drag bzw zieht die Linie, falls man am Start oder Ende der Linie zieht
         line.setOnMousePressed(new EventHandler<MouseEvent>() {
+
             @Override
             public void handle(MouseEvent event) {
+
+                if (event.getButton() != MouseButton.PRIMARY || isselected)
+                {
+                    return;
+                }
                 int startMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getStartX()-event.getSceneX()),2))
                         +(Math.pow(Math.abs(line.getStartY()-event.getSceneY()),2)));
 
                 int endMausAbstand = (int) Math.sqrt((Math.pow(Math.abs(line.getEndX()-event.getSceneX()),2))
                         +(Math.pow(Math.abs(line.getEndY()-event.getSceneY()),2)));
 
-        line.setOnMouseDragged(new EventHandler<MouseEvent>(){
+                line.setOnMouseDragged(new EventHandler<MouseEvent>(){
 
-            public void handle(MouseEvent event)
-            {
-                line.setStroke(colorGreen);
-                //Prüft ob man am Startpunkt zieht
-                if(startMausAbstand <= 20){
-                    posX=event.getSceneX()+xs;
-                    posY=event.getSceneY()+ys;
-                    line.setStartX(posX);
-                    line.setStartY(posY);
-                    drop=true;
-                }
-                //Prüft ob man am Endpunkt zieht
-                else if(endMausAbstand <= 20){
-                    xend=event.getSceneX()+xe;
-                    yend=event.getSceneY()+ye;
-                    line.setEndX(xend);
-                    line.setEndY(yend);
-                    drop=true;
-                }
-                //sonst draggen 
-                else{
-                    //Was passiert wenn man ausserhalb der Boxen ist
-                    if(event.getSceneY()<25) {line.setStroke(Color.RED);}
-                    else if(event.getSceneX() < 125&&event.getSceneY()<450) {line.setStroke(Color.RED);}
-                    else if(event.getSceneY()>=border.getHeight()-40){line.setStroke(Color.RED);}
-                    else if(event.getSceneX()>=border.getWidth()-25){line.setStroke(Color.RED);}
+                    public void handle(MouseEvent event)
+                    {
+                        if(isselected)
+                        {
+                            return;
+                        }
+                        line.setStroke(colorGreen);
+                        //Prüft ob man am Startpunkt zieht
+                        if(startMausAbstand <= 20){
+                            posX=event.getSceneX()+xs;
+                            posY=event.getSceneY()+ys;
+                            line.setStartX(posX);
+                            line.setStartY(posY);
+                            drop=true;
+                        }
+                        //Prüft ob man am Endpunkt zieht
+                        else if(endMausAbstand <= 20){
+                            xend=event.getSceneX()+xe;
+                            yend=event.getSceneY()+ye;
+                            line.setEndX(xend);
+                            line.setEndY(yend);
+                            drop=true;
+                        }
+                        //sonst draggen
+                        else{
+                            //Was passiert wenn man ausserhalb der Boxen ist
+                            if(event.getSceneY()<25) {line.setStroke(Color.RED);}
+                            else if(event.getSceneX() < 125&&event.getSceneY()<450) {line.setStroke(Color.RED);}
+                            else if(event.getSceneY()>=border.getHeight()-40){line.setStroke(Color.RED);}
+                            else if(event.getSceneX()>=border.getWidth()-25){line.setStroke(Color.RED);}
 
-                        posX = event.getSceneX() + xs;
-                        posY = event.getSceneY() + ys;
-                        xend = event.getSceneX() + xe;
-                        yend = event.getSceneY() + ye;
+                            posX = event.getSceneX() + xs;
+                            posY = event.getSceneY() + ys;
+                            xend = event.getSceneX() + xe;
+                            yend = event.getSceneY() + ye;
 
-                        line.setStartX(posX);
-                        line.setStartY(posY);
-                        line.setEndX(xe + event.getSceneX());
-                        line.setEndY(ye + event.getSceneY());
-                        drop = false;
-                }
-            }});
+                            line.setStartX(posX);
+                            line.setStartY(posY);
+                            line.setEndX(xe + event.getSceneX());
+                            line.setEndY(ye + event.getSceneY());
+                            drop = false;
+                        }
+                    }});
             }
         });
 
@@ -100,6 +111,7 @@ public class Leitung extends Bauelemente {
                 line.setStroke(colorGreen);
                 helpimage.setY(border.getHeight()-36);
                 helpimage.setX(5);
+                bauteilEntered = true;
                 //dann geht löschen nicht mehr
                 //border.getChildren().add(helpimage);
             }});
@@ -107,7 +119,10 @@ public class Leitung extends Bauelemente {
         line.setOnMouseExited(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
-                line.setStroke(colorGrew);
+                if(!isselected) {
+                    line.setStroke(colorGrew);
+                }
+                bauteilEntered = false;
                 //dann geht löschen nicht mehr
                 //border.getChildren().remove(helpimage);
             }});
@@ -116,7 +131,13 @@ public class Leitung extends Bauelemente {
 
             public void handle(MouseEvent event)
             {
-                line.setStroke(colorGrew);
+                if (event.getButton() != MouseButton.PRIMARY)
+                {
+                    return;
+                }
+                if(!bauteilEntered) {
+                    line.setStroke(colorGrew);
+                }
                 //Prüft ob man die Linie verlängert
                 //Linie gedragged
                 if(drop==false) {
@@ -128,11 +149,11 @@ public class Leitung extends Bauelemente {
                         line.removeEventHandler(MouseEvent.ANY, this);
                     }
                     //Todo roter bereich
-
+/*
                     //oben
                     else if(event.getSceneY() < 50)
                     {
-                    System.out.println("<50");
+                        System.out.println("<50");
                     }
                     //rechts passt nicht immer
                     else if (event.getSceneX() > border.getWidth()-40)
@@ -162,6 +183,7 @@ public class Leitung extends Bauelemente {
                         line.setEndX(xend);
                         line.setEndY(yend);
                     }
+                    */
                 }
                 //Linie verlängern
                 else if(drop==true)
@@ -201,4 +223,35 @@ public class Leitung extends Bauelemente {
     public double getPosX() {return posX;}
     public double getPosY() {return posY;}
     public double getXend() {return xend;}
+    public void select(){
+        isselected=true;
+        line.setStroke(colorGreen);
+    }
+    public void deselect(){
+        isselected=false;
+
+        if(!bauteilEntered) {
+            line.setStroke(colorGrew);
+        }
+    }
+    public void preview(double xDistance, double yDistance)
+    {
+
+        line.setStartX(posX + xDistance);
+        line.setEndX(xend + xDistance);
+        line.setStartY(posY + yDistance);
+        line.setEndY(yend + yDistance);
+    }
+
+    public void move(double xDistance, double yDistance)
+    {
+        posX = round(posX+ xDistance);
+        posY = round(posY + yDistance);
+        xend = round(xend+ xDistance);
+        yend = round(yend + yDistance);
+        line.setStartX(posX);
+        line.setEndX(xend);
+        line.setStartY(posY);
+        line.setEndY(yend);
+    }
 }

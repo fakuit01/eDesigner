@@ -147,7 +147,7 @@ public class App extends Application {
                 }
             }
         });
-        /*
+        ///*
         //Anfang mehrere Objekte bewegen
         scene.setOnKeyReleased(new EventHandler<KeyEvent>()
         {
@@ -158,20 +158,24 @@ public class App extends Application {
         scene.setOnMouseClicked(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
+
                 if(event.getButton() != MouseButton.PRIMARY || !isControlPressed) {return;}
                 xStartPosition = event.getSceneX();
                 yStartPosition = event.getSceneY();
                 for(Bauelemente b : arraylist)
                 {
-                    if (b.isMouseInsideImage(xStartPosition, yStartPosition) && !draglist.contains(b))
+                    if (b.isMouseInsideImage())
                     {
-                        draglist.add(b);
-                        //System.out.println("dragliste:");
-                        for (Bauelemente d: draglist) {
-                            //System.out.println(d);
-                            d.orientationF();
+                        if(!draglist.contains(b)) {
+                            draglist.add(b);
+                            b.select();
+                            //System.out.println("dragliste:");
                         }
-
+                        else
+                        {
+                            draglist.remove(b);
+                            b.deselect();
+                        }
                     }
                 }
             }
@@ -185,9 +189,10 @@ public class App extends Application {
                 yStartPosition = event.getSceneY();
                 for(Bauelemente b : arraylist)
                 {
-                    if (b.isMouseInsideImage(xStartPosition, yStartPosition) && !draglist.contains(b))
+                    if (b.isMouseInsideImage() && !draglist.contains(b))
                     {
                         draglist.add(b);
+                        b.select();
                         //System.out.println("drag Bauteil:");
                         //for (Bauelemente d: draglist) {System.out.println(d);}
                     }
@@ -197,7 +202,7 @@ public class App extends Application {
 
         scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                if(event.getButton()!= MouseButton.PRIMARY) {return;}
+                if(event.getButton( )!= MouseButton.PRIMARY || isControlPressed) {return;}
                 double xDistance = event.getSceneX() - xStartPosition;
                 double yDistance = event.getSceneY() - yStartPosition;
                 for (Bauelemente d: draglist) {
@@ -211,14 +216,15 @@ public class App extends Application {
                 if(event.getButton()!= MouseButton.PRIMARY || isControlPressed) {return;}
                 double xDistance = event.getSceneX() - xStartPosition;
                 double yDistance = event.getSceneY() - yStartPosition;
-                for (Bauelemente d: draglist) {d.move(xDistance, yDistance);}
+                for (Bauelemente d: draglist) {d.move(xDistance, yDistance);
+                    d.deselect();}
                 xStartPosition = 0;
                 yStartPosition = 0;
                 draglist.clear();
             }
         });
         //Ende mehrere Objekte bewegen
-        */
+        //*/
 
         //Menüpunkt "Datei" erstellen
         Menu fileMenu = new Menu("_Menü");
@@ -840,8 +846,12 @@ public class App extends Application {
         /*Wenn Maus gedrückt ist wird linezeichnen gezeichnet und immer wieder gelöscht
           wird nicht am ende gerundet*/
             canvas.setOnMouseDragged(new EventHandler<MouseEvent>() {
+
                 @Override
                 public void handle(MouseEvent event) {
+                    if(draglist.size() > 0){
+                        return;
+                    }
                     xEndLeitung=round(event.getSceneX());
                     yEndLeitung=round(event.getSceneY());
                     drawline.setEndX(event.getSceneX());
@@ -854,6 +864,9 @@ public class App extends Application {
             canvas.setOnMouseReleased(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
+                    if(draglist.size() > 0){
+                        return;
+                    }
                     xEndLeitung = round(event.getSceneX());
                     yEndLeitung = round(event.getSceneY());
                     borderPane.getChildren().remove(drawline);
@@ -869,7 +882,6 @@ public class App extends Application {
                         IDLeitung++;
                         Leitung leitung1 = new Leitung(IDLeitung, xStartLeitung, yStartLeitung, 0, xEndLeitung, yEndLeitung);
                         leitung1.draw(borderPane);
-                        xmlstring = leitung1.toxml(xmlstring);
                         arraylist.add(leitung1);
                         xStartLeitung = 0;
                         yStartLeitung = 0;

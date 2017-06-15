@@ -7,10 +7,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
 
-        import javafx.geometry.Orientation;
-        import javafx.scene.canvas.GraphicsContext;
-        import javafx.scene.image.Image;
-        import javafx.scene.layout.BorderPane;
+import javafx.geometry.Orientation;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
 
 public abstract class Bauelemente {
 
@@ -21,6 +21,8 @@ public abstract class Bauelemente {
     boolean deleted=false;
     BorderPane border=new BorderPane();
     ImageView helpimage = new ImageView();
+    boolean isselected=false;
+    boolean bauteilEntered = false;
 
     //Icon
     public Bauelemente(int ID, double posX1, double posY1, int Orientation1) {
@@ -51,6 +53,7 @@ public abstract class Bauelemente {
                 helpimage.setY(border.getHeight() - 36);
                 helpimage.setX(5);
                 border.getChildren().add(helpimage);
+                bauteilEntered = true;
                 //Hilfebild ende
             }});
         //Wenn man das Objekt verlässt
@@ -61,17 +64,18 @@ public abstract class Bauelemente {
             {
                 border.getChildren().remove(helpimage);
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
-                    deleted=true;
+                    deleted = true;
                     imageview.setImage(null);
                     imageview.removeEventHandler(MouseEvent.ANY, this);
                 }
                 //Transparent in schwarz je nach orientierung
-                else
+                else if(!isselected)
                 {
                     orientationS();
                 }
+                bauteilEntered = false;
             }});
-        ///*
+        /*
         //Ändert das Bild in das mit schwarzen Hintergrund beim Losllassen der Maustaste Todo unnötig mit neuem Code
         imageview.setOnMouseReleased(new EventHandler<MouseEvent>(){
 
@@ -171,11 +175,12 @@ public abstract class Bauelemente {
                     }
                 }
             }});
-        //*/
+        */
         //Rechtsklick Drehung bzw ändern des Bildes
         imageview.setOnMouseClicked(new EventHandler<MouseEvent>(){
 
             public void handle(MouseEvent event) {
+
                 if (event.getButton() == MouseButton.SECONDARY) {
                     //Welches Bild ist aktuell? Wegen drehen des Bildes
                     orientationFundOrienation();
@@ -230,10 +235,10 @@ public abstract class Bauelemente {
 
 
     //Neu draggen neuer code
-    public boolean isMouseInsideImage(double x, double y)
+
+    public boolean isMouseInsideImage()
     {
-        return (x < posX + 25 && x > posX - 25 &&
-                y < posY + 25 && y > posY - 25 );
+        return bauteilEntered;
     }
     public void preview(double xDistance, double yDistance)
     {
@@ -282,7 +287,6 @@ public abstract class Bauelemente {
             posY = 50;
             imageview.setX(posX - 25);
             imageview.setY(posY-25);
-            orientationS();
         }
         //rechts passt nicht immer
         else if (posX + xDistance > border.getWidth()-40) {
@@ -290,7 +294,6 @@ public abstract class Bauelemente {
             posY = round(posY + yDistance);
             imageview.setX(posX-25);
             imageview.setY(posY-25);
-            orientationS();
         }
         //links muss noch
         else if (posX + xDistance <= 125&&posY + yDistance<=450){
@@ -298,7 +301,6 @@ public abstract class Bauelemente {
             posY = round(posY + yDistance);
             imageview.setX(posX - 25);
             imageview.setY(posY- 25);
-            orientationS();
         }
         //unten
         else if (posY + yDistance >= (border.getHeight()-25 - 40))
@@ -307,7 +309,6 @@ public abstract class Bauelemente {
             posY = round(border.getHeight()-25- 40);
             imageview.setX(posX-25);
             imageview.setY(posY-25);
-            orientationS();
         }
         //normaler bereich
         else
@@ -316,10 +317,18 @@ public abstract class Bauelemente {
             posY = round(posY + yDistance);
             imageview.setX(posX- 25);
             imageview.setY(posY- 25);
+        }
+    }
+    public void select(){
+        isselected=true;
+        orientationF();
+    }
+    public void deselect(){
+        isselected=false;
+        if(!bauteilEntered) {
             orientationS();
         }
     }
-
 
 }
 
