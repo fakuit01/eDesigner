@@ -810,7 +810,7 @@ public class App extends Application {
             dialogPane.getStylesheets().add("file:src/main/java/Starter/Css.css");
             alert.setTitle("Neues Projekt anlegen");
             alert.setHeaderText("");
-            alert.setContentText("Wollen Sie das aktuelle Projekt löschen und ein neues anlegen? Alle nicht gespeicherten Änderungen werden gelöscht.");
+            alert.setContentText("Wollen Sie das aktuelle Projekt löschen und ein neues laden? Alle nicht gespeicherten Änderungen werden gelöscht.");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == yes) {
                 file=null;
