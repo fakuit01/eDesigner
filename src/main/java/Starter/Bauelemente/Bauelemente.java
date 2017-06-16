@@ -280,6 +280,8 @@ public abstract class Bauelemente {
         if (posX + xDistance <= 125 && posY + yDistance >= 450 && posY + yDistance <= 500) {
             deleted = true;
             imageview.setImage(null);
+            border.getChildren().remove(imageview);
+
         }
         //oben
         else if(posY + yDistance < 50) {
