@@ -108,7 +108,7 @@ public class App extends Application {
         window.setMinHeight(600);
         window.setMinWidth(400);
         scene = new Scene(borderPane, 1000, 600);
-        final Image cursor=new Image("file:Images/cursor.png",17,27,false,false);
+        final Image cursor=new Image("file:Images/cursor.png",15,22,false,false);
 
         /*
         //Todo aktueller Screen versuch ich geb auf
