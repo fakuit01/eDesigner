@@ -21,6 +21,7 @@ public class Leitung extends Bauelemente {
     Line line =new Line();
     boolean drop=false;
     double xs,ys,xe,ye;
+    boolean smaller20=false;
 
     public Leitung(int ID,double xstart, double ystart, int Orientation, double xende, double yende)
     {
@@ -56,10 +57,32 @@ public class Leitung extends Bauelemente {
 
                     public void handle(MouseEvent event)
                     {
+
                         if(isselected)
                         {
+                            //System.out.println("geht immer hier rein");
+                            if(startMausAbstand <= 20){
+                                //System.out.println("start kleiner");
+                                posX=event.getSceneX()+xs;
+                                posY=event.getSceneY()+ys;
+                                line.setStartX(posX);
+                                line.setStartY(posY);
+                                drop=true;
+                                }
+                            else if(endMausAbstand <= 20){
+                                //System.out.println("ende kleiner");
+                                xend=event.getSceneX()+xe;
+                                yend=event.getSceneY()+ye;
+                                line.setEndX(xend);
+                                line.setEndY(yend);
+                                drop=true;
+                                }
+                            else {drop=false;}
+
                             return;
                         }
+/*
+
                         line.setStroke(colorGreen);
                         //Prüft ob man am Startpunkt zieht
                         if(startMausAbstand <= 20){
@@ -95,7 +118,7 @@ public class Leitung extends Bauelemente {
                             line.setEndX(xe + event.getSceneX());
                             line.setEndY(ye + event.getSceneY());
                             drop = false;
-                        }
+                        }*/
                     }});
             }
         });
@@ -148,6 +171,7 @@ public class Leitung extends Bauelemente {
                         border.getChildren().remove(line);
                         line.removeEventHandler(MouseEvent.ANY, this);
                     }
+
                     //Todo roter bereich
 /*
                     //oben
@@ -173,6 +197,7 @@ public class Leitung extends Bauelemente {
                     }
 
                     //normaler Bereich
+                    
                     else {
                         posX = round(event.getSceneX() + xs);
                         posY = round(event.getSceneY() + ys);
@@ -197,6 +222,7 @@ public class Leitung extends Bauelemente {
                     line.setEndX(xend);
                     line.setEndY(yend);
                 }
+
             }});
     }
     //Wird zum String xml hinzugefügt
@@ -223,9 +249,11 @@ public class Leitung extends Bauelemente {
     public double getPosX() {return posX;}
     public double getPosY() {return posY;}
     public double getXend() {return xend;}
+
     public void select(){
         isselected=true;
         line.setStroke(colorGreen);
+        drop=false;
     }
     public void deselect(){
         isselected=false;
@@ -236,22 +264,26 @@ public class Leitung extends Bauelemente {
     }
     public void preview(double xDistance, double yDistance)
     {
-
+    if(!drop) {
         line.setStartX(posX + xDistance);
         line.setEndX(xend + xDistance);
         line.setStartY(posY + yDistance);
         line.setEndY(yend + yDistance);
+        //System.out.println("XDistance" + xDistance + posX);
+      }
     }
 
     public void move(double xDistance, double yDistance)
     {
-        posX = round(posX+ xDistance);
-        posY = round(posY + yDistance);
-        xend = round(xend+ xDistance);
-        yend = round(yend + yDistance);
-        line.setStartX(posX);
-        line.setEndX(xend);
-        line.setStartY(posY);
-        line.setEndY(yend);
+        if(!drop) {
+            posX = round(posX + xDistance);
+            posY = round(posY + yDistance);
+            xend = round(xend + xDistance);
+            yend = round(yend + yDistance);
+            line.setStartX(posX);
+            line.setEndX(xend);
+            line.setStartY(posY);
+            line.setEndY(yend);
+        }
     }
 }

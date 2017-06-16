@@ -2,35 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f1b103-0d5a-453b-95c1-ed83d6058453" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$5.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$10.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$11.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$12.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$13.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$14.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$15.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$16.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$17.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$18.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$19.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$20.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$21.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$22.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$23.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$5.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$6.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$7.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$8.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App$9.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/App.class" afterPath="$PROJECT_DIR$/target/classes/Starter/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$3.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Bauelemente.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$1$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$1$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$1.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$2.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$2.class" />
@@ -38,8 +9,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$4.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung.class" afterPath="$PROJECT_DIR$/target/classes/Starter/Bauelemente/Leitung.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/App.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" afterPath="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,89 +21,22 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="222" column="24" lean-forward="false" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="24" />
-              <folding>
-                <element signature="class#4860:5224" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="3473">
+              <caret line="397" column="30" lean-forward="false" selection-start-line="397" selection-start-column="23" selection-end-line="397" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bauelemente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3915">
-              <caret line="271" column="25" lean-forward="false" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="25" />
-              <folding>
-                <element signature="e#9326#9327#0" expanded="true" />
-                <element signature="e#9363#9364#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Leitung.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Leitung.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="137" column="11" lean-forward="false" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Startscreen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Startscreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53460">
-              <caret line="3926" column="19" lean-forward="false" selection-start-line="3926" selection-start-column="19" selection-end-line="3926" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spannungsquelle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kondensator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Kondensator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="54">
+              <caret line="199" column="20" lean-forward="true" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -151,8 +53,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>open</find>
-      <find>buffere</find>
       <find>filere</find>
       <find>reader</find>
       <find>filereader1</find>
@@ -181,6 +81,8 @@
       <find>setS</find>
       <find>scene c</find>
       <find>cli</find>
+      <find>prev</find>
+      <find>spannun</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,8 +107,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Methodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java" />
       </list>
     </option>
   </component>
@@ -224,9 +126,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="874" />
+    <option name="x" value="87" />
+    <option name="y" value="136" />
+    <option name="width" value="1008" />
+    <option name="height" value="630" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -246,9 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,12 +233,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -859,14 +765,16 @@
       <workItem from="1497464883546" duration="278000" />
       <workItem from="1497525754177" duration="9308000" />
       <workItem from="1497535146720" duration="59000" />
+      <workItem from="1497567473607" duration="5803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101338000" />
+    <option name="totallyTimeSpent" value="107141000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="87" y="136" width="1008" height="630" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -877,15 +785,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.289441" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28877005" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11597222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -897,6 +804,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -947,12 +855,6 @@
           <line>328</line>
           <properties />
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java</url>
-          <line>233</line>
-          <properties />
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Spannungsquelle.java</url>
@@ -1288,16 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="222" column="24" lean-forward="false" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="24" />
-          <folding>
-            <element signature="class#4860:5224" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Bauelemente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3915">
@@ -1309,23 +1201,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="137" column="11" lean-forward="false" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Startscreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3473">
+          <caret line="397" column="30" lean-forward="false" selection-start-line="397" selection-start-column="23" selection-end-line="397" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter/Bauelemente/Leitung.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="199" column="20" lean-forward="true" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>eDesigner</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:3.8.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
