@@ -62,14 +62,18 @@ public abstract class Bauelemente {
             //Muelleimer
             public void handle(MouseEvent event)
             {
+                if(deleted)return;
                 border.getChildren().remove(helpimage);
+
+/*
                 if(event.getSceneX()<=125&&event.getSceneY()>=450&&event.getSceneY()<=500) {
+                    System.out.println("löschen");
                     deleted = true;
                     imageview.setImage(null);
                     imageview.removeEventHandler(MouseEvent.ANY, this);
-                }
+                }*/
                 //Transparent in schwarz je nach orientierung
-                else if(!isselected)
+                if(!isselected)
                 {
                     orientationS();
                 }
@@ -242,6 +246,9 @@ public abstract class Bauelemente {
     }
     public void preview(double xDistance, double yDistance)
     {
+
+        if(deleted) return;
+
         if (posY + yDistance < 25)
         {
             imageview.setX(posX + xDistance - 25);
@@ -277,9 +284,12 @@ public abstract class Bauelemente {
 
     public void move(double xDistance, double yDistance)
     {
-        if (posX + xDistance <= 125 && posY + yDistance >= 450 && posY + yDistance <= 500) {
+        if(deleted) return;
+
+        if (posX + xDistance <= 125 && posY + yDistance >= 450 ) {
             deleted = true;
             imageview.setImage(null);
+
             border.getChildren().remove(imageview);
 
         }
@@ -322,10 +332,12 @@ public abstract class Bauelemente {
         }
     }
     public void select(){
+        if(deleted) return;
         isselected=true;
         orientationF();
     }
     public void deselect(){
+        if(deleted) return;
         isselected=false;
         if(!bauteilEntered) {
             orientationS();
