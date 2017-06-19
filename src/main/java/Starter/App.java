@@ -652,7 +652,8 @@ public class App extends Application {
         scene.setOnMouseEntered(new EventHandler<MouseEvent>(){
             public void handle(MouseEvent event)
             {
-               scene.setCursor(new ImageCursor(cursor));
+
+                //scene.setCursor(new ImageCursor(cursor));
             }});
         //+++++Ende Maus Cursor
 
@@ -673,7 +674,7 @@ public class App extends Application {
         hboxTipps.setPrefSize(100,15);
 
         Timeline timeline = new Timeline(new KeyFrame(
-                Duration.millis(10000),
+                Duration.millis(8000),
                 ae ->changetip()));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
